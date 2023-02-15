@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#"
+    xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+    xmlns:nas="https://data.nasa.gov/ontologies/atmonto/NAS#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:gen="https://data.nasa.gov/ontologies/atmonto/general#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="https://data.nasa.gov/ontologies/atmontoCore">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM"/>
+    <dc:creator>Richard M. Keller</dc:creator>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment"/>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/general"/>
+    <dc:title>Air Traffic Management (ATM) Ontology: includes core classes and properties</dc:title>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <dcterms:license>
+      <dcterms:LicenseDocument rdf:ID="ATMontologyLicenseTerms">
+        <dc:description>Release Terms, Information, and Acknowledgments
+NASA Air Traffic Management Ontology
+
+The US National Aeronautics and Space Administration's (NASA) Air Traffic Management (ATM) ontology was developed as a key component of a semantic data integration system built to support integration, query, and search over multiple sources of heterogeneous ATM data, including data from the US Federal Aviation Administration (FAA), the US National Oceanic and Atmospheric Administration (NOAA), NASA, and other non-governmental providers. In this data integration system, the ATM Ontology is used to bridge multiple types of aviation data models and enable cross-datasource querying; the ontology serves as the backbone upon which to overlay data from multiple sources. The ontology data model interconnects data from several different aviation realms, including flight, traffic management, aeronautical information, weather, and carrier operations.
+
+This work was funded by the National Aeronautics and Space Administration under the Aviation Operations and Safety Program.
+
+The NASA Air Traffic Management Ontology incorporates data (provided under any applicable distribution terms and conditions) from the following sources, and NASA gratefully acknowledges their contribution:
+
+- US Federal Aviation Administration:
+-- Airport performance data (from Aviation System Performance Metrics database), public access
+National Airspace System facility and route data (from the National Flight Data Center), public access
+-- Airspace sector boundaries (from the Aeronautical Data Exchange), distributed with permission
+Flight track and flight plan data (from Aircraft Situation Display to Industry data feed), distributed with permission
+-- Aircraft registration data (from FAA Aircraft Registry), public access
+-- Traffic management advisories (from Air Traffic Control System Command Center), public access
+
+- US Department of Transportation
+-- Runway data (from the Bureau of Transportation Statistics), public access
+
+- US National Oceanic and Atmospheric Agency
+-- Airport current and forecast weather data (from the National Weather Service), public access
+
+- Commercial Aviation Safety Team / International Civil Aviation Organization
+-- Aircraft make/model/series information (from the CICTT Aircraft Taxonomy), distributed with permission
+
+- OpenFlights.org
+-- Airport and airline data (from the OpenFlights Airports and Airlines databases), distributed in accordance with license and disclaimer terms
+
+THE DATA IS PROVIDED "AS IS" WITHOUT ANY WARRANTY OF ANY KIND, EITHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO, ANY WARRANTY THAT THE DATA WILL CONFORM TO SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, FREEDOM FROM INFRINGEMENT, OR ANY WARRANTY THAT THE DATA WILL BE ERROR FREE OR ANY WARRANTY THAT RELATED DOCUMENTATION/RELEASE NOTES WILL CONFORM TO THE DATA PROVIDED.  NASA HAS NEITHER VERIFIED NOR VALIDATED THIRD PARTY DATA, WHICH IS PROVIDED SOLELY FOR THE PURPOSE OF ILLUSTRATING USE OF THE ONTOLOGY.  IN NO EVENT SHALL THE U.S. GOVERNMENT BE LIABLE FOR ANY DAMAGES, INCLUDING BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF OR RESULTING FROM OR IN ANY WAY CONNECTED WITH THIS DATA.  YOU ARE PUT ON NOTICE THAT EXPORT OF ANY GOODS OR TECHNICAL DATA FROM THE UNITED STATES MAY REQUIRE SOME FORM OF EXPORT LICENSE FROM THE U.S. GOVERNMENT BEFORE THEY ARE EITHER SENT OUTSIDE OF THE UNITED STATES OR MADE AVAILABLE TO NATIONALS OF A FOREIGN COUNTRY EITHER WITHIN THE UNITED STATES OR ABROAD.  FAILURE TO OBTAIN NECESSARY EXPORT LICENSES MAY RESULT IN CRIMINAL LIABILITY UNDER U.S. LAWS.  NASA NEITHER REPRESENTS THAT A LICENSE SHALL NOT BE REQUIRED NOR THAT, IF REQUIRED, IT SHALL BE ISSUED.  THE DATA, AND/OR ANY MODIFIED OR ENHANCED VERSION THEREOF, SHALL NOT BE OFFERED FOR SALE TO THE U.S. GOVERNMENT OR ANY OTHER ENTITY. NASA SHALL BE NEITHER LIABLE NOR RESPONSIBLE FOR ANY MAINTENANCE OR UPDATING OF THE DATA, NOR FOR CORRECTION OF ANY ERRORS IN THE DATA.</dc:description>
+      </dcterms:LicenseDocument>
+    </dcterms:license>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/data"/>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS"/>
+    <dc:description>The ATM Ontology describes classes, properties, and relationships relevant to the domain of air traffic management, and represents information pertinent to a broad and diverse set of interacting components in the US and the global airspace, including flights, aircraft, manufacturers, airports, airlines, air routes, facilities, air traffic advisories, weather phenomena, and many others. There are three interrelated ontologies in the ATM Ontology suite: atmontoCore (https://data.nasa.gov/ontologies/atmontoCore), atmonto (https://data.nasa.gov/ontologies/atmonto), and atmontoPlus (https://data.nasa.gov/ontologies/atmontoPlus). The 'atmontoCore' ontology contains only classes and property definitions, but does not contain any class instances or property values. (This corresponds to the ATM Ontology's TBox, or terminological component.) The 'atmonto' ontology, which imports the 'atmontoCore' ontology, includes the aforementioned classes and property definitions, along with class instances and associated property values (i.e., TBox plus ABox fact assertions). In particular, the 'atmonto' ontology contains instances corresponding to relatively static, temporally-stable data pertaining to the US National AIrspace. Finally,the 'atmontoPlus' ontology imports the 'atmonto' ontology and adds additional instances covering a sample set of temporally-dependent flight, advisory, and weather data for the month of July 2014. (Due to volume considerations, only 100 flights from 15 July 2014 are included in this sample.) See the documentation at https://data.nasa.gov/ontologies/atmontoCore for further details.</dc:description>
+    <dc:date>2018-03-20</dc:date>
+  </owl:Ontology>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

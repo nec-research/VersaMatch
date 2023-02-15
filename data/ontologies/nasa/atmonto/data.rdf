@@ -1,0 +1,1218 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#"
+    xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+    xmlns:nas="https://data.nasa.gov/ontologies/atmonto/NAS#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:gen="https://data.nasa.gov/ontologies/atmonto/general#"
+    xmlns:spin="http://spinrdf.org/spin#"
+    xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sp="http://spinrdf.org/sp#"
+    xmlns:spl="http://spinrdf.org/spl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:doc="https://data.nasa.gov/ontologies/atmonto/documentation#" > 
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#etmsArrivals">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>etms arrivals</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Count of arrivals at airport based on ETMS (Enhanced Traffic Management System) data.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#StandAloneWeatherStation">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreportingStation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#rapidityOfWeatherChange"/>
+    <owl:allValuesFrom rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasWeatherCondition">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+    <rdfs:label>has weather condition</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>Associates a meteorological condition with the details of the weather conditions at the reporting location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasSurfaceWindCondition">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:label>has surface wind condition</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>Associates a meteorological condition with the details of the surface wind conditions at the reporting location..</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasAirportData">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:label>has airport data</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links an airport to a collection of temporally-dependent data pertinent to the airport conditions, including a variety of data collected in the ASPM system.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first>scattered clouds</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A5"/>
+    <rdf:first>small hail and/or snow pellets</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#metarReportModifier"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition">
+    <rdfs:subClassOf rdf:nodeID="A7"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:label>TAF meteorological condition</rdfs:label>
+    <rdfs:comment>Meteorological conditions reported as part of a TAF forecast. Includes sky, wind, visibility and weather components for current and future time periods.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A9"/>
+    <rdf:first>shower</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#cloudType"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#runwayReportedOn">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway"/>
+    <rdfs:label>runway reported on</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#RunwayStatusData"/>
+    <rdfs:comment>Associates a runway status report with the physical runway being measured.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:nodeID="A12"/>
+    <rdf:first>gradual</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#flowMeasurementRegion"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#windDirectionUpper">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>lower wind direction</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:comment>Upper bound (in degrees) of two bounding values describing a variable wind direction.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:rest rdf:nodeID="A15"/>
+    <rdf:first>sand</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MetCondition"/>
+    <rdfs:label>Visibility condition</rdfs:label>
+    <rdfs:comment>The current or forecast surface visibility conditions at a given airport or other reporting station.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#RunwayStatusData">
+    <rdfs:subClassOf rdf:nodeID="A16"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:label>Runway status data</rdfs:label>
+    <rdfs:comment>This class describes a temporally-dependent set of data about the operating status of a physical runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#surfaceWindDirectionStatus"/>
+    <owl:allValuesFrom rdf:nodeID="A18"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>delayed</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>COR</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://spinrdf.org/arg#property">
+    <rdfs:subPropertyOf rdf:resource="http://spinrdf.org/sp#arg"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:first>thunderstorm</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#weatherProximity"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#tafReportType"/>
+    <owl:allValuesFrom rdf:nodeID="A24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:rest rdf:nodeID="A26"/>
+    <rdf:first>amended</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#weatherPhenomenon"/>
+    <owl:allValuesFrom rdf:nodeID="A28"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#RunwayVisibleRangeMeasurement">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:rest rdf:nodeID="A30"/>
+    <rdf:first>mist</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#cloudType"/>
+    <owl:allValuesFrom rdf:nodeID="A32"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#METARreportingStation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>METARreporting station</rdfs:label>
+    <rdfs:comment>A weather reporting station that provides sensor data for a METAR report. Many airports are also METAR reporting stations.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>SPECI</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#edctDepartureHold">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>EDCT departure hold</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>EDCT (Estimated Departure Clearance Time) hold minutes at other airports departing this airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#surfaceWindSpeed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>surface wind speed</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:comment>The speed in knots of the surface wind.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#metConditionProbability">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>met condition probability</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>For a forecast meteorological condition, the percent probability associated with the forecast occurrence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#metarReportType"/>
+    <owl:allValuesFrom rdf:nodeID="A35"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:rest rdf:nodeID="A37"/>
+    <rdf:first>varyingWithinRange</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:rest rdf:nodeID="A39"/>
+    <rdf:first>partial</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#FixCapacity">
+    <rdfs:subClassOf rdf:nodeID="A13"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftCapacity"/>
+    <rdfs:label>Fix capacity</rdfs:label>
+    <rdfs:comment>A subclass of interval-based data representing the maximum controllable number of aircraft flowing through a fix per some interval of time, given weather and other air traffic control constraints.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#dataIntervalEndTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>data interval end time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:comment>For temporally-dependent data, the ending time of the data's period of validity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:rest rdf:nodeID="A41"/>
+    <rdf:first>cumulonimbus</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <owl:oneOf rdf:nodeID="A43"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasASPMmetCondition">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#ASPMmeteorologicalCondition"/>
+    <rdfs:label>has ASPMmet condition</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Links meteorological information to the collection of temporally-dependent data associated with an airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <owl:oneOf rdf:nodeID="A45"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#topAltitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>top altitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer"/>
+    <rdfs:comment>The top altitude of a homogenous cloud layer.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#ceiling">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>ceiling</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SkyCondition"/>
+    <rdfs:comment>The vertical visibility (in feet) measured from the ground to the lowest cloud layer reported as broken or overcast.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <owl:oneOf rdf:nodeID="A46"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#dewpoint">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>dewpoint</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>The dewpoint recorded as part of a meteorological condition report.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#surfaceGustSpeed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>surface gust speed</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:comment>Surface gust speed measured under the associated surface wind conditions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#windShearHeight">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>wind shear height</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:comment>The height in hundreds of feet above ground level associated with a wind shear phenomenon.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#scheduledDepartures">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>scheduled departures</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Count of scheduled departures. (Most probably from OAG (Official Airline Guide))</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#cloudType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>cloud type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer"/>
+    <rdfs:comment>For a given homogeneous cloud layer, the type of cloud present: towering cumulus, cumulonimbus, altocumulus castellanus.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>vertical visibility layer</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Airport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreportingStation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:rest rdf:nodeID="A33"/>
+    <rdf:first>METAR</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:rest rdf:nodeID="A51"/>
+    <rdf:first>sandstorm</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#airportArrivalRate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>airport arrival rate</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The arrival rate per hour set by the airport during the specified interval. This is the total number of aircraft that can arrive on all runways combined during an hour.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#TAFreport">
+    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:subClassOf rdf:nodeID="A52"/>
+    <rdfs:subClassOf rdf:nodeID="A53"/>
+    <rdfs:subClassOf rdf:nodeID="A47"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:label>TAF report</rdfs:label>
+    <rdfs:comment>Meteorological conditions provided in a periodic TAF forecast. Includes sky, wind, visibility and weather components.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#unlimitedVisibility">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>unlimited visibility</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition"/>
+    <rdfs:comment>A binary property indicating whether the visibility conditions are unlimited.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:rest rdf:nodeID="A55"/>
+    <rdf:first>well-developed dust/sand whirls</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#metarReportType"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:rest rdf:nodeID="A19"/>
+    <rdf:first>corrected</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>freezing</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:rest rdf:nodeID="A58"/>
+    <rdf:first>clear</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#cloudCover"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#flowMeasurementRegion"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:rest rdf:nodeID="A54"/>
+    <rdf:first>spray</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#etmsDepartures">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>etms arrivals</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Count of departures at airport based on ETMS (Enhanced Traffic Management System) data.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first>hail</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#RunwayReport">
+    <rdfs:comment>A report on runway conditions during a specified interval of time, focusing on runway status (open vs. closed) and surface friction during winter precipitation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#dataIntervalStartTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>data interval start time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:comment>For temporally-dependent data, the starting time of the data's period of validity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <owl:oneOf rdf:nodeID="A64"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#cloudCover"/>
+    <owl:allValuesFrom rdf:nodeID="A66"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#weatherProximity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>weather proximity</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+    <rdfs:comment>Describes the location of the weather phenomena in relation to the reporting station: immediate proximity or in vicinity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#flowMeasurementRegion"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#MetCondition">
+    <rdfs:label>Meteorological condition</rdfs:label>
+    <rdfs:comment>A superclass over the various types of meteorological conditions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#FixFlow">
+    <rdfs:subClassOf rdf:nodeID="A60"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlow"/>
+    <rdfs:label>Fix flow</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#FixFlow"/>
+    <rdfs:comment>A subclass of interval-based data representing the number of aircraft flowing through a fix per some interval of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#metarReportModifier"/>
+    <owl:allValuesFrom rdf:nodeID="A69"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#scheduledArrivals">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>scheduled arrivals</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Count of scheduled arrivals. (Most probably from OAG (Official Airline Guide))</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#metarReportModifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>metar report modifier</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreport"/>
+    <rdfs:comment>Automation status information pertaining to a METAR report: AUTO indicates a fully automated report with no human intervention; COR indicates a corrected observation; no modifier indicates either human observer/reporter or automated report with human oversight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#METARreport">
+    <rdfs:subClassOf rdf:nodeID="A56"/>
+    <rdfs:subClassOf rdf:nodeID="A6"/>
+    <rdfs:subClassOf rdf:nodeID="A34"/>
+    <rdfs:subClassOf rdf:nodeID="A68"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:label>METAR Report</rdfs:label>
+    <rdfs:comment>Meteorological conditions provided in a periodic METAR report. Includes sky, wind, visibility and weather components.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <rdf:rest rdf:nodeID="A71"/>
+    <rdf:first>ice crystals</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <rdf:rest rdf:nodeID="A73"/>
+    <rdf:first>snow</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#SectorCapacity">
+    <rdfs:subClassOf rdf:nodeID="A67"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftCapacity"/>
+    <rdfs:label>Sector capacity</rdfs:label>
+    <rdfs:comment>A subclass of interval-based data representing the maximum number of controllable aircraft flowing through a sector during some interval of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#totalAirborneDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>total airborne delay</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Total airborne flight delay in minutes for this airport during the specified period.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#windDirectionFixed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>fixed wind direction</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:comment>Steady wind direction (in degrees), when winds are fixed and not variable.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:rest rdf:nodeID="A61"/>
+    <rdf:first>haze</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:rest rdf:nodeID="A74"/>
+    <rdf:first>immediate proximity</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#surfaceWindDirectionStatus"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#weatherProximity"/>
+    <owl:allValuesFrom rdf:nodeID="A42"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first>rapid</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#metarReportType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>metar report type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreport"/>
+    <rdfs:comment>METAR report type indicator specifies whether this report is a regularly scheduled hourly report (METAR) or a special unscheduled report (SPECI). SPECIs are issued more frequently than hourly when adverse weather conditions prevail.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <owl:oneOf rdf:nodeID="A49"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#tafReportType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>taf report type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFreport"/>
+    <rdfs:comment>Type of Terminal Area Forecast (TAF) report: a routine report (TAF), an amended report (AMD), a corrected report (COR), or a delayed report (RTD). An amended TAF is issued when the current TAF no longer adequately describes the ongoing weather or the forecaster feels the TAF is not representative of the current or expected weather.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#weatherQualifier"/>
+    <owl:allValuesFrom rdf:nodeID="A79"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:rest rdf:nodeID="A81"/>
+    <rdf:first>observed</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#SkyCondition">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MetCondition"/>
+    <rdfs:label>Sky condition</rdfs:label>
+    <rdfs:comment>The current or forecast sky conditions, including the ceiling and information on the cloud layers present.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A29"/>
+    <rdf:first>unknown precipitation</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#cloudCover">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>cloud cover</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer"/>
+    <rdfs:comment>For a given homogenous cloud layer, the type of cloud cover present: clear, few clouds, scattered clouds, broken clouds, overcast, vertical visibility layer.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#airportDepartureRate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>airport departure rate</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The departure rate per hour set by the airport during the specified interval. This is the total number of aircraft that can depart from all runways combined during an hour.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <owl:oneOf rdf:nodeID="A82"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <owl:oneOf rdf:nodeID="A83"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasVisibilityCondition">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition"/>
+    <rdfs:label>has visibility condition</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>Associates a meteorological condition with the details of the surface visibility conditions at the reporting location..</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasCloudLayerProfile">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayerProfile"/>
+    <rdfs:label>has cloud layer profile</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SkyCondition"/>
+    <rdfs:comment>Links a sky condition to a representation of the cloud layers present.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:rest rdf:nodeID="A84"/>
+    <rdf:first>squalls</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>transient</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <owl:oneOf rdf:nodeID="A85"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#tafReportString">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>taf report string</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFreport"/>
+    <rdfs:comment>The full text of the entire TAF report.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#surfaceWindDirectionStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>surface wind direction status</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:comment>Information about the direction of the wind, either fixed, varyingWithinRange, or variable.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>altocumulus castellanus</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#baseAltitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>base altitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer"/>
+    <rdfs:comment>For a given homogeonous cloud layer, this is the lowest altitude.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#aspmFlightRules"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasMETARreport">
+    <owl:inverseOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#associatedMETARreportingStation"/>
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreport"/>
+    <rdfs:label>has METARreport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreportingStation"/>
+    <rdfs:comment>Associates a METAR reporting station with METAR weather reports generated for that station.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <rdf:rest rdf:nodeID="A14"/>
+    <rdf:first>widespread dust</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#seaLevelPressure">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>sea level pressure</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>Sea level pressure measured under the associated meteorological conditions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasTAFreport">
+    <owl:inverseOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#forecastingAirport"/>
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFreport"/>
+    <rdfs:label>has TAFreport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Associates an airport with TAF weather reports generated for that airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first>blowing</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://spinrdf.org/arg#class">
+    <rdfs:subPropertyOf rdf:resource="http://spinrdf.org/sp#arg"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:oneOf rdf:nodeID="A89"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#runwaySurfaceFriction">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>runway surface friction (mu)</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#RunwayStatusData"/>
+    <rdfs:comment>The surface friction (mu) value of the runway for the specified period. Runway surface friction is directly relevant to the braking action which will be available to an aircraft decelerating after touch down, or after a decision to reject a take off.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition">
+    <rdfs:label>Weather condition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A90"/>
+    <rdfs:subClassOf rdf:nodeID="A27"/>
+    <rdfs:subClassOf rdf:nodeID="A22"/>
+    <rdfs:subClassOf rdf:nodeID="A76"/>
+    <rdfs:subClassOf rdf:nodeID="A78"/>
+    <rdfs:subClassOf rdf:nodeID="A91"/>
+    <rdfs:comment>The current or forecast weather conditions at a given airport or other reporting station.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MetCondition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>variable</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#WITIproperty">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>WITIproperty</rdfs:label>
+    <rdfs:comment>A class of different properties relating to WITI (Weather-Impacted Traffic Index)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:nodeID="A92"/>
+    <rdf:first>patchy</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>duststorm</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:rest rdf:nodeID="A48"/>
+    <rdf:first>overcast</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#oagGateDepartureDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>OAG gate departure delay</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Minutes of OAG (Official Airline Guide) based gate departure delay in excess of 15 minutes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#meteorologicalConditionStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>meteorological condition status</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>An indicator of whether the meteorological condition is based on actual observations (observed) or on future projections (forecast).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#weatherPhenomenon">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>weather phenomenon</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+    <rdfs:comment>Describes the type of weather phenomena experienced during the specified period: drizzle, rain, snow, snow grains, ice crystals, ice pellets, hail, small hail and/or snow pellets, unknown precipitation, mist, fog, smoke, volcanic ash, widespread dust, sand, haze, spray, well-developed dust/sand whirls, squalls, funnel cloud, tornado/waterspout, sandstorm, duststorm</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:oneOf rdf:nodeID="A77"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#lowCeilingWITIdaily">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>low ceiling WITI daily</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The low ceiling weather impacted traffic index (WITI) computed for the airport during the specified timeframe (daily). WITI is an estimate of the number of flights potentially impacted due to inclement weather based on the scheduled traffic demand for a defined geographic region of the air traffic system (in this case, an airport). If the ceiling at the airport is below a set threshold, then the low ceiling WITI is set to the number of scheduled arrivals for that timeframe.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WITIproperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#dataIntervalEndDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>data interval end day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:comment>Links temporally-dependent data to the ending day of its period of validity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:rest rdf:nodeID="A94"/>
+    <rdf:first>fog</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#aspmFlightRules">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>ASPM Flight Rules</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Indicates what flight rule conditions the airport is operating under during the specified time period (I-instrument, V-Visual).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#associatedMETARreportingStation">
+    <owl:inverseOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#hasMETARreport"/>
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreportingStation"/>
+    <rdfs:label>METAR reporting station</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreport"/>
+    <rdfs:comment>Links a METAR report to the reporting station where the data were collected.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#forecastIssueTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>forecast issue time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFreport"/>
+    <rdfs:comment>The time that the TAF (Terminal Area Forecast) report was issued.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#rapidityOfWeatherChange"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hourlyPrecipitation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>hourly precipitation</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+    <rdfs:comment>Recorded hourly precipitation rate at the measurement station in inches.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <rdf:rest rdf:nodeID="A36"/>
+    <rdf:first>fixed</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:rest rdf:nodeID="A20"/>
+    <rdf:first>AUTO</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#surfaceTemperature">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>surface temperature</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>Surface temperature measured under the associated meteorological conditions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data">
+    <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer">
+    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdfs:subClassOf rdf:nodeID="A59"/>
+    <rdfs:subClassOf rdf:nodeID="A31"/>
+    <rdfs:subClassOf rdf:nodeID="A65"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>Cloud layer</rdfs:label>
+    <rdfs:comment>Represents a cloud layer, providing its bottom and top altitude, its cloud type, and its degree of coverage.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>closed</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#hasSkyCondition">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SkyCondition"/>
+    <rdfs:label>has sky condition</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:comment>Associates a meteorological condition with the details of the sky and cloud conditions at the reporting location..</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#oagArrivalDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>OAG arrival delay</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>Minutes of OAG (Official Airline Guide) based arrival delay in excess of 15 minutes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:rest rdf:nodeID="A40"/>
+    <rdf:first>towering cumulus</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:rest rdf:nodeID="A72"/>
+    <rdf:first>rain</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#SectorFlow">
+    <rdfs:subClassOf rdf:nodeID="A99"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlow"/>
+    <rdfs:label>Sector flow</rdfs:label>
+    <rdfs:comment>A subclass of interval-based data representing the number of aircraft flowing through a sector during some interval of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#lowCeilingWITIhourly">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>low ceiling WITI hourly</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The low ceiling weather impacted traffic index (WITI) computed for the airport during the specified timeframe (hourly). WITI is an estimate of the number of flights potentially impacted due to inclement weather based on the scheduled traffic demand for a defined geographic region of the air traffic system (in this case, an airport). If the ceiling at the airport is below a set threshold, then the low ceiling WITI is set to the number of scheduled arrivals for that timeframe.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WITIproperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:rest rdf:nodeID="A38"/>
+    <rdf:first>shallow</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:rest rdf:nodeID="A100"/>
+    <rdf:first>smoke</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first>few clouds</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>V</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity"/>
+    <owl:allValuesFrom rdf:nodeID="A102"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:rest rdf:nodeID="A103"/>
+    <rdf:first>funnel cloud</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#lowVisibilityWITIdaily">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>low visibility WITI daily</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The low visibility weather impacted traffic index (WITI) computed for the airport during the specified timeframe (daily). WITI is an estimate of the number of flights potentially impacted due to inclement weather based on the scheduled traffic demand for a defined geographic region of the air traffic system (in this case, an airport). If the visibility at the airport is below a set threshold, then the low visibility WITI is set to the number of scheduled arrivals for that timeframe.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WITIproperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#highWindWITIhourly">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>high wind WITI hourly</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The high wind weather impacted traffic index (WITI) computed for the airport during the specified timeframe (hourly). WITI is an estimate of the number of flights potentially impacted due to inclement weather based on the scheduled traffic demand for a defined geographic region of the air traffic system (in this case, an airport). If the winds at the airport are above a set threshold, then the high wind WITI is set to the number of scheduled arrivals for that timeframe.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WITIproperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition">
+    <rdfs:subClassOf rdf:nodeID="A75"/>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MetCondition"/>
+    <rdfs:label>Surface wind condition</rdfs:label>
+    <rdfs:comment>The current or forecast surface wind conditions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#aspmFlightRules"/>
+    <owl:allValuesFrom rdf:nodeID="A44"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#metarStationHasPrecipitationSensor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>metar station has precipitation sensor</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreport"/>
+    <rdfs:comment>A boolean value indicating whether the reporting METAR station has a precipitation sensor.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <owl:oneOf rdf:nodeID="A105"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <rdf:rest rdf:nodeID="A87"/>
+    <rdf:first>volcanic ash</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:nodeID="A93"/>
+    <rdf:first>broken clouds</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#AirportData">
+    <rdfs:subClassOf rdf:nodeID="A86"/>
+    <rdfs:subClassOf rdf:nodeID="A104"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:label>Airport Data</rdfs:label>
+    <rdfs:comment>Represents a collection of airport data for a given time period, as reported by the FAA's ASPM system.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <rdf:rest rdf:nodeID="A50"/>
+    <rdf:first>tornado/waterspout</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#arrivalDemand">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>arrival demand</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The number of aircraft intending to arrive at an airport during the specified time period.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#edctArrivalHold">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>EDCT arrival hold</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>EDCT (Estimated Departure Clearance Time) hold minutes at other airports arriving this airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <rdf:rest rdf:nodeID="A25"/>
+    <rdf:first>routine</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#runwayVisibleRange">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RunwayVisibleRangeMeasurement"/>
+    <rdfs:label>runway visible range</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition"/>
+    <rdfs:comment>Links a visibility condition to a runway visible range measurement class instance.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>heavy</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#windDirectionLower">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>lower wind direction</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition"/>
+    <rdfs:comment>Lower bound (in degrees) of two bounding values describing a variable wind direction.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <owl:oneOf rdf:nodeID="A95"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#forecastingAirport">
+    <owl:inverseOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#hasTAFreport"/>
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>forecasting airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFreport"/>
+    <rdfs:comment>Links to the airport for which the TAF (Terminal Area Forecast) report was compiled.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:rest rdf:nodeID="A70"/>
+    <rdf:first>snow grains</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <rdf:rest rdf:nodeID="A62"/>
+    <rdf:first>ice pellets</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#lowVisibilityWITIhourly">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>low visibility WITI hourly</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The low visibility weather impacted traffic index (WITI) computed for the airport during the specified timeframe (hourly). WITI is an estimate of the number of flights potentially impacted due to inclement weather based on the scheduled traffic demand for a defined geographic region of the air traffic system (in this case, an airport). If the visibility at the airport is below a set threshold, then the low visibility WITI is set to the number of scheduled arrivals for that timeframe.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WITIproperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#metarReportString">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>METAR report string</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#METARreport"/>
+    <rdfs:comment>Entire text of METAR report.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#runwayStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>runway status</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#RunwayStatusData"/>
+    <rdfs:comment>An indicator of whether the runway is open or closed during the specified period.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#highWindWITIdaily">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>high wind WITI daily</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The high wind weather impacted traffic index (WITI) computed for the airport during the specified timeframe (daily). WITI is an estimate of the number of flights potentially impacted due to inclement weather based on the scheduled traffic demand for a defined geographic region of the air traffic system (in this case, an airport). If the winds at the airport are above a set threshold, then the high wind WITI is set to the number of scheduled arrivals for that timeframe.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WITIproperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#rapidityOfWeatherChange">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>rapidity of weather change</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition"/>
+    <rdfs:comment>Indicates how fast change is expected from the prior state to the forecast meteorological conditions: "rapid" , "gradual" , "transient".</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#meteorologicalConditionStatus"/>
+    <owl:allValuesFrom rdf:nodeID="A109"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#weatherQualifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>weather qualifier</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+    <rdfs:comment>An additional qualifier describing the reported weather phenomenon: shallow, partial, patchy, low drifting, blowing, shower, thunderstorm, freezing.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <rdf:rest rdf:nodeID="A106"/>
+    <rdf:first>moderate</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#departureDemand">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>departure demand</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#AirportData"/>
+    <rdfs:comment>The number of aircraft intending to depart during the specified time period.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:rest rdf:nodeID="A98"/>
+    <rdf:first>drizzle</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#CloudLayer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#meteorologicalConditionStatus"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#limitedVisibilityDistance">
+    <rdfs:seeAlso rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#unlimitedVisibility"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>limited visibility distance</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition"/>
+    <rdfs:comment>The visibility distance (in miles) at the reporting station. Only applicable if data:unlimitedVisibility is False.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#dataIntervalStartDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>data interval start day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:comment>Links temporally-dependent data to the starting day of its period of validity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:rest rdf:nodeID="A101"/>
+    <rdf:first>I</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>forecast</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <rdf:rest rdf:nodeID="A97"/>
+    <rdf:first>open</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <rdf:rest rdf:nodeID="A110"/>
+    <rdf:first>light</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>weather intensity</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+    <rdfs:comment>An indicator of the intensity of the weather: light, moderate, heavy.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:rest rdf:nodeID="A88"/>
+    <rdf:first>low drifting</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>in vicinity</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#ASPMmeteorologicalCondition">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition"/>
+    <rdfs:label>ASPM meteorological condition</rdfs:label>
+    <rdfs:comment>Meteorological conditions reported as part of the ASPM hourly airport data. Includes sky, wind, visibility and weather components.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#CloudLayerProfile">
+    <rdfs:subClassOf rdf:nodeID="A111"/>
+    <rdfs:subClassOf rdf:nodeID="A96"/>
+    <rdfs:subClassOf rdf:nodeID="A107"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>Cloud layer profile</rdfs:label>
+    <rdfs:comment>A sequence of cloud layers, ordered from the ground upward. Represents cloud conditions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#IntervalData">
+    <rdfs:label>Interval data</rdfs:label>
+    <rdfs:comment>State data that has a temporal lifetime: a start and end time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <owl:oneOf rdf:nodeID="A57"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#flowMeasurementRegion"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition">
+    <rdfs:subClassOf rdf:nodeID="A112"/>
+    <rdfs:subClassOf rdf:nodeID="A108"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#IntervalData"/>
+    <rdfs:label>Meteorological condition</rdfs:label>
+    <rdfs:comment>A representation of the meteorological status for the specified time period, including sky, wind, visibility, and weather subcomponents.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <owl:oneOf rdf:nodeID="A80"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#runwayStatus"/>
+    <owl:allValuesFrom rdf:nodeID="A63"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>11</type>
+  <onto1>
+    <Ontology rdf:about="http://confOf">
+      <location>http://confOf</location>
+    </Ontology>
+  </onto1>
+  <onto2>
+    <Ontology rdf:about="http://ekaw">
+      <location>http://ekaw</location>
+    </Ontology>
+  </onto2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.w3.org/2002/07/owl#Thing'/>
+      <entity2 rdf:resource='http://www.w3.org/2002/07/owl#Thing'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Chair_PC'/>
+      <entity2 rdf:resource='http://ekaw#PC_Chair'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Member_PC'/>
+      <entity2 rdf:resource='http://ekaw#PC_Member'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#University'/>
+      <entity2 rdf:resource='http://ekaw#University'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Conference'/>
+      <entity2 rdf:resource='http://ekaw#Conference'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Event'/>
+      <entity2 rdf:resource='http://ekaw#Event'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Tutorial'/>
+      <entity2 rdf:resource='http://ekaw#Tutorial'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Student'/>
+      <entity2 rdf:resource='http://ekaw#Student'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Workshop'/>
+      <entity2 rdf:resource='http://ekaw#Workshop'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Social_event'/>
+      <entity2 rdf:resource='http://ekaw#Social_Event'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Paper'/>
+      <entity2 rdf:resource='http://ekaw#Paper'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://confOf#Person'/>
+      <entity2 rdf:resource='http://ekaw#Person'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.0</measure>
+    </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>

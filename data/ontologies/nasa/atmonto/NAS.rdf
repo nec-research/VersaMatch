@@ -1,0 +1,958 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#"
+    xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+    xmlns:nas="https://data.nasa.gov/ontologies/atmonto/NAS#"
+    xmlns:gen="https://data.nasa.gov/ontologies/atmonto/general#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:doc="https://data.nasa.gov/ontologies/atmonto/documentation#" > 
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#runwayWidthInFeet">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>runway width in feet</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway"/>
+    <rdfs:comment>The width in feet of the physical runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#taxiwayID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>taxiway ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+    <rdfs:comment>An identifier for the taxiway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#TRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RNAVroute"/>
+    <rdfs:label>T-Route</rdfs:label>
+    <rdfs:comment>A low altitude RNAV airway route. (RNAV routes allow an aircraft to choose any course within a network of navigation beacons, rather than navigate directly to and from the beacons.)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationServiceProvider"/>
+    <rdfs:label>Air carrier</rdfs:label>
+    <rdfs:comment>An entity that it licensed to operate aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent"/>
+    <rdfs:comment>An ordered sequence of navigation elements specifying a path through the airspace.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#dayOfMonth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:comment>The day number associated with a day class.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCCtier">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent"/>
+    <rdfs:label>ARTCCtier</rdfs:label>
+    <rdfs:comment>A donut-shaped geographical area surrounding a designated central ARTCC. The first tier includes all the ARTCCs that share a boundary with the designated  ARTCC. The tier two ARTCCs includes the first tier ARTCCs plus those adjacent to the first tier ARCCCs. And so on.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#RNAVroute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#FederalAirway"/>
+    <rdfs:label>RNAV route</rdfs:label>
+    <rdfs:comment>An RNAV (Random Navigation) route is defined relative to a network of existing ground-based navigation beacons.  RNAV allows an aircraft to choose any course within the network, rather than navigate using only point-to-point routes defined by the beacons.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#StandAloneWeatherStation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Stand-alone weather station</rdfs:label>
+    <rdfs:comment>A non-airport location where operational weather monitoring hardware is installed.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#calendarMonth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:comment>The month number associated with a day class.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent"/>
+    <rdfs:label>Airspace layer</rdfs:label>
+    <rdfs:comment>Represents a layer within the airspace, defined by a shear-sided polygon with specified low and high altitudes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#locatedInCenter">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+    <rdfs:label>located in Center</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:comment>Links a sector to the ARTCC in which the sector is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AviationIndustryManufacturer">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationServiceProvider"/>
+    <rdfs:label>Aviation industry manufacturer</rdfs:label>
+    <rdfs:comment>A superclass encompassing the set of airframe and engine manufacturers.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#locatedInState">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Located in State</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>The 2-letter US postal code for the state in which the airport is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Sector">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent"/>
+    <rdfs:label>Sector</rdfs:label>
+    <rdfs:comment>A defined volume in the the airspace of an ARTCC or TRACON whose flight traffic is typically controlled by a single controller.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasSTAR">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#STAR"/>
+    <rdfs:label>has STAR</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Associates an airport with the the STARs designated to route aircraft to that airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#QRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RNAVroute"/>
+    <rdfs:label>Q-Route</rdfs:label>
+    <rdfs:comment>A high altitude RNAV airway route. (RNAV routes allow an aircraft to choose any course within a network of navigation beacons, rather than navigate directly to and from the beacons.)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTaxiway">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+    <rdfs:label>has taxiway</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links an airport to a taxiway for that airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#tfmsMonitorAlertParameter">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>tfms monitor alert parameter</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:comment>The maximum number of aircraft permitted in a given sector at any time, per agreement between FAA and Air Traffic Controller union. MAP (Monitor Alert Parameter) is a TFMS input parameter.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirportServiceVehicle">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Airport service vehicle</rdfs:label>
+    <rdfs:comment>A class of vehicles that service the flights and maintain the airport physical infrastructure.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#countryOfRegistry">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>country of registry</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:comment>The country name of the airline registration.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasSectorName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has sector name</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:comment>An alphanumeric sector name that is in general different than the sector ID.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#VORroute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#FederalAirway"/>
+    <rdfs:label>VOR route</rdfs:label>
+    <rdfs:comment>A VOR route is defined relative to a network of existing ground-based VOR navigation beacons. VOR routes consist of point-to-point segments, where the points are defined by the beacons. More modern RNAV routes allow any path within the network, not limited to VOR-to-VOR segments.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#runwayMeasured">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#OperationalRunway"/>
+    <rdfs:label>runway measured</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RunwayVisibleRangeMeasurement"/>
+    <rdfs:comment>Indicates which operational runway is being measured for visible range.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airCarrierName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Air carrier name</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:comment>The official name of an air carrier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#RefuelingTruck">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportServiceVehicle"/>
+    <rdfs:label>Refueling truck</rdfs:label>
+    <rdfs:comment>Vechicle that transports and pumps jet fuel to refuel aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>TOWER</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasSectorID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has sector ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:comment>A sector identifier that consists of the ARTCC identifier concatenated with a three-digit number. This identifier is in general different than the sector name.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#isInstrumentControlEligible">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>is instrument control eligible</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Indicates whether this airport is capable of an instrument approach.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#InternationalAirport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>International airport</rdfs:label>
+    <rdfs:comment>The set of international (i.e., non-US) airports.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasSectorLayer">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer"/>
+    <rdfs:label>has sector layer</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:comment>Links a sector to its vertically-stacked set of layers.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#date">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>date</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:comment>The date corresponding to the day represented by the day class. The value of this property is a date datatype. In contrast, the class represents the day conceptually as an object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#NonCONUSairport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#USairport"/>
+    <rdfs:label>Non CONUS airport</rdfs:label>
+    <rdfs:comment>The set of airports located in the United States, but outside the contiguous lower 48 states.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasAirspaceLayerGeometry">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#ShearSidedPolygonalVolume"/>
+    <rdfs:label>has airspace layer geometry</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer"/>
+    <rdfs:comment>Links an airspace layer with a polygon describing its location in 3-space. A sector is composed of a sequence of layers, each of which is represented as a shear-sided polygonal volume.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#manufacturerCountryName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>manufacturer country name</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirframeManufacturer"/>
+    <rdfs:comment>The country name where the manufacturer is established.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airportLocation">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdfs:label>airport location</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links to a geographic point designated as the airport location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#DeicingTruck">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportServiceVehicle"/>
+    <rdfs:label>Deicing truck</rdfs:label>
+    <rdfs:comment>A vehicle that holds deicing fluid and pumping equipment to support deicing.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#touchdownPoint">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdfs:label>touchdown point</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#OperationalRunway"/>
+    <rdfs:comment>Links to the geographical point location that is the touchdown spot on the operational runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airspaceLayerLowAltitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>airspace layer low altitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer"/>
+    <rdfs:comment>The lower altitude bound of an airspace layer.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTower">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ATCT"/>
+    <rdfs:label>has tower</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links an airport to an air traffic control tower for that airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#CONUSairport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#USairport"/>
+    <rdfs:label>Continental US airport</rdfs:label>
+    <rdfs:comment>The set of airports in the continental US.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#ATCSCC">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+    <rdfs:label>ATCSCC</rdfs:label>
+    <rdfs:comment>Air Traffic Control System Command Center (ATCSCC) facility</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hoursOffsetFromUTC">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>hours offset from UTC</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>The number of hours that the airport is offset from the UTC timezone.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTier">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCCtier"/>
+    <rdfs:label>has tier</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+    <rdfs:comment>Asociates an ARTCC with the set of ARTCCs in its nth level tier.  Tier 1 includes the central ARTCC plus all ARTCCs immediately adjoining the central ARTCC; tier 2 includes tier 1 plus all adjacent ARTCCs two steps away from the central ARTCC. And so on.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#RunwayVisibleRangeMeasurement">
+    <rdfs:label>RVR measurement</rdfs:label>
+    <rdfs:comment>A measurement of the distance over which a pilot of an aircraft on the centerline of a runway can see the runway surface markings delineating the runway and its centerline. RVR (Runway Visible Range) is expressed as an interval specifying the minimum and maximum number of feet visible.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Airport infrastructure component</rdfs:label>
+    <rdfs:comment>Part of an airport's physical infrastructure, including gates, terminals, runways, taxiways, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#routeID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>route ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute"/>
+    <rdfs:comment>FAA alphanumeric identifier assigned to the route/airway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent"/>
+    <rdfs:label>ARTCC</rdfs:label>
+    <rdfs:comment>Air Route Traffic Control Center (ARTCC or 'Center') facility</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Airspace infrastructure component</rdfs:label>
+    <rdfs:comment>A defined substructure of the airspace used to manage air traffic, including sectors, SIDs, STARs, routes, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#OperationalRunway">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Operational runway</rdfs:label>
+    <rdfs:comment>An operational runway is a named runway one used in airport operations. There are two operational runways corresponding to one physical runway; these operational runways are 180 degrees apart.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#calendarYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:comment>The calendar year associated with a day class.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasRunway">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway"/>
+    <rdfs:label>has runway</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links an airport to a physical runway for that airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTRACONid">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has TRACON ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TRACON"/>
+    <rdfs:comment>The FAA alphanumeric code for the TRACON.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#RadialRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute"/>
+    <rdfs:label>Radial Route</rdfs:label>
+    <rdfs:comment>A route that follows a specified radial path emanating from a given fix.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#withinARTCC">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+    <rdfs:label>within ARTCC</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links the airport to the ARTCC within which it is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#artccID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>artcc ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+    <rdfs:comment>The 3-letter ARTCC (Air Route Traffic Control Center) code.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airportName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>airport name</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>The official name of the airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#deicingPadLocation">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Polygonal2DRegion"/>
+    <rdfs:label>deicing pad location</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#DeicingPad"/>
+    <rdfs:comment>Links a deicing pad with its location as a two-dimensional bounding polygon.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirframeManufacturer">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationIndustryManufacturer"/>
+    <rdfs:label>Airframe manufacturer</rdfs:label>
+    <rdfs:comment>A manufacturer of physical aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTerminal">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+    <rdfs:label>has terminal</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links an airport to a terminal for that airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#runwayLengthInFeet">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>runway length in feet</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway"/>
+    <rdfs:comment>The length in feet of the physical runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTRACONname">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has TRACON name</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TRACON"/>
+    <rdfs:comment>The common name for the TRACON.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#withinTimezone">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>within timezone</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>The timezone identifier for the airport, where the timezone is specified as Area/Location, e.g. America/New_York.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasCenterGeometry">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Polygonal2DRegion"/>
+    <rdfs:label>has center geometry</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+    <rdfs:comment>Links an ARTCC to a 2-dimensional bounding polygon.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasQueue">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#DeicingQueue"/>
+    <rdfs:label>has queue</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#DeicingPad"/>
+    <rdfs:comment>Links a deicing pad to its queue of aircraft waiting to be deiced.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#USairport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>USairport</rdfs:label>
+    <rdfs:comment>The set of airports located in the United States.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Terminal</rdfs:label>
+    <rdfs:comment>A structure on the airport surface that serves as an interface between people, baggage, and aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#GovernmentAviationServiceProvider">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationServiceProvider"/>
+    <rdfs:label>Government aviation service provider</rdfs:label>
+    <rdfs:comment>The set of govenment agencies that perform aviation services.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#associatedOpRunway">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#OperationalRunway"/>
+    <rdfs:label>associated operational runway</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway"/>
+    <rdfs:comment>Associates a physical runway with its two operational runways (180 degrees apart, representing approaches from either end of the physical runway).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#icaoCarrierCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>ICAO Air Carrier Code</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:comment>The three-letter ICAO code assigned to the airline carrier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#minVisibility">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>min visibility</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RunwayVisibleRangeMeasurement"/>
+    <rdfs:comment>The lower bound of visibility in feet over the centerline of the runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airlineCallsign">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>airline callsign</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:comment>The radio call sign associated with an the air carrier. Used by pilots and controllers to identify aircraft over radio frequencies.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS">
+    <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#manufacturerFullName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>manufacturer full name</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirframeManufacturer"/>
+    <rdfs:comment>The full name of the manufacturer.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#TransitionRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTARroute"/>
+    <rdfs:label>Transition route</rdfs:label>
+    <rdfs:comment>A route within a SID or STAR that feeds aircraft into or out from the common route of the SID/STAR. In other words, the transition route is a feeder route from the en route segment of a flight into the heart of a STAR for arrival; or an exit route from a SID funneling flights to their appropriate initial jet routes for the en route segment of flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTRACONlayer">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer"/>
+    <rdfs:label>has TRACON layer</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TRACON"/>
+    <rdfs:comment>A link between the TRACON and its geographic extent, represented as a single shear-sided polygonal volume.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#NASday">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>NAS day</rdfs:label>
+    <rdfs:comment>A class that represents a day of the year. Events, such as flights, weather forecasts, and other events are linked to the instance of the day they occurred.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#departureRouteAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>departure route airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportRoute"/>
+    <rdfs:comment>Links to the airport from which this route is destined.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#sidstarID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>sidstar ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR"/>
+    <rdfs:comment>The FAA identifier for the SID or STAR. Typically, but not uniformly, 5 alpha characters plus a revision digit.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#includesARTCC">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+    <rdfs:label>includes ARTCC</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCCtier"/>
+    <rdfs:comment>A link between an ARTCC tier and the ARTCCs included in the tier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#isWeatherReportingStation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>is weather reporting station</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Indicates whether this airport is a METAR weather reporting station.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#CanadianAirport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#InternationalAirport"/>
+    <rdfs:label>Canadian airport</rdfs:label>
+    <rdfs:comment>The set of Canadian airports.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airCarrierAlias">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>air carrier alias</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:comment>An alternative name for an air carrier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#STAR">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR"/>
+    <rdfs:label>Standard Arrival Route</rdfs:label>
+    <rdfs:comment>A STAR (Standard Terminal Arrival Route) is an air traffic control coded arrival route established for application to arriving IFR (Instrument Flight Rules) aircraft destined for certain airports.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#DeicingPad">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Deicing pad</rdfs:label>
+    <rdfs:comment>A physical location in the airport where deicing is performed.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasSID">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SID"/>
+    <rdfs:label>has SID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Associates an airport with the the SIDs designated to route aircraft from that airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#JetRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#VORroute"/>
+    <rdfs:label>Jet route</rdfs:label>
+    <rdfs:comment>A high altitude airway based on ground-based VOR sensor locations.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airspaceLayerHighAltitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>airspace layer high altitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer"/>
+    <rdfs:comment>The upper altitude bound of an airspace layer.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasCommonRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#CommonRoute"/>
+    <rdfs:label>has common route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR"/>
+    <rdfs:comment>Associates a common route with a SID or STAR. A SID or STAR has a single common route, but can have multiple airport or transition routes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Airport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+    <rdfs:label>Airport</rdfs:label>
+    <rdfs:comment>A facility where regularly-scheduled aircraft arrive and depart.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#arrivalRouteAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>arrival route airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportRoute"/>
+    <rdfs:comment>Links to the airport for which this route is destined.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#gateID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>gate ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Gate"/>
+    <rdfs:comment>The gate identifier assigned by the airport authority.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#airportBoundary">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Polygonal2DRegion"/>
+    <rdfs:label>airport boundary</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>Links an airport to a representation of its perimeter boundary.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:oneOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#maxVisibility">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>max visibility</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RunwayVisibleRangeMeasurement"/>
+    <rdfs:comment>The upper bound of visibility in feet over the centerline of the runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#taxiwayFootprint">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Polygonal2DRegion"/>
+    <rdfs:label>taxiway location</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+    <rdfs:comment>Associates a taxiway with its bounding two-dimensional rectangle.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasLOAwith">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+    <rdfs:label>has LOA with</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+    <rdfs:comment>This property links a NAS facility to another NAS facility when there is a letter of agreement (LOA) in place between them.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#iataAirportCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>IATA Airport Code</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>The thre-letter IATA code assigned to the airport. Contrast with the ICAO and FAA airport codes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTransitionRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TransitionRoute"/>
+    <rdfs:label>has transition route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR"/>
+    <rdfs:comment>Associates a transition route with a SID or STAR. A SID or STAR has a single common route, but can have multiple airport or transition routes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#tierLevel">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>tier level</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCCtier"/>
+    <rdfs:comment>The degree number of the ARTCC tier. Tier 1 includes the central ARTCC plus all ARTCCs immediately adjoining the central ARTCC; tier 2 includes tier 1 plus all adjacent ARTCCs two steps away from the central ARTCC. And so on.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#RampTower">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Ramp tower</rdfs:label>
+    <rdfs:comment>A control tower from which ramp controllers guide aircraft movements as they enter and exit the taxiways, and arrive and leave the gates. The ramp is the area of the airport surface where planes, service vehicles, and people meet.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#startingTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    <rdfs:label>starting time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NAShour"/>
+    <rdfs:comment>The beginning of the hour stored as a datetime value.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Taxiway</rdfs:label>
+    <rdfs:comment>An airport surface leading that connects the ramp area (i.e., the area in the vicinity of the gates) with the runways.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirportRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTARroute"/>
+    <rdfs:label>Airport route</rdfs:label>
+    <rdfs:comment>A route within a SID or STAR that connects the common route to one of multiple airports that use the SID/STAR.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first>TRACON</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasRampTower">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RampTower"/>
+    <rdfs:label>has ramp tower</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+    <rdfs:comment>Associates an airport terminal with a ramp tower that controlls the aircraft and vehicle traffic in the vicinity of that terminal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Physical Runway</rdfs:label>
+    <rdfs:comment>A physical runway, defined as a delimited rectangular surface region of the airport. Each physical runway is associated with two operational runways, 180 degrees apart.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTRACONstate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has TRACONstate</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TRACON"/>
+    <rdfs:comment>The name of the US state in which the TRACON command center is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent"/>
+    <rdfs:label>SIDSTAR</rdfs:label>
+    <rdfs:comment>A superclass of SID and STAR defining the properties shared by both, specifically the set of common, airport, and transition routes that comprise the SID/STAR.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasGate">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Gate"/>
+    <rdfs:label>has gate</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+    <rdfs:comment>Associates an airport terminal with a aircraft gate located at that terminal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:unionOf rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#DeicingQueue">
+    <rdfs:subClassOf rdf:nodeID="A7"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>Deicing queue</rdfs:label>
+    <rdfs:comment>An ordered sequence of aircraft awaiting deicing at a deicing pad.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#SID">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR"/>
+    <rdfs:label>Standard Instrument Departure</rdfs:label>
+    <rdfs:comment>A SID (Standard Instrument Departure) is an air traffic control coded departure procedure that has been established at certain airports to simplify clearance delivery procedures.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>NAS facility</rdfs:label>
+    <rdfs:comment>The set of FAA and airport facilities involved in operational air traffic management.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Gate">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>Gate</rdfs:label>
+    <rdfs:comment>A physical interface between the aircraft and the terminal, used to board passengers and crew.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AviationServiceProvider">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Aviation service provider</rdfs:label>
+    <rdfs:comment>A superclass encompassing all entities that provide aviation services in the public and private sectors.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#VictorRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#VORroute"/>
+    <rdfs:label>Victor route</rdfs:label>
+    <rdfs:comment>A low altitude airway based on ground-based VOR sensor locations.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AircraftEngineManufacturer">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationIndustryManufacturer"/>
+    <rdfs:label>Aircraft engine manufacturer</rdfs:label>
+    <rdfs:comment>A manufacturer of aircraft engines.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#adjacentSector">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:label>adjacent sector</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:comment>Links a sector to an immediately adjacent sector that shares a boundary.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#terminalID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>terminal ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+    <rdfs:comment>The alphanumeric identifier of the airport terminal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#iataCarrierCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>IATA Carrier Code</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:comment>The two-letter IATA code assigned to the carrier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#NAShour">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>NAShour</rdfs:label>
+    <rdfs:comment>A class that represents an hour within a day. Events, such as flights, weather forecasts, and other events are linked to the instance of the day they occurred.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#ATCT">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:label>ATCT</rdfs:label>
+    <rdfs:comment>Air Traffic Control Tower (ATCT) facility</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTARroute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute"/>
+    <rdfs:label>SIDSTARroute</rdfs:label>
+    <rdfs:comment>A route that defines a SID or STAR.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#associatedAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>associated airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportInfrastructureComponent"/>
+    <rdfs:comment>Associates some component of airport infrastructure (runway, terminal, tower, etc.) with its airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#towerID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>tower ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ATCT"/>
+    <rdfs:comment>The FAA identifier for air traffic control tower.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#TRACON">
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASfacility"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent"/>
+    <rdfs:label>TRACON</rdfs:label>
+    <rdfs:comment>Terminal Radar Approach Control (TRACON) facility</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#faaAirportCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>FAA airport code</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>The alphanumeric FAA code of lenth 3 or 4 for the airport. Contrasted with the ICAO and IATA codes, which in general are different. Often the IATA and FAA codes are identical.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#FederalAirway">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute"/>
+    <rdfs:label>Federal airway</rdfs:label>
+    <rdfs:comment>An airspace route that is defined by FAA and can be filed as part of a flight plan: a jet route, a Q-route,  a T-Route, a Victor route.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#icaoAirportCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>ICAO airport code</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:comment>The four-letter ICAO code assignied to the airport. Contrast with the IATA and FAA airport codes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTRACONcity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has TRACONcity</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TRACON"/>
+    <rdfs:comment>The city name where the TRACON command center is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#hasTRACONtype"/>
+    <owl:allValuesFrom rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#CommonRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTARroute"/>
+    <rdfs:label>Common route</rdfs:label>
+    <rdfs:comment>The backbone portion of a SID or STAR that is flown by all aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasAirportRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportRoute"/>
+    <rdfs:label>has airport route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR"/>
+    <rdfs:comment>Associates an airport route with a SID or STAR. A SID or STAR has a single common route, but can have multiple airport or transition routes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#hasTRACONtype">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has TRACONtype</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TRACON"/>
+    <rdfs:comment>The type of TRACON: Tower-colocated TRACON or standalone TRACON.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#runwayFootprint">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Polygonal2DRegion"/>
+    <rdfs:label>runway footprint</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#PhysicalRunway"/>
+    <rdfs:comment>Associates a physical runway with its bounding two-dimensional rectangle.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#OperationalRunway"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#runwayID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>runway ID</rdfs:label>
+    <rdfs:domain rdf:nodeID="A6"/>
+    <rdfs:comment>An identifier for the runway. For physical runways, the convention is to label runways by their heading, dropping the last digit. E.g. for Liverpool, runway 9/27 is facing approximately magnetic heading 90 degrees in one direction, and 270 degrees in the opposite direction. If an airport has parallel runways, these would then be marked Left, Center and Right, e.g. 9L, 9C, 9R. For operational runways, the runway identifiers specifies one direction only: either 9 or 27 in the Liverpool example.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+</rdf:RDF>

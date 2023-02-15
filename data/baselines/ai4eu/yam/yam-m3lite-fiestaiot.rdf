@@ -1,0 +1,3709 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>11</type>
+  <onto1>
+    <Ontology rdf:about="http://purl.org/iot/vocab/m3-lite#">
+      <location>http://purl.org/iot/vocab/m3-lite#</location>
+    </Ontology>
+  </onto1>
+  <onto2>
+    <Ontology rdf:about="http://purl.org/iot/ontology/fiesta-iot#">
+      <location>http://purl.org/iot/ontology/fiesta-iot#</location>
+    </Ontology>
+  </onto2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AlarmSystem'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AlarmSystem'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Transportation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Transportation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microvolt'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microvolt'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateEmergencyVehicle'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateEmergencyVehicle'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Visibility'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Visibility'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DiastolicBloodPressure'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DiastolicBloodPressure'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GaseousPollutantSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GaseousPollutantSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Speed'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Speed'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Mileage'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Mileage'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MagneticField'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MagneticField'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SecondAngle'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SecondAngle'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Humidity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Humidity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionOfArrival'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionOfArrival'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MmHg'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MmHg'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Scale'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Scale'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindChillSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindChillSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Distance'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Distance'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NOSensor'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.5</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NOSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#NOSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pound'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pound'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SO2Sensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SO2Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SO2Sensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#NO2Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.97</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sirens'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sirens'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#HDOP'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#HDOP'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationSO2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationSO2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationSO2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.98</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ECG'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ECG'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lumen'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lumen'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrivalSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrivalSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Milligram'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Milligram'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CholesterolSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CholesterolSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilHumiditySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilHumiditySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Radian'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Radian'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Kelvin'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Kelvin'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#City'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#City'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SaltMeter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SaltMeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Accelerometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Accelerometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RecognizedActivity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RecognizedActivity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingStateDriver'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingStateDriver'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#IonisingRadiation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#IonisingRadiation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Gauss'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Gauss'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntDlLatency'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntDlLatency'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MinuteTime'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MinuteTime'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pascal'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pascal'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Acceleration'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Acceleration'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Ohm'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Ohm'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microgram'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microgram'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Emotion'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Emotion'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sodium'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sodium'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilMoistureTension'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilMoistureTension'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Telephone'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Telephone'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#COSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#COSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BoardVoltageSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BoardVoltageSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoltageSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoltageSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Platform'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Platform'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ProximitySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ProximitySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Device'/>
+      <entity2 rdf:resource='http://www.onem2m.org/ontology/Base_Ontology/base_ontology#Device'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Device'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Device'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TemperatureWasteContainer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TemperatureWasteContainer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Rainfall'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Rainfall'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#HouseholdApplianceTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#HouseholdApplianceTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#EAQI'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#EAQI'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millisecond'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millisecond'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricalSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricalSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelConsumption'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelConsumption'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CurrentSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CurrentSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LuminousIntensity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LuminousIntensity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateDriverCard2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateDriverCard2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Tonne'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Tonne'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DustSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DustSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#KilometrePerHour'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#KilometrePerHour'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NFC'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#NFC'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Bar'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Bar'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MetrePerSecondSquare'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MetrePerSecondSquare'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentrationNO3Ion'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentrationNO3Ion'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FrequencySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FrequencySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStatePeople'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStatePeople'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterNH4IonSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterNH4IonSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingStateDriver1'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingStateDriver1'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Environment'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Environment'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DistanceNextBusSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DistanceNextBusSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millilitre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millilitre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sink'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sink'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelConsumptionTotal'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelConsumptionTotal'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntUlThroughputKbps'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntUlThroughputKbps'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PressureSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PressureSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Precipitation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Precipitation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Agriculture'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Agriculture'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Manual'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Manual'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentration'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.99</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentration'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentration'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MilligramPerCubicMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MilligramPerCubicMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Blind'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Blind'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Freezer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Freezer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MetrePerSecond'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MetrePerSecond'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GasDetector'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GasDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TouchSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TouchSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelGasTank2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelGasTank2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricCurrent'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricCurrent'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AlcoholLevelSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AlcoholLevelSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SecondTime'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SecondTime'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#OxidationReductionPotentialSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#OxidationReductionPotentialSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MicrowattPerSquareCentimetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MicrowattPerSquareCentimetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GyrometerSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GyrometerSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#OpticalDustSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#OpticalDustSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirPollutantSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirPollutantSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Timestamp'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Timestamp'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Curtain'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Curtain'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountAvailableBicycles'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountAvailableBicycles'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Index'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Index'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterPHSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterPHSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PHSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PHSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Fan'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Fan'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GramPerLitre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GramPerLitre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#IEEE802154InterfaceEnergyMeter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#IEEE802154InterfaceEnergyMeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrivalNextBusSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrivalNextBusSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ConstructionWork'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ConstructionWork'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RFID'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RFID'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirConditioner'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirConditioner'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BeatPerMinute'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BeatPerMinute'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BodyTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BodyTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PartsPerBillion'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PartsPerBillion'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Invalid'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Invalid'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilThermometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilThermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationDust'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationDust'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/NET/ssnx/qu/qu#Unit'/>
+      <entity2 rdf:resource='http://purl.org/NET/ssnx/qu/qu#Unit'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelWasteContainer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelWasteContainer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LeafWetnessSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LeafWetnessSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SPO2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SPO2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedStateDriver'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedStateDriver'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Seismometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Seismometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelGasTank'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelGasTank'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrivalNextBus'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrivalNextBus'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionDirectionSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionDirectionSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LightSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LightSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeltaDewPointSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeltaDewPointSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationVOC'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationVOC'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AtmosphericPressureSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AtmosphericPressureSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountPeople'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountPeople'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pressure'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pressure'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundPressureLevelAmbient'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundPressureLevelAmbient'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField2100MHz'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField2100MHz'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FogLamp'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FogLamp'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateDriverCard1'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateDriverCard1'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lavatory'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lavatory'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MillimetrePerHour'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MillimetrePerHour'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Conductivity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Conductivity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterLevel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterLevel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindSpeedSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindSpeedSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NO2Sensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#NO2Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NO2Sensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SO2Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.97</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RadiationParticlesPerMinute'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RadiationParticlesPerMinute'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BuildingAutomation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BuildingAutomation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RotationalSpeed'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RotationalSpeed'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindDirection'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindDirection'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Degree'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Degree'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AtmosphericPressure'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AtmosphericPressure'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Tourism'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Tourism'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WeightSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WeightSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeviceUptime'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeviceUptime'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Count'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Count'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Weather'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Weather'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ESP'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ESP'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionAzimuth'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionAzimuth'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Potassium'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Potassium'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Miles'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Miles'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccS1SigEstabSuccRate'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccS1SigEstabSuccRate'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WiFiInterfaceEnergyMeter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WiFiInterfaceEnergyMeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelConsumptionInstantaneous'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelConsumptionInstantaneous'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountPeopleStaying'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountPeopleStaying'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WattPerSquareMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WattPerSquareMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Frequency'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Frequency'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Frequency'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Frequency'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.55</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeviceUptimeClock'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeviceUptimeClock'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Kilometre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Kilometre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WeatherPrecipitation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WeatherPrecipitation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Ventilation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Ventilation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MicrogramPerCubicMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MicrogramPerCubicMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirQuality'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirQuality'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MileageDistanceToService'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MileageDistanceToService'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Ampere'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Ampere'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pedometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pedometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DoorStateSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DoorStateSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lux'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lux'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DewPointSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DewPointSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Traffic'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Traffic'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sound'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sound'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SystolicBloodPressure'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SystolicBloodPressure'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationO3'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationO3'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Energy'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Energy'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Mass'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Mass'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SeatBeltTensionSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SeatBeltTensionSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MotionState'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MotionState'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LoRaInterface'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LoRaInterface'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedStateDriver2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedStateDriver2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionElevationSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionElevationSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PrecipitationSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PrecipitationSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Candela'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Candela'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Direction'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Direction'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millibar'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millibar'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WashingMachine'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WashingMachine'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BoardThermometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BoardThermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DecibelA'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Decibel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.99</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DecibelA'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DecibelA'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Illuminance'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Illuminance'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Thermometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Thermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MilligramPerSquareMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MilligramPerSquareMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterThermometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterThermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoiceCommand'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoiceCommand'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ThrottleSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ThrottleSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundSource'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundSource'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AutomaticSensing'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AutomaticSensing'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DecibelMilliwatt'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DecibelMilliwatt'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Voltage'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Voltage'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BodyThermometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BodyThermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BatteryLevel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BatteryLevel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateDriverCard'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateDriverCard'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirPollution'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirPollution'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Wout'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Wout'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingState'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingState'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Presence'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Presence'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Motion'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Motion'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MotionStateVehicle'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MotionStateVehicle'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateParking'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceStateParking'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindSpeed'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindSpeed'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MinuteAngle'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MinuteAngle'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SolarRadiationSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SolarRadiationSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DegreeCelsius'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DegreeCelsius'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterO2IonSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterO2IonSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MobHoPrepSuccRate'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MobHoPrepSuccRate'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AngularSpeed'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AngularSpeed'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricPotential'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricPotential'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionOfArrivalSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionOfArrivalSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MillivoltPerMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MillivoltPerMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AlcoholLevel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AlcoholLevel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccelerationInstantaneous'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccelerationInstantaneous'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BloodPressureSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BloodPressureSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BoardTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BoardTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RadianPerSecond'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RadianPerSecond'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Hour'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Hour'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountStatellitesSignalReceived'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountStatellitesSignalReceived'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RotationalSpeedEngine'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RotationalSpeedEngine'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleFlowCountSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleFlowCountSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehiclesPerMinute'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehiclesPerMinute'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Temperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Temperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SnowChains'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SnowChains'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MobHoExecSuccRate'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MobHoExecSuccRate'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LeafWetness'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LeafWetness'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#EnergyDOI'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#EnergyDOI'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceDetector'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PresenceDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionHeading'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DirectionHeading'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoadSurfaceThermometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoadSurfaceThermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Decibel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Decibel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Decibel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DecibelA'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.99</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MileageTotal'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MileageTotal'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MmolPerLitre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MmolPerLitre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LitrePer100Kilometres'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LitrePer100Kilometres'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PPM'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PPM'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Hydrophone'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Hydrophone'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehicleCountSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehicleCountSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DewPoint'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DewPoint'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lamp'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lamp'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Glucometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Glucometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindDirectionSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindDirectionSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DewPointTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DewPointTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Others'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Others'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Weight'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Weight'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField2400MHz'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField2400MHz'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Counter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Counter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehiclePresenceDetector'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VehiclePresenceDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/NET/ssnx/qu/qu#QuantityKind'/>
+      <entity2 rdf:resource='http://purl.org/NET/ssnx/qu/qu#QuantityKind'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Experiment'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Experiment'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentrationO2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentrationO2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Animals'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Animals'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Fridge'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Fridge'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TemperatureEngine'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TemperatureEngine'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RSSI'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RSSI'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DegreeFahrenheit'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DegreeFahrenheit'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccInitialERabSetupSuccRate'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccInitialERabSetupSuccRate'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Metre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Metre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SkinConductance'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SkinConductance'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MethaneSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MethaneSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Hertz'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Hertz'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BloodPressure'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BloodPressure'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#SensingDevice'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#SensingDevice'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RelativeHumidity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RelativeHumidity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Source'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Source'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleCountSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleCountSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Farad'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Farad'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CO2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CO2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoomTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoomTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ConductivitySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ConductivitySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FoodTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FoodTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelGasTank1'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevelGasTank1'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GramPerCubicMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GramPerCubicMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionDirection'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionDirection'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirHumiditySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirHumiditySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Drawer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Drawer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microwave'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microwave'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccInitialERabEstabSuccRate'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccInitialERabEstabSuccRate'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingStateDriver2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WorkingStateDriver2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MeasurementType'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MeasurementType'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoiceCommandSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoiceCommandSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#O3Sensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#O3Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CloudCoverSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CloudCoverSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CloudCover'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CloudCover'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PulseOxymeter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PulseOxymeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RetERabDrop'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RetERabDrop'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField1800MHz'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField1800MHz'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeltaDewPoint'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DeltaDewPoint'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#HumanPresenceDetector'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#HumanPresenceDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Kilogram'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Kilogram'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#EnergyMeter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#EnergyMeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoadTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoadTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentConcentration'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentConcentration'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterNO3IonSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterNO3IonSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentration'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentration'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindChill'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WindChill'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNH3'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNH3'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Salinity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Salinity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#KilobitsPerSecond'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#KilobitsPerSecond'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrival'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeOfArrival'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RevolutionsPerMinute'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RevolutionsPerMinute'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SiemensPerMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SiemensPerMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Volt'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Volt'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BloodGlucose'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BloodGlucose'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedMedian'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedMedian'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Bus'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Bus'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RadiationParticleDetector'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RadiationParticleDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricalResistance'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricalResistance'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microampere'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microampere'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LoRaInterfaceEnergyMeter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LoRaInterfaceEnergyMeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LocationQK'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LocationQK'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntDlThroughputKbps'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntDlThroughputKbps'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricCharge'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricCharge'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField900Mhz'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricField900Mhz'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Okta'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Okta'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PublicTransit'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PublicTransit'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoadOccupancy'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#RoadOccupancy'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Clock'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Clock'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Day'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Day'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Capacitance'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Capacitance'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#StayingPeopleCountSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#StayingPeopleCountSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WeatherLuminosity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WeatherLuminosity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentration'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.99</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DoorStatus'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DoorStatus'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millimetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millimetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#KilogramPerCubicMetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#KilogramPerCubicMetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntUlPacketLoss'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#IntUlPacketLoss'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FallDetector'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FallDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DistanceNextBus'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DistanceNextBus'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Item'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Item'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#HeartBeatSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#HeartBeatSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Heating'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Heating'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Gram'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Gram'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentrationNH4Ion'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentWaterConcentrationNH4Ion'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilHumidity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoilHumidity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GyroscopeSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GyroscopeSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LuminousFlux'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#LuminousFlux'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundPressureLevel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SoundPressureLevel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedState'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedState'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Computer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Computer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Boiler'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Boiler'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ABS'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ABS'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.91</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#BuildingTemperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#BuildingTemperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Tesla'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Tesla'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NH3Sensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#NH3Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#KiloWattHour'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#KiloWattHour'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Calcium'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Calibration'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.86</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Calcium'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Calcium'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Milliwatt'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Milliwatt'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Proximity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Proximity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedAverage'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedAverage'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Magnetometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Magnetometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Door'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Door'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ShakeSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ShakeSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SmokeDetector'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SmokeDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SolarRadiation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SolarRadiation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MagneticFluxDensity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MagneticFluxDensity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountEmptyDockingPoints'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountEmptyDockingPoints'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Odometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Odometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GPSSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GPSSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/UNIS/fiware/iot-lite#TagDevice'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/UNIS/fiware/iot-lite#TagDevice'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Year'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Year'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterConductivitySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterConductivitySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DomainOfInterest'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DomainOfInterest'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedStateDriver1'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TimeRelatedStateDriver1'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MilligramPerLitre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MilligramPerLitre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microwatt'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Microwatt'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Neighbours'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Neighbours'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DishWasher'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DishWasher'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Window'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Window'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MobMobilitySuccRate'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#MobMobilitySuccRate'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Milliampere'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Milliampere'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Irrigation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Irrigation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#OxygenSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#OxygenSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricFieldSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ElectricFieldSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Watt'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Watt'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationNO2'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationSO2'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.98</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelLevel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FuelLevel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Barcode'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Barcode'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Coulomb'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Coulomb'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ResAverageLicConnectedUsers'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ResAverageLicConnectedUsers'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionElevation'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SunPositionElevation'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VisibilitySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VisibilitySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevel'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#FillLevel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ImageSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ImageSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DegreeAngle'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DegreeAngle'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationCO'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationCO'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Inch'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Inch'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#HeartBeat'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#HeartBeat'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Percent'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Percent'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Power'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Power'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Communication'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Communication'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#QRCode'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#QRCode'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedInstantaneous'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SpeedInstantaneous'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#DistanceSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DistanceSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Place'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Place'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleStayDurationSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleStayDurationSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TV'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TV'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.91</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Cupboard'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Cupboard'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SkinConductanceSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SkinConductanceSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VOCSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VOCSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoltAmpereReactive'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoltAmpereReactive'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CO2Sensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CO2Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationAirParticles'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ChemicalAgentAtmosphericConcentrationAirParticles'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ReactivePower'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ReactivePower'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CoffeeMachine'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CoffeeMachine'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Dimensionless'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Dimensionless'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountAvailableTaxis'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountAvailableTaxis'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Step'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Step'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Cholesterol'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Cholesterol'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirThermometer'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AirThermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleStayDurationAverage'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#PeopleStayDurationAverage'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#TrafficIntensity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#TrafficIntensity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Coordinates'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Coordinates'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoiceCommandController'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#VoiceCommandController'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SNR'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SNR'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millivolt'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Millivolt'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Crowd'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Crowd'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#H2SSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#H2SSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Centibar'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Centibar'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Shower'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Shower'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Centimetre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Centimetre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Litre'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Litre'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ActivePower'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ActivePower'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Health'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Health'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccRrcConnSetupSuccRate'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#AccRrcConnSetupSuccRate'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#UltrasonicSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#UltrasonicSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#HumiditySensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#HumiditySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountPeopleMoving'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#CountPeopleMoving'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>

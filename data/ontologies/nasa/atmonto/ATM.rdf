@@ -1,0 +1,1946 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#"
+    xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+    xmlns:nas="https://data.nasa.gov/ontologies/atmonto/NAS#"
+    xmlns:gen="https://data.nasa.gov/ontologies/atmonto/general#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:doc="https://data.nasa.gov/ontologies/atmonto/documentation#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#aircraftWeightCat"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NRSfix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#LatLonFix"/>
+    <rdfs:label>NRS fix</rdfs:label>
+    <rdfs:comment>The NRS is a system of waypoints developed for use within the United States for flight planning and navigation without reference to ground based navigational aids. The NRS waypoints are located in a grid pattern along defined latitude and longitude lines. NRS waypoint names are composed of two letters followed by two numbers, followed by a single letter. The first and second characters of NRS waypoints are the FIR identifier for the United States (“K”) and the FIR subdivision, or ARTCC center in which the waypoint is located (e.g. “D” for Denver ARTCC). The third and fourth characters are a number group representing the latitude of the waypoint. These numbers begin at the equator with 00 and advances north and south from 01 to 90 and correspond to every 10 minutes of latitude and repeating every 15°. The final character in the NRS waypoint is a letter representing the line of longitude for which the waypoint is located. This identifier starts at the prime meridian moving west to east and uses the letters A to Z while repeating every 26°. To date, the current density of the NRS grid is one waypoint spaced every 30 minutes of latitude and every 2° of longitude.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteReason"/>
+    <owl:allValuesFrom rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first>runway</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#MeterFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AbsoluteFix"/>
+    <rdfs:label>Meter fix</rdfs:label>
+    <rdfs:comment>A fix defined as an point in the terminal airspace through which flights are metered by air traffic control on approach.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#includesAirportType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>includes airport type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:comment>Indicates which type of airports are included in the set of airports covered by this airport specification: all, US, CONUS, NonCONUS, International, Canadian. This property allows for the implicit specification of an entire class of airports; the property atm:includesAirport allows for the explicit specification of a list of specific airports.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first>large</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first>origin</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#extensionProbability"/>
+    <owl:allValuesFrom rdf:nodeID="A10"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#hasCrewMember">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#CrewMember"/>
+    <rdfs:label>has crew member</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight to its crew members.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#flowCapacity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>flow capacity</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftCapacity"/>
+    <rdfs:comment>The maximum controllable number of aircraft flowing through an airspace region per some interval of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#publishedDepartureDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>published departure day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the day that the flight is planned to depart per the OAG schedule.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#alternateArrivalAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>alternate arrival airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the alternate arrival airport to be used in case of weather, traffic, or other unforseen contingency. The alternate airport is specified in the flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#hasNumericParameter"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>actual arrival time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The time determined by surveillance data sources to be the 'actual' time of flight arrival, versus the scheduled time or the time specified in the flight plan, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:nodeID="A13"/>
+    <rdf:first>Jet</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteTimeType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>ReRoute time type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI"/>
+    <rdfs:comment>The time period associated with the reroute is specified in one of three ways. The reroute can apply to flights that: depart specified airports or centers during a certain time window (timeType=ETD); depart specified airports or centers to arrive at their destinations during a certain time window (timeType=ETA); or arrive at the boundary of a flow constrained area during a certain time window (timeType=FCA Flight List).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#extensionProbability"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#impactingCondition"/>
+    <owl:allValuesFrom rdf:nodeID="A16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:oneOf rdf:nodeID="A18"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRate">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#IntegerParameter"/>
+    <rdfs:label>Program arrival rate</rdfs:label>
+    <rdfs:comment>The number of aircraft that the Ground Delay Program (GDP) is to provide to the airport for a given hour.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#hasActualRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ActualFlightRoute"/>
+    <rdfs:label>has actual route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight to its actual trajectory (i.e., a sequence of track points), as determined by flight track surveillance data.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:rest rdf:nodeID="A20"/>
+    <rdf:first>INFORMATIONAL</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#fixId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>fix ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:comment>A non-unique FAA identifier for a fix. When combined with a fix ICAO code, it defines a unique fix worldwide. Often, but not always, the fixId is identical to the fixName.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#issuedTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>issued time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>The time when the traffic management initiative (TMI) was issued.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:rest rdf:nodeID="A22"/>
+    <rdf:first>VOLUME</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#prevTotalDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>previous total delay minutes</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The total flight delay experienced prior to the start of a Ground Stop(GS).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteTimeType"/>
+    <owl:allValuesFrom rdf:nodeID="A24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:rest rdf:nodeID="A26"/>
+    <rdf:first>MEDIUM</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#flightInclusionSpec">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:label>flight inclusion spec</rdfs:label>
+    <rdfs:domain rdf:nodeID="A27"/>
+    <rdfs:comment>Links a Ground Delay Program (GDP) or a Ground Stop (GS) to a specification of the flight(s) included in the traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#flightRouteString">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>flight route string</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdfs:comment>A string that provides the route of flight proposed in a flight plan. Syntactically, the string shows a path of fixes, airways, SIDs, and STARs, separated by either one or two dots. The string is parsed to create an equivalent ontology representation: an ordered sequence of navigation elements that are associated directly with the flight plan (atm:PlannedFlightRoute).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#SIDSTARtraverse">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationElement"/>
+    <rdfs:label>SIDSTARtraverse</rdfs:label>
+    <rdfs:comment>A route through a SID (Standard Instrument Departure route) or a STAR (Standard Arrival Route), traversing a common route at minimum and optionally a transition route and/or an airport route.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#planGapAfterSequenceElementNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>plan gap after sequence element number</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdfs:comment>Indicates the location of a gap in the flight plan due to non-parsable/uninterpretable elements in the flight plan string.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#effectiveStartDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>effective start day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>Links to the expected starting day of the traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#includesAirportType"/>
+    <owl:allValuesFrom rdf:nodeID="A29"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:rest rdf:nodeID="A32"/>
+    <rdf:first>equipment</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCCtier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#mustHaveOrigin">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:label>must have origin</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to an airport specification describing the originating airports for the flights being specified. Any flight covered by the flight specification must have as its origin one of the airports covered by the airport specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactorContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#includesAirway">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute"/>
+    <rdfs:label>includes airway</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one of more airways (routes). Any flight that traverses a linked airway is included in the set of flights covered by this flight specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative">
+    <rdfs:subClassOf rdf:nodeID="A36"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Traffic management initiative</rdfs:label>
+    <rdfs:comment>A Traffic Management Initiative (TMI) is an orchestrated air traffic management procedure implemented as needed to control the flow of air traffic in the NAS based on capacity and demand.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#trueAirspeed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>true airspeed</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The true airspeed of a flight: the speed of the aircraft relative to the airmass in which it is flying.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:rest rdf:nodeID="A38"/>
+    <rdf:first>NonCONUS</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <owl:oneOf rdf:nodeID="A39"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#adsbID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>adsb ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The unique identifier of the ADS-B (Automatic Dependent Surveillance - Broadcast) transponder unit on board the aircraft for this flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>ReRoute type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI"/>
+    <rdfs:comment>The ReRoute type encodes information about the type of ReRoute being initiated or the reason for the ReRoute. One of the following: ROUTE , PLAYBOOK , CDR, SPECIAL OPERATIONS, NRP SUSPENSIONS, VS , NAT, SHUTTLE ACTIVITY, FCA, FEA, INFORMATIONAL, MISCELLANEOUS.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reportingTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>reporting time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdfs:comment>The time when an en route aircraft passed through a trackpoint and reported its position, speed, and heading.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>other</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#exemptedAFP">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirspaceFlowProgramTMI"/>
+    <rdfs:label>exempted AFP</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one of more Airspace Flow Program (AFP) traffic management initiatives (TMIs). Any flight included in one of the linked AFPs is excluded from the set of flights covered by this flight specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#CrewMember">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Crew member</rdfs:label>
+    <rdfs:comment>The set of inflight airline personnel operating or performing servicing functions on a flight (pilots and cabin attendants).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavElementContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationPath"/>
+    <rdfs:label>Planned flight route</rdfs:label>
+    <rdfs:comment>A planned flight route is an ordered sequence of navigation elements that the pilot intends to traverse en route from origin to destination airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#flightInclusionExclusion">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:label>flight inclusion exclusion</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI"/>
+    <rdfs:comment>Links a ReRoute to a specification of the flight(s) included in or excluded from the ReRoute traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRateContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#withinAirportBoundingRegion">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#CircularRegion"/>
+    <rdfs:label>within airport bounding region</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:comment>Links an airport specification to a circular geographic region. Only airports whose locations fall within this region satisfy the specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:rest rdf:nodeID="A43"/>
+    <rdf:first>Air Taxi</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#actualArrivalDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>actual arrival day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight with the day on which the flight arrives. This is the day determined by surveillance data sources to be the 'actual' day of arrival, versus the scheduled day or the day specified in the flight plan, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#prevMaximumDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>previous maximum delay minutes</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The maximum flight delay experienced prior to the start of a Ground Stop(GS).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#advisoryNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>advisory number</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>Advisory number as reported from the FAA Command Center database. it restarts at 001 on every new day UTC.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:rest rdf:nodeID="A45"/>
+    <rdf:first>MEDIUM</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#impactingCondition">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>impacting condition</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundDelayProgramTMI"/>
+    <rdfs:comment>Indicates the reason for initiating the Ground Delay Program: weather, volume, runway, equipment, other.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#radialAngle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>radial angle</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RadialRoute"/>
+    <rdfs:comment>The angle (in degrees) that defines the radial route's angular position with respect to the defined fix.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteType"/>
+    <owl:allValuesFrom rdf:nodeID="A47"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#operatingTimeInterval">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#TimeInterval"/>
+    <rdfs:label>operating time interval</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to a time interval. Each flight covered by the specification must be airborne sometime during the time period specified by the interval.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AirspaceRouteSegment">
+    <rdfs:subClassOf rdf:nodeID="A48"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationSubPath"/>
+    <rdfs:label>Airspace route segment</rdfs:label>
+    <rdfs:comment>A contiguous portion of an existing airspace route.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:nodeID="A49"/>
+    <rdf:first>heavy</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#aircraftCount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>aircraft count</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlow"/>
+    <rdfs:comment>The number of aircraft flowing through an airspace region per some interval of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#timeConstraintType"/>
+    <owl:allValuesFrom rdf:nodeID="A51"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:rest rdf:nodeID="A53"/>
+    <rdf:first>weather</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationSubPath">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SubSequence"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationElement"/>
+    <rdfs:label>Navigation SubPath</rdfs:label>
+    <rdfs:comment>A contiguous portion of an existing navigation path.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:rest rdf:nodeID="A55"/>
+    <rdf:first>Prop</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#timeConstraintType"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel">
+    <rdfs:subClassOf rdf:nodeID="A57"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>GDPmodel</rdfs:label>
+    <rdfs:comment>This class represents a computational delay model used in assigning times to the aircraft involved in the GDP or GS. The properties of this class correspond to parameters that are used by the delay model to compute the delay times.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <owl:unionOf rdf:nodeID="A59"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#LatLonFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AbsoluteFix"/>
+    <rdfs:label>Lat-lon fix</rdfs:label>
+    <rdfs:comment>A navigation fix based on latitude/longitude coordinates.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:rest rdf:nodeID="A62"/>
+    <rdf:first>SPECIAL OPERATIONS</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AirportFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#VORfix"/>
+    <rdfs:label>Airport Fix</rdfs:label>
+    <rdfs:comment>A subclass of navigation fix corresponding to fixes associated directly with a ground reference point that is an airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#FlightPlanSegment">
+    <rdfs:subClassOf rdf:nodeID="A63"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationSubPath"/>
+    <rdfs:label>Flight plan segment</rdfs:label>
+    <rdfs:comment>A contiguous portion of a complete flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#arrivalRunway">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#OperationalRunway"/>
+    <rdfs:label>arrival runway</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the actual arrival runway for the flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#includesFix">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:label>includes fix</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one of more navigation fixes. Any flight that traverses a linked fix is included in the set of flights covered by this flight specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteReason"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#delayAssignmentMode"/>
+    <owl:allValuesFrom rdf:nodeID="A65"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#GroundDelayProgramTMI">
+    <rdfs:subClassOf rdf:nodeID="A66"/>
+    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdfs:subClassOf rdf:nodeID="A67"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:label>Ground Delay Program (GDP)</rdfs:label>
+    <rdfs:comment>A Ground Delay Program (GDP) traffic management initiative (TMI). A Ground Delay Program (GDP) is a traffic management procedure where aircraft are delayed at their departure airport in order to manage demand and capacity at their arrival airport.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <owl:oneOf rdf:nodeID="A52"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#prevAverageDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>previous average delay minutes</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The average flight delay experienced prior to the start of a Ground Stop(GS).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <rdf:rest rdf:nodeID="A70"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundDelayProgramTMI"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:rest rdf:nodeID="A33"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#Airport">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#aircraftFlown">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:label>aircraft flown</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight with the actual aircraft used.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationPath">
+    <rdfs:subClassOf rdf:nodeID="A71"/>
+    <rdfs:subClassOf rdf:nodeID="A72"/>
+    <rdfs:subClassOf rdf:nodeID="A40"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationElement"/>
+    <rdfs:label>Navigation path</rdfs:label>
+    <rdfs:comment>An ordered sequence of navigation elements (fixes, routes, airports) representing a path through the airspace.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteTimeType"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#VORfix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavaidFix"/>
+    <rdfs:label>VOR Fix</rdfs:label>
+    <rdfs:comment>A fix based on the location of a ground-based VOR (VHF Omni Directional Radio Range) installation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCCtier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <owl:oneOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NavaidFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AbsoluteFix"/>
+    <rdfs:label>NavaidFix</rdfs:label>
+    <rdfs:comment>A fix based on the location of a ground-based Navigation Aid (Navaid) installation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#operatingCarrier">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:label>operating carrier</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one or more carrier airline(s). Each flight covered by the specification must be operated by one of these carriers.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#modeledAverageDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>modeled average delay minutes</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The average flight delay specified when modeling a Ground Delay Program (GDP) or Ground Stop(GS).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#ActualFlightRoute">
+    <rdfs:subClassOf rdf:nodeID="A77"/>
+    <rdfs:subClassOf rdf:nodeID="A73"/>
+    <rdfs:subClassOf rdf:nodeID="A35"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>Actual Flight Route</rdfs:label>
+    <rdfs:comment>A flight trajectory (i.e., a sequence of track points), as determined by flight track surveillance data.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:oneOf rdf:nodeID="A78"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <rdf:rest rdf:nodeID="A80"/>
+    <rdf:first>Turbo</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#modeledBy">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:label>modeled by</rdfs:label>
+    <rdfs:domain rdf:nodeID="A81"/>
+    <rdfs:comment>Links a Ground Delay Program (GDP) or a Ground Stop (GS) to a representation of the model used to design that initiative. The model contains all relevant parameters used to create the initiative.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#controlledNASelement"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:rest rdf:nodeID="A79"/>
+    <rdf:first>Jet and Prop</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <owl:oneOf rdf:nodeID="A83"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#GDPmodel">
+    <rdfs:comment>This model provides parameters to the code that assigns times to the aircraft involved in the GDP or GS</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#hasNumericParameter">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#NumericParameter"/>
+    <rdfs:label>has numeric parameter</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NumericParameterContainer"/>
+    <rdfs:comment>Links a container for a numerical parameter to the numerical parameter contained.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#publishedDepartureTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>published departure time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The time that the flight is planned to depart per the OAG schedule.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:rest rdf:nodeID="A84"/>
+    <rdf:first>Cargo</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#departureTaxiPath">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Taxipath"/>
+    <rdfs:label>departure taxi path</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the taxipath followed by the flight en route to the runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>ETA</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRateContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#modeledMaximumDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>modeled maximum delay minutes</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The maximum flight delay specified when modeling a Ground Delay Program (GDP) or Ground Stop(GS).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A50"/>
+    <rdfs:subClassOf rdf:nodeID="A87"/>
+    <rdfs:subClassOf rdf:nodeID="A56"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Flight spec</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A88"/>
+    <rdfs:subClassOf rdf:nodeID="A89"/>
+    <rdfs:subClassOf rdf:nodeID="A90"/>
+    <rdfs:subClassOf rdf:nodeID="A91"/>
+    <rdfs:comment>A specification describing a set of flights.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#impactingConditionMessage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>impacting condition message</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundDelayProgramTMI"/>
+    <rdfs:comment>A free-text descriptoin elaborating on the reason for initiating the Ground Delay Program.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#extensionProbability"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:rest rdf:nodeID="A93"/>
+    <rdf:first>International</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:nodeID="A94"/>
+    <rdf:first>all</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#operatedBy">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirCarrier"/>
+    <rdfs:label>operated by</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight to its carrier airline.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#fixTrajectoryString">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>fix trajectory string</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>This is an experimental property of a flight that stores an ordered sequence of named fixes corresponding one-to-one to the sequence of trajectory track points recorded for the flight. For a given track point, the corresponding named fix is computed by finding the closest named fix to the track point.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#aircraftWeightCat"/>
+    <owl:allValuesFrom rdf:nodeID="A76"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#departureScope">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:label>departure scope</rdfs:label>
+    <rdfs:domain rdf:nodeID="A96"/>
+    <rdfs:comment>Links a Ground Delay Program (GDP) or a Ground Stop (GS) to a specification of the departure airport(s) participating in the traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <rdf:rest rdf:nodeID="A98"/>
+    <rdf:first>Cargo</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#excludesFix">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:label>excludes fix</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one of more navigation fixes. Any flight that traverses a linked fix is excluded from the set of flights covered by this flight specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlow">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity"/>
+    <rdfs:label>Aircraft flow</rdfs:label>
+    <rdfs:comment>A subclass of interval-based data representing the number of aircraft flowing through an airspace region during some interval of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#modeledArrivalRate">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRateSequence"/>
+    <rdfs:label>modeled arrival rate</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>Links a delay model used in defining a Ground Delay Program (GDP) or Ground Stop(GS) to a sequence of desired hourly aircraft arrival rates specified for the initiative.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <owl:oneOf rdf:nodeID="A100"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#GPSfix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#LatLonFix"/>
+    <rdfs:label>GPS fix</rdfs:label>
+    <rdfs:comment>A navigation fix defined by GPS coordinates.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <owl:unionOf rdf:nodeID="A102"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#hasNavElement">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationElement"/>
+    <rdfs:label>has navigation element</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavElementContainer"/>
+    <rdfs:comment>Links a container for a navigational element to the element contained.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#relativeDistance">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>relative distance</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#RelativeFix"/>
+    <rdfs:comment>The distance (in nautical miles) between a relative fix and its defining (absolute) fix.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#aircraftFix">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:label>aircraft fix</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdfs:comment>Links an aircraft track point with its associated navigation fix.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <rdf:rest rdf:nodeID="A104"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundDelayProgramTMI"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#includesAircraftClass"/>
+    <owl:allValuesFrom rdf:nodeID="A105"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#planFilingDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>plan filing day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdfs:comment>Links to the day when the flight plan was filed with the FAA.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#hasPlannedRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdfs:label>has planned route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight to a version of its flight plan. (Which version gets stored is application-dependent.) There are multiple versions of the flight plan generated and then amended during the course of the flight, starting in the pre-flight timeframe and extending through to the termination of the flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>FCA Flight List</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#initiativeComments">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>Provides any specific comments on the traffic management initiative (TMI) made by the issuing authority (e.g., ATCSCC, ARTCC).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#GroundStopTMI">
+    <rdfs:subClassOf rdf:nodeID="A92"/>
+    <rdfs:subClassOf rdf:nodeID="A107"/>
+    <rdfs:subClassOf rdf:nodeID="A108"/>
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:nodeID="A82"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:label>Ground Stop (GS)</rdfs:label>
+    <rdfs:comment>A Ground Stop (GS) traffic management initiative (TMI). A ground stop is a procedure requiring aircraft that meet specific criteria to remain on the ground. The GS may be airport specific, related to a geographical area, or equipment related.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NumericParameterContainer">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>Numeric parameter container</rdfs:label>
+    <rdfs:comment>A wrapper around a numeric parameter. Containers can be sequenced to create an ordered list of numeric parameters.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#issuedDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>issued day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>Links to the day when the traffic management initiative (TMI) was issued.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#excludesAirway">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute"/>
+    <rdfs:label>excludes airway</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one of more airways (routes). Any flight that traverses a linked airway is excluded from the set of flights covered by this flight specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <rdf:rest rdf:nodeID="A75"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#ARTCC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#aircraftWeightCat">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>aircraft weight category</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Indicates the weight category as part of a flight specification constraint.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:rest rdf:nodeID="A109"/>
+    <rdf:first>volume</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedDepartureDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>planned departure day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the day that the flight is planned to depart per the flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#usesAirportRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirportRoute"/>
+    <rdfs:label>uses airport route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#SIDSTARtraverse"/>
+    <rdfs:comment>Links a SIDSTARtraverse (a path through a SID/STAR) to the airport route used in making the traverse.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#delayAssignmentMode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>delay assignment mode</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The type of delay assignment mode specified for this delay model: DAS, GAAP, or UDP.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec">
+    <rdfs:subClassOf rdf:nodeID="A28"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Airport spec</rdfs:label>
+    <rdfs:comment>A specification of a set of airports.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#includesAircraftClass"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <owl:oneOf rdf:nodeID="A111"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#relativeAngle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>relative angle</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#RelativeFix"/>
+    <rdfs:comment>The angular direction in degrees (1-360) of a relative fix with respect to its defining absolute fix.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#adlTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>adl time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The timestamp of the ADL (Aggregate Demand List) that the delay model is based upon. Each ADL contains information on the flights arriving and departing from an airport, or entering into and departing from a flow area.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <rdf:rest rdf:nodeID="A19"/>
+    <rdf:first>FEA</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRateContainer">
+    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NumericParameterContainer"/>
+    <rdfs:label>Program arrival rate container</rdfs:label>
+    <rdfs:comment>A wrapper around a program arrival rate, used to sequence them into an ordered list.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#MilesInTrailTMI">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:label>Miles in Trail (MIT)</rdfs:label>
+    <rdfs:comment>A Miles-in-Trail (MIT) traffic management initiative (TMI) is used to apportion traffic into a manageable flow, as well as provide space for additional traffic (merging or departing) to enter the flow of traffic. Miles-in-trail describes the number of miles required between aircraft departing an airport, over a fix, at an altitude, through a sector, or on a specific route.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#includesFlight">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:label>includes flight</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one of more flights. Any linked flight is included in the set of flights covered by this flight specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationPath"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#implementationStatus"/>
+    <owl:allValuesFrom rdf:nodeID="A114"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#includesAircraftClass">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>includes aircraft class</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Indicates which class of aircraft the flights defined by this specification must employ: jet, prop, jet and prop, turbo, all.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>HIGH</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#adlDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>adl day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>Links a delay model to the day that the ADL (Aggregate Demand List) was generated. Each ADL contains information on the flights arriving and departing from an airport, or entering into and departing from a flow area.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#userCategory"/>
+    <owl:allValuesFrom rdf:nodeID="A17"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#Flight">
+    <rdfs:subClassOf rdf:nodeID="A115"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Flight</rdfs:label>
+    <rdfs:comment>A single flight segment from origin to destination.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#flightPlanETA">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>flight plan ETA</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdfs:comment>The estimated time of arrival specified in the flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <rdf:rest rdf:nodeID="A116"/>
+    <rdf:first>GA</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactorContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#locatedInSector">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Sector"/>
+    <rdfs:label>located in sector</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:comment>Links a navigation fix to the airspace sector in which that fix is located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#excludesFlight">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:label>excludes flight</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to one of more flights. Any linked flight is excluded from the set of flights covered by this flight specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#usesTransitionRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TransitionRoute"/>
+    <rdfs:label>uses transition route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#SIDSTARtraverse"/>
+    <rdfs:comment>Links a SIDSTARtraverse (a path through a SID/STAR) to the transition route used in making the traverse.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#effectiveStartTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>effective start time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>The expected start time of the traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationElement"/>
+    <rdfs:label>Navigation fix</rdfs:label>
+    <rdfs:comment>A designated point on the surface of the earth used for aeronautical navigation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NavElementContainer">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>Navigation element container</rdfs:label>
+    <rdfs:comment>A navigation element container is a wrapper around an existing navigation element, such as a fix or a route. These containers can be sequenced together to represent flight paths and flight trajectories.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#traconID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>tracon ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Three letter FAA TRACON identifier code.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedArrivalDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>planned arrival day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the day that the flight is planned to arrive per the flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#publishedArrivalDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>published arrival day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the day that the flight is planned to arrive per the OAG schedule.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:oneOf rdf:nodeID="A118"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#excludesARTCC">
+    <rdfs:range rdf:nodeID="A58"/>
+    <rdfs:label>excludes ARTCC</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:comment>Links an airport specification to one of more ARTCCs (Centers) or ARTCC tiers (Centers radiating out from a give ARTCC). Any airport within the ARTCC or ARTCC tier is excluded from the set of airports covered by this airport specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <rdf:rest rdf:nodeID="A119"/>
+    <rdf:first>NONE</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <rdf:rest rdf:nodeID="A121"/>
+    <rdf:first>RMD</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reRoutePath">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdfs:label>re route path</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteSegment"/>
+    <rdfs:comment>Links a route segment alternative (specified as part of a ReRoute traffic management initiative) to its associated flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#aircraftTypeFlown">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+    <rdfs:label>aircraft type flown</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight with the type of aircraft flown. The aircraft 'type' corresponds to a set of aircraft models with similar characteristics.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRateContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>MISCELLANEOUS</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:unionOf rdf:nodeID="A69"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#fixName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>fix name</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:comment>A unique FAA identier for a fix that can be filed as part of a flight plan. The fix name conceptually represents the worldwide-unique combination of a FixID and ICAO code. Often, but not always, the fixId is identical to the fixName.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <rdf:rest rdf:nodeID="A124"/>
+    <rdf:first>FYI</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <rdf:rest rdf:nodeID="A97"/>
+    <rdf:first>Air Taxi</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#TFMcontrolElement">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>TFM control element</rdfs:label>
+    <rdfs:comment>Any NAS entity that is potentially controlled via a TFM initiative.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#subsequenceOf"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceRoute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AbsoluteFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:label>Absolute fix</rdfs:label>
+    <rdfs:comment>A fix based on some established global measuring scheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reportingDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>reporting day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdfs:comment>A link between an aircraft track point and the day during which an en route aircraft traversed that point and reported its position, speed, and heading.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <rdf:rest rdf:nodeID="A126"/>
+    <rdf:first>MEDIUM</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>HIGH</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#publishedArrivalTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>published arrival time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The time that the flight is planned to arrive per the OAG schedule.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:oneOf rdf:nodeID="A127"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#mustHaveDestination">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:label>must have destination</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Links a flight specification to an airport specification describing the destination airports for the flights being specified. Any flight covered by the flight specification must have as its destination one of the airports covered by the airport specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>Canadian</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>All</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <rdf:rest rdf:nodeID="A128"/>
+    <rdf:first>weather</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity">
+    <rdfs:label>Aircraft flow capacity</rdfs:label>
+    <rdfs:comment>A subclass of interval-based data representing the maximum controllable number of aircraft flowing through an airspace region during some interval of time, given weather and other air traffic control constraints.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteSegmentType"/>
+    <owl:allValuesFrom rdf:nodeID="A130"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#controlledNASelement"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundStopTMI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteConstraint">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:label>reroute constraint</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteSegment"/>
+    <rdfs:comment>Links a route segment specified as part of a ReRoute traffic management initiative (TMI) to a flight specification indicating which flights are permitted to follow the route segment.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A131"/>
+    <rdf:first>equipment</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#timeConstraintType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>time constraint type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:comment>Specifies the type of flight time being constrained in this flight specification: either ETA (estimated arrival time) or ETD (estimated departure time).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceInfrastructureComponent">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TFMcontrolElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#arrivalTaxiPath">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Taxipath"/>
+    <rdfs:label>arrival taxi path</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the taxipath followed by the flight en route to the gate.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactorSequence">
+    <rdfs:subClassOf rdf:nodeID="A117"/>
+    <rdfs:subClassOf rdf:nodeID="A132"/>
+    <rdfs:subClassOf rdf:nodeID="A34"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>Popup Factor Sequence</rdfs:label>
+    <rdfs:comment>An ordered sequence of hourly popup factors used in specifying a Ground Delay Program (GDP).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#actualDepartureTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>actual departure time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The time determined by surveillance data sources to be the 'actual' time of flight departure, versus the scheduled time or the time specified in the flight plan, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <rdf:rest rdf:nodeID="A112"/>
+    <rdf:first>FCA</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#arrivalAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>arrival airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the actual arrival airport for the flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:first>WEATHER</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#IntersectionFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AbsoluteFix"/>
+    <rdfs:label>Intersection fix</rdfs:label>
+    <rdfs:comment>A navigation fix defined by the intersection of two airspace routes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#ProgramArrivalRateSequence">
+    <rdfs:subClassOf rdf:nodeID="A122"/>
+    <rdfs:subClassOf rdf:nodeID="A41"/>
+    <rdfs:subClassOf rdf:nodeID="A86"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>Program Arrival Rate Sequence</rdfs:label>
+    <rdfs:comment>An ordered sequence of hourly program arrival rates used in specifying a Ground Dela Program (GDP).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#radialFix">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:label>radial fix</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#RadialRoute"/>
+    <rdfs:comment>Links to the fix through which the radial route passes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <rdf:rest rdf:nodeID="A135"/>
+    <rdf:first>DAS</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <rdf:rest rdf:nodeID="A137"/>
+    <rdf:first>ETD</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#implementationStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>implementation status</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI"/>
+    <rdfs:comment>Indicates the enforcement status of the ReRoute advisory: RQD (required), RMD (recommended), PLN (planned for implementation), FYI (informational only)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:rest rdf:nodeID="A42"/>
+    <rdf:first>GA</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>HIGH</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteSegment">
+    <rdfs:subClassOf rdf:nodeID="A129"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>ReRoute segment</rdfs:label>
+    <rdfs:comment>One of the route segment alternatives specified as part of a ReRoute traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#TACANfix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavaidFix"/>
+    <rdfs:label>TACAN Fix</rdfs:label>
+    <rdfs:comment>A fix based on the location of a ground-based TACAN (TACtical Air Navigation) installation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#heading">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>heading</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdfs:comment>The aircraft heading at the track point: a number between 0.01 and 360.0 indicating the angular heading with respect to North.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <rdf:rest rdf:nodeID="A139"/>
+    <rdf:first>RUNWAY/TAXIWAY</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NDBfix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavaidFix"/>
+    <rdfs:label>NDB Fix</rdfs:label>
+    <rdfs:comment>A fix based on the location of a ground-based non-directional radio beacon (NDB) installation. NDB signals follow the curvature of the Earth, so they can be received at much greater distances at lower altitudes, a major advantage over VOR. However, NDB signals are also affected more by atmospheric conditions, mountainous terrain, coastal refraction and electrical storms, particularly at long range.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#includedFlights">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:label>included flights</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlow"/>
+    <rdfs:comment>Links an aircraft flow to a specification of the flights included in the flow.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#flightExclusionSpec">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+    <rdfs:label>flight exclusion spec</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundDelayProgramTMI"/>
+    <rdfs:comment>Links a Ground Delay Program (GDP) or a Ground Stop (GS) to a specification of the flight(s) excluded from the traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <owl:unionOf rdf:nodeID="A140"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#includesAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>includes airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:comment>Links an airport specification to one of more airports. Any airport linked is included in the set of airports covered by this airport specification. This property allows for explicit specification of a list of specific airports; the property atm:includesAirportType allows for the the implicit specification of an entire class of airports.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftCapacity">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity"/>
+    <rdfs:label>Aircraft capacity</rdfs:label>
+    <rdfs:comment>A subclass of interval-based data representing the maximum number of controllable aircraft flowing through an airspace region during some interval of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A141"/>
+    <rdf:first>destination</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:rest rdf:nodeID="A142"/>
+    <rdf:first>Commercial</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <owl:oneOf rdf:nodeID="A144"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#maxFlowCapacity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>max flow capacity</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TFMcontrolElement"/>
+    <rdfs:comment>The absolute maximum controllable number of aircraft flowing through an airspace region per some interval of time under any air traffic conditions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:rest rdf:nodeID="A145"/>
+    <rdf:first>US</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#controlledNASelement">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TFMcontrolElement"/>
+    <rdfs:label>controlled NASelement</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>Links a traffic management initiative (TMI) to the airspace element being controlled by the TMI (e.g., an airport).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactorContainer">
+    <rdfs:subClassOf rdf:nodeID="A146"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NumericParameterContainer"/>
+    <rdfs:label>Popup Factor container</rdfs:label>
+    <rdfs:comment>A wrapper around a popup factor parameter. Used to sequence popup factors in the specification of a Ground Delay Program (GDP).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <owl:unionOf rdf:nodeID="A103"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#allowedRoute">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteSegment"/>
+    <rdfs:label>allowed route</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI"/>
+    <rdfs:comment>In a reRoute traffic management initiative, there are multiple allowed routes specified between origin and destination. This property links a ReRouteTMI with its allowed routes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <rdf:rest rdf:nodeID="A133"/>
+    <rdf:first>SHUTTLE ACTIVITY</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <owl:oneOf rdf:nodeID="A148"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#flowMeasurementRegion">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TFMcontrolElement"/>
+    <rdfs:label>flow measurement region</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity"/>
+    <rdfs:comment>Links an aircraft capacity or aircraft flow to the spatial region through which flow or capacity is being monitored and measured.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#controlledNASelement"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <rdf:rest rdf:nodeID="A149"/>
+    <rdf:first>NONE</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#cruisingAltitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>cruising altitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The cruising altitude (in number of feet) specified in the flight plan for this flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>origin-destination</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <rdf:rest rdf:nodeID="A85"/>
+    <rdf:first>ETD</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <rdf:rest rdf:nodeID="A150"/>
+    <rdf:first>GAAP</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#actualDepartureDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>actual departure day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links a flight with the day on which the flight departs. This is the day determined by surveillance data sources to be the 'actual' day of departure, versus the scheduled day or the day specified in the flight plan, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#planFilingTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>plan filing time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdfs:comment>The time that the flight plan was filed with the FAA.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <owl:oneOf rdf:nodeID="A123"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteReason">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>reroute reason</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI"/>
+    <rdfs:comment>Provides the reason for initiating a ReRoute: WEATHER , VOLUME , EQUIPMENT , RUNWAY/TAXIWAY , OTHER.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#extensionProbability"/>
+    <owl:allValuesFrom rdf:nodeID="A143"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <rdf:rest rdf:nodeID="A125"/>
+    <rdf:first>LOW</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundStopTMI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#extensionProbability">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>extension probability</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>The probability that this traffic management initiative (TMI) will be extended: LOW, MEDIUM, or HIGH.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <rdf:rest rdf:nodeID="A120"/>
+    <rdf:first>PLN</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>other</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>Military</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <rdf:rest rdf:nodeID="A147"/>
+    <rdf:first>NAT</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A154">
+    <rdf:rest rdf:nodeID="A155"/>
+    <rdf:first>PLAYBOOK</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundStopTMI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#userCategory">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>user category</rdfs:label>
+    <rdfs:domain rdf:nodeID="A156"/>
+    <rdfs:comment>The type of airspace user that this flight represents: GA, Air Taxi, Cargo, Commercial, Military. Also used to constrain a flight specification to contain only flights representing a specific user category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedDepartureTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>planned departure time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The time that the flight is planned to depart per the flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#effectiveEndTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>effective end time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>The expected end time of the traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A157">
+    <rdf:rest rdf:nodeID="A30"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#FlightSpec"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#excludesAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>excludes airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:comment>Links an airport specification to one of more airports. Any airport linked is excluded from the set of airports covered by this airport specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <rdf:rest rdf:nodeID="A44"/>
+    <rdf:first>LOW</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>Aircraft Track Point</rdfs:label>
+    <rdfs:comment>A point during a flight where various flight parameters are captured and sent (via transponder) to FAA computers.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <owl:oneOf rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <rdf:rest rdf:nodeID="A37"/>
+    <rdf:first>CONUS</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A158">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#extensionProbability"/>
+    <owl:allValuesFrom rdf:nodeID="A110"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:rest rdf:nodeID="A159"/>
+    <rdf:first>NRP SUSPENSIONS</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <owl:oneOf rdf:nodeID="A134"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactorContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>UDP</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:rest rdf:nodeID="A138"/>
+    <rdf:first>EQUIPMENT</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#subsequenceOf"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PlannedFlightRoute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <rdf:rest rdf:nodeID="A151"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#GroundDelayProgramTMI"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A156">
+    <owl:unionOf rdf:nodeID="A157"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM">
+    <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#Taxipath">
+    <rdfs:subClassOf rdf:nodeID="A95"/>
+    <rdfs:subClassOf rdf:nodeID="A60"/>
+    <rdfs:subClassOf rdf:nodeID="A54"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>Taxipath</rdfs:label>
+    <rdfs:comment>A sequence of taxiways followed by an aircraft taxiing en route to/from a runway.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A160">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#implementationStatus"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#modeledPopUpFactor">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactorSequence"/>
+    <rdfs:label>modeled pop up factor</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>Links a delay model used in defining a Ground Delay Program (GDP) or Ground Stop(GS) to a sequence of desired hourly popup factors specified for the initiative. 'Popups' account for late-filing flights (unexpected/unplanned flights) when modeling delays as part of a traffic management initiative (TMI) design process.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <owl:oneOf rdf:nodeID="A12"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:rest rdf:nodeID="A154"/>
+    <rdf:first>ROUTE</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#effectiveEndDay">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#NASday"/>
+    <rdfs:label>effective end day</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>Links to the expected ending day of the traffic management initiative (TMI).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#withinARTCC">
+    <rdfs:range rdf:nodeID="A101"/>
+    <rdfs:label>within ARTCC</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirportSpec"/>
+    <rdfs:comment>Links an airport specification to an ARTCC or ARTCC tier. Only airports within the ARTCC or ARTCC tier are covered by the specification.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <rdf:rest rdf:nodeID="A106"/>
+    <rdf:first>ETA</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#traversesSIDSTAR">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SIDSTAR"/>
+    <rdfs:label>traverses SIDSTAR</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#SIDSTARtraverse"/>
+    <rdfs:comment>Links a SIDSTARtraverse (i.e., a specific route through a SID or STAR) to the specific SID or STAR being traversed by a given flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A158"/>
+    <rdfs:subClassOf rdf:nodeID="A74"/>
+    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:subClassOf rdf:nodeID="A14"/>
+    <rdfs:subClassOf rdf:nodeID="A46"/>
+    <rdfs:subClassOf rdf:nodeID="A161"/>
+    <rdfs:subClassOf rdf:nodeID="A64"/>
+    <rdfs:subClassOf rdf:nodeID="A160"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:comment>A ReRoute is a traffic management initiative (TMI) that mandates a change in the filed flight plan for a set of specified flights. There are multiple factors that might justify a reroute, including weather, traffic congestion, unusual airspace activity, etc. The substitute flight plans route air traffic around the airspace problem area.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:subClassOf rdf:nodeID="A113"/>
+    <rdfs:label>ReRoute</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <rdf:rest rdf:nodeID="A25"/>
+    <rdf:first>LOW</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#referenceFix">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AbsoluteFix"/>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#RelativeFix"/>
+    <rdfs:comment>Links a relative fix to the absolute fix that serves as the basis for its location. (A relative fix position is defined relative to an absolute fix position, e.g. as a vector offset from the absolute fix.)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#userCategory"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first>volume</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:rest rdf:nodeID="A152"/>
+    <rdf:first>Commercial</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#departureRunway">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#OperationalRunway"/>
+    <rdfs:label>departure runway</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the actual departure runway for the flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#callSign">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>call sign</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The flight identifier (3-letter ICAO code plus number).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>RQD</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#departureAirport">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Airport"/>
+    <rdfs:label>departure airport</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>Links to the actual departure airport for the flight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#groundSpeed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>ground speed</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftTrackPoint"/>
+    <rdfs:comment>The reported ground speed at an aircraft track point.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#hasNumericParameter"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationElement">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TFMcontrolElement"/>
+    <rdfs:label>Navigation element</rdfs:label>
+    <rdfs:comment>A navigation element is a set of components that can be used to assemble a flight plan or trajectory. They include fixes, routes, airports, SID/STAR traverses, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#impactingCondition"/>
+    <owl:allValuesFrom rdf:nodeID="A68"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#userCategory"/>
+    <owl:allValuesFrom rdf:nodeID="A99"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A159">
+    <rdf:rest rdf:nodeID="A153"/>
+    <rdf:first>VS</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#plannedArrivalTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>planned arrival time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+    <rdfs:comment>The time that the flight is planned to arrive per the flight plan.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#modeledTotalDelay">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>modeled total delay minutes</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#DelayModel"/>
+    <rdfs:comment>The total flight delay specified when modeling a Ground Delay Program (GDP) or Ground Stop(GS).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <rdf:rest rdf:nodeID="A31"/>
+    <rdf:first>runway</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:oneOf rdf:nodeID="A136"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>small</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#FRDfix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#RelativeFix"/>
+    <rdfs:label>FRD Fix</rdfs:label>
+    <rdfs:comment>A Fix Radial Distance (FRD) fix is located a specified distance from a ground-based navaid, a named fix, or an airport, along a given radial vector.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A155">
+    <rdf:rest rdf:nodeID="A61"/>
+    <rdf:first>CDR</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A161">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteType"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#controlledNASelement"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#reRouteSegmentType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>re route segment type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteSegment"/>
+    <rdfs:comment>Indicates which type of ReRoute segment: origin , destination, origin-destination. A ReRoute segment can be a entire route between origin and destination, or a partial route leading from an origin or leading to a destination.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>Military</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavElementContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first>OTHER</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#AirspaceFlowProgramTMI">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative"/>
+    <rdfs:label>Airspace Flow Program (AFP)</rdfs:label>
+    <rdfs:comment>A subclass of Traffic Management Initiative involving control and metering of air traffic through specified airspace volumes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#PopupFactor">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#IntegerParameter"/>
+    <rdfs:label>Popup factor</rdfs:label>
+    <rdfs:comment>Factor to account for late-filing flights when modeling delays as part of a traffic management initiative (TMI) design process.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavElementContainer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#RelativeFix">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#NavigationFix"/>
+    <rdfs:label>Relative fix</rdfs:label>
+    <rdfs:comment>A fix defined in relation to another fix.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

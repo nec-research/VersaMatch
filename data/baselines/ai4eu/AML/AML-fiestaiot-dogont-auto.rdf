@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>http://purl.org/iot/ontology/fiesta-iot#</onto1>
+	<onto2>http://elite.polito.it/ontologies/dogont.owl</onto2>
+	<uri1>http://purl.org/iot/ontology/fiesta-iot#</uri1>
+	<uri2>http://elite.polito.it/ontologies/dogont.owl</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Clock"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Clock"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#HumiditySensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#HumiditySensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#CO2Sensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Co2Sensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#LightSensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#LightSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Environment"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Environment"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#PressureSensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#PressureSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Cupboard"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Cupboard"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Communication"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Communication"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Drawer"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Drawer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Lamp"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Lamp"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Shower"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Shower"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Fridge"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Fridge"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Window"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Window"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Fan"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Fan"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#WashingMachine"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#WashingMachine"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Computer"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Computer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Boiler"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Boiler"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Door"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Door"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#EnergyMeter"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#EnergyMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#TV"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Tv"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#DishWasher"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Dishwasher"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9703</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#FillLevel"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#FillLevelState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7914</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#ReactivePower"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#ReactivePowerMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7011</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Step"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StepFunctionality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6988</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#ActivePower"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#ActivePowerMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.69</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#DoorStateSensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#DoorSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6787</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#BatteryLevel"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#BatteryLevelNotification"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.67</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Presence"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#PresenceState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6691</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Pressure"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#PressureState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6559</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/muo-vocab.owl#UnitOfMeasurement"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6348</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Temperature"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#TemperatureState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6321</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#RelativeHumidity"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#GetRelativeHumidityCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6314</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Ventilation"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Ventilator"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6163</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#Power"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#PowerMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6077</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://purl.org/iot/vocab/m3-lite#WindSpeedSensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#WindowSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6041</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

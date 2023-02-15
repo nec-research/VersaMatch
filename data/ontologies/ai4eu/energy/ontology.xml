@@ -1,0 +1,886 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="EnergyUsageOntology/"
+     xml:base="EnergyUsageOntology/"
+     xmlns:efficiency="http://www.ida.liu.se/projects/semtech/schemas/energy/2013/09/efficiency.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:enaeq="http://www.purl.org/oema/enaeq/"
+     xmlns:saref="https://w3id.org/saref#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:EnergyResourceOntology="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SEMANCO="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#"
+     xmlns:units="http://www.purl.org/oema/units/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:swrlx="http://www.w3.org/2003/11/swrlx#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:WeatherOntology="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#"
+     xmlns:prosg="http://www.purl.org/net/v3/prosg#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.purl.org/dabgeo/common-domain/energyusage">
+        <owl:imports rdf:resource="http://www.purl.org/dabgeo/common-domain/energyparameter"/>
+        <owl:imports rdf:resource="http://www.purl.org/oema/units"/>
+        <terms:issued xml:lang="en">2018-02-07</terms:issued>
+        <terms:modified xml:lang="en">2019-02-22</terms:modified>
+        <owl:versionInfo xml:lang="en">2.0</owl:versionInfo>
+        <dc:title xml:lang="en">Energy Usage ontology</dc:title>
+        <rdfs:comment xml:lang="en">The &apos;Energy Usage&apos; ontology module represents the most used energy usage parameters among existing energy ontologies (energy demand, energy supply and energy storage). It also represents the energy sources (renwable and non renewable) and energy types (final energy and useful energy). Finally, the ontology module relates all these concepts answering questions suchs as &apos;what energy source has been consumed/supplied?&apos;
+This ontology module reuses the knowledge from the &apos;Energy Parameter&apos; ontology module and &apos;OEMA units&apos; external ontology.
+
+
+Information about changes compared to version 1.1
+*********************************************************
+We have changed the names of ontology layers and documented missing classes.</rdfs:comment>
+        <dc:creator xml:lang="en">Javier Cuenca &lt;mailto:jcuenca@mondragon.edu&gt;</dc:creator>
+        <ns:license>https://creativecommons.org/licenses/by-nc/4.0/</ns:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/oema/units/unitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/oema/units/unitOfMeasure"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#consumesEnergyType -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#consumesEnergyType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Property used to relte energy consumer facilities with the energy type the consume</rdfs:comment>
+        <rdfs:label>consumesenergytype</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">The type of energy of a certain energy demand or supply</rdfs:comment>
+        <rdfs:label xml:lang="en">ofEnergyType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#hasObservationTime -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#hasObservationTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/oema/enaeq/hasValue">
+        <rdfs:label>hasValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#realStateValue -->
+
+    <owl:DatatypeProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#realStateValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Buthane -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Buthane">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable"/>
+        <rdfs:comment xml:lang="en">This class represents buthane energy sources. Butane is one of the hydrocarbon components of raw natural gas, which is a type of fossil fuel</rdfs:comment>
+        <rdfs:label xml:lang="en">Buthane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#LPG -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#LPG">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable"/>
+        <rdfs:comment xml:lang="en">This class represents Liquefied petroleum gas energy sources. Liquefied petroleum gas (LPG) or liquid petroleum gas (LPG or LP gas), also referred to as simply propane or butane, are flammable mixtures of hydrocarbon gases used as fuel in heating appliances, cooking equipment, and vehicles.</rdfs:comment>
+        <rdfs:label xml:lang="en">LPG</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Mix -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Mix">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable"/>
+        <rdfs:comment xml:lang="en">This class represents mix energy sources. The energy mix is a group of different primary energy sources from which secondary energy for direct use - usually electricity - is produced. Primary energy in the form of fossil fuels is nowadays still mostly used directly for motor-driven vehicles, i.e. transport.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Propane -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Propane">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable"/>
+        <rdfs:comment xml:lang="en">This class represents propane energy sources. Propane is one of a group of liquefied petroleum gases (LP gases). The others include butane, propylene, butadiene, butylene, isobutylene, and mixtures thereof.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ww.purl.org/oema/enaeq/Oil -->
+
+    <owl:Class rdf:about="http://ww.purl.org/oema/enaeq/Oil">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/FossilFuel"/>
+        <rdfs:comment>Fraction obtained from petroleum distillation, either as a distillate or a residue.</rdfs:comment>
+        <rdfs:label>Oil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ww.purl.org/oema/enaeq/TidalEnergySource -->
+
+    <owl:Class rdf:about="http://ww.purl.org/oema/enaeq/TidalEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaterEnergySource"/>
+        <rdfs:comment xml:lang="en">This class is used to model tidal power source. Tidal power, also called tidal energy, is a form of hydropower that converts the energy of tides into useful forms of power, mainly electricity.</rdfs:comment>
+        <rdfs:label xml:lang="en">TidalEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/net/v3/prosg#CoGenerationResource -->
+
+    <owl:Class rdf:about="http://www.purl.org/net/v3/prosg#CoGenerationResource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable"/>
+        <rdfs:comment xml:lang="en">This class models the cogeneration power producers. Cogeneration (Combined Heat and Power or CHP) is the simultaneous production of electricity and heat, both of which are useful. For instance, Gas turbines, Gas Engines, BioFuel Engines etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">CoGeerationResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/HydroResource -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/HydroResource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class represents hydropower energy sources. Hydropower or water power is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">HydroResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/NuclearEnergyResource -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/NuclearEnergyResource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable"/>
+        <rdfs:comment xml:lang="en">This class is used to model a nuclear-based power source. A nuclear power plant is a thermal power station in which the heat source is a nuclear reactor. As is typical in all conventional thermal power stations the heat is used to generate steam which drives a steam turbine connected to a generator which produces electricity.</rdfs:comment>
+        <rdfs:label xml:lang="en">NuclearEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/BiomassEnergyResource -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/BiomassEnergyResource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class represents different biomass energy sources. Biomass most often refers to plants or plant-based materials that are not used for food or feed, and are specifically called lignocellulosic biomass.[2] As an energy source, biomass can either be used directly via combustion to produce heat, or indirectly after converting it to various forms of biofuel.</rdfs:comment>
+        <rdfs:label xml:lang="en">BiomassEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/Coal -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/Coal">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/FossilFuel"/>
+        <rdfs:comment>A combustible black or dark brown rock consisting chiefly of carbonized plant matter, found mainly in underground seams and used as fuel.</rdfs:comment>
+        <rdfs:label>Coal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/Electricity -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/Electricity">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#SecondaryEnergySource"/>
+        <rdfs:comment>A form of energy resulting from the existence of charged particles (such as electrons or protons), either statically as an accumulation of charge or dynamically as a current.</rdfs:comment>
+        <rdfs:label>Electricity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/EnergyDemand -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/EnergyDemand">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyParameter"/>
+        <rdfs:comment>The amount of energy consumed by an energy consuming facility.</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy Demand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/EnergySource -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/EnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyType"/>
+        <rdfs:label>Energy Provider/Producer View: Classification of primary and secondary energy carriers</rdfs:label>
+        <rdfs:label>EnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/EnergyStorage -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/EnergyStorage">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.org/oema/units/unitOfMeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.purl.org/oema/units/EnergyUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The energy stored by an energy storage device.</rdfs:comment>
+        <rdfs:label>EnergyStorage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/FinalEnergy -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/FinalEnergy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Coal"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergy"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Gas"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Oil"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Wood"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyType"/>
+        <rdfs:comment>Energy Consumer View: energy that can be directly used in the home or be transformed into some other (useful) energy form.</rdfs:comment>
+        <rdfs:label>FinalEnergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/FossilFuel -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/FossilFuel">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable"/>
+        <rdfs:comment>A natural fuel such as coal or gas, formed in the geological past from the remains of living organisms.</rdfs:comment>
+        <rdfs:label>FossilFuel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/GeothermalEnergySource -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/GeothermalEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class represents different geothermal energy sources. Geothermal energy is thermal energy generated and stored in the Earth. Thermal energy is the energy that determines the temperature of matter.</rdfs:comment>
+        <rdfs:label xml:lang="en">GeothermalEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/HotDryRockThermalEnergy -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/HotDryRockThermalEnergy">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/GeothermalEnergySource"/>
+        <rdfs:comment xml:lang="en">This class represents Hot dry rock thermal energy sources. Hot dry rock (HDR) is an abundant source of geothermal energy available to mankind. A vast store of thermal energy is contained in the hot—but essentially dry—impervious crystalline basement rocks found almost everywhere deep beneath the earth’s surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hot Dry Rock Thermal Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/HydrothermalEnergy -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/HydrothermalEnergy">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/GeothermalEnergySource"/>
+        <rdfs:comment xml:lang="en">This class represents hydrothermal energy sources. Hydrothermal energy is the process of obtaining heat or energy from a large body of water. &apos;Heat&apos;, in this case should not be associated with high temperature (as it may be with geothermal energy) but rather a relative heat content or relative temperature difference.</rdfs:comment>
+        <rdfs:label xml:lang="en">HydrothermalEnergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/NaturalGas -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/NaturalGas">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/FossilFuel"/>
+        <rdfs:comment>Natural gas is a fossil fuel used as a source of energy for heating, cooking, and electricity generation. It is also used as a fuel for vehicles and as a chemical feedstock in the manufacture of plastics and other commercially important organic chemicals. Fossil fuel based natural gas is a non-renewable resource.</rdfs:comment>
+        <rdfs:label>NaturalGas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/ShallowGeothermalEnergy -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/ShallowGeothermalEnergy">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/GeothermalEnergySource"/>
+        <rdfs:comment xml:lang="en">A ‘ground source heat’ or ‘shallow geothermal’ system is a sustainable system of extracting renewable
+heat energy from the ground, concentrating it and using it to supply heat and domestic hot water. The
+same system can be used to cool a house by removing surplus heat energy and putting it into the
+ground. The most efficient systems carry out both functions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shallow Geothermal Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/SorlarEnergySource -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/SorlarEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class represents different solar energy sources. Solar energy is radiant light and heat from the Sun that is harnessed using a range of ever-evolving technologies such as solar heating, photovoltaics, solar thermal energy, solar architecture, molten salt power plants and artificial photosynthesis. It is an important source of renewable energy and its technologies are broadly characterized as either passive solar or active solar depending on how they capture and distribute solar energy or convert it into solar power.</rdfs:comment>
+        <rdfs:label xml:lang="en">SolarEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/enaeq/WindEnergySource -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/enaeq/WindEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class is used to model Wind power resources. Wind power is the conversion of wind energy into a useful form of energy, such as using wind turbines to make electrical power</rdfs:comment>
+        <rdfs:label xml:lang="en">WindEnergySources</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/oema/units/EnergyUnit -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/units/EnergyUnit"/>
+    
+
+
+    <!-- http://www.purl.org/oema/units/UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/units/UnitOfMeasure"/>
+    
+
+
+    <!-- http://www.purl.org/oema/units/WeightUnit -->
+
+    <owl:Class rdf:about="http://www.purl.org/oema/units/WeightUnit"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#BioGasEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#BioGasEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class represents biogas energy sources. Biogas typically refers to a mixture of different gases produced by the breakdown of organic matter in the absence of oxygen. Biogas can be produced from raw materials such as agricultural waste, manure, municipal waste, plant material, sewage, green waste or food waste. Biogas is a renewable energy source.</rdfs:comment>
+        <rdfs:label xml:lang="en">BioGasEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ChipWoodEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ChipWoodEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergySource"/>
+        <rdfs:comment>Woodchips are small to medium sized pieces of wood formed by cutting or chipping larger pieces of wood such as trees, branches, logging residues, stumps, roots, and wood waste.</rdfs:comment>
+        <rdfs:label>ChipWoodEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#CoalEnergyDemand -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#CoalEnergyDemand">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/oema/enaeq/EnergyDemand"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Coal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Consumed energy that has a coal energy source.</rdfs:comment>
+        <rdfs:label>CoalEnergyDemand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ColdEnergySupply -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ColdEnergySupply">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergySupply"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Cold"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The generated cold energy. The cold Energy comes from the materials or environment that contains &apos;cold&apos;, or low temperature.</rdfs:comment>
+        <rdfs:label>ColdEnergySupply</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergyDemand -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergyDemand">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/oema/enaeq/EnergyDemand"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Consumed energy that has an electric energy source.</rdfs:comment>
+        <rdfs:label>ElectricEnergyDemand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergySupply -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergySupply">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergySupply"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergySupply"/>
+        <rdfs:comment>The generated electric energy.</rdfs:comment>
+        <rdfs:label>ElectricEnergySupply</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyParameter -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyParameter"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergySupply -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergySupply">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.org/oema/units/unitOfMeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.purl.org/oema/units/EnergyUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The amount of energy produced by an energy facility.</rdfs:comment>
+        <rdfs:label>Energy supply</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyType -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyType">
+        <rdfs:comment>Energy types classification</rdfs:comment>
+        <rdfs:label>EnergyType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#GasEnergyDemand -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#GasEnergyDemand">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/oema/enaeq/EnergyDemand"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Gas"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Consumed energy that has a gas energy source.</rdfs:comment>
+        <rdfs:label>ElectricEnergyDemand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#HardWoodEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#HardWoodEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergySource"/>
+        <rdfs:comment>The wood from a broadleaved tree (such as oak, ash, or beech) as distinguished from that of conifers.</rdfs:comment>
+        <rdfs:label>HardWoodEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#HeatEnergySupply -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#HeatEnergySupply">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergySupply"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Heat"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The generated heat energy. The heat energy is the result of the movement of tiny particles called atoms, molecules or ions in solids, liquids and gases.</rdfs:comment>
+        <rdfs:label>HeatEnergySupply</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#HydroelectricEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#HydroelectricEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaterEnergySource"/>
+        <rdfs:comment xml:lang="en">Hydroelectricity is electricity produced from hydropower.</rdfs:comment>
+        <rdfs:label xml:lang="en">HydroelectricEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#NonRenewable">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#PrimaryEnergySource"/>
+        <owl:disjointWith rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">Non renewable energy source</rdfs:comment>
+        <rdfs:label xml:lang="en">NonRenewable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#PelletWoodEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#PelletWoodEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergySource"/>
+        <rdfs:comment>Wood pellets are the most common type of pellet fuel and are generally made from compacted sawdust and related industrial wastes from the milling of lumber, manufacture of wood products and furniture, and construction.</rdfs:comment>
+        <rdfs:label>PelletWoodEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#PrimaryEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#PrimaryEnergySource">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/EnergySource"/>
+        <owl:disjointWith rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#SecondaryEnergySource"/>
+        <rdfs:comment xml:lang="en">Energy form found in nature that has not been subjected to a transformation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">PrimaryEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#PrimaryEnergySource"/>
+        <rdfs:comment xml:lang="en">Renewable energy source</rdfs:comment>
+        <rdfs:label xml:lang="en">Renewable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#SecondaryEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#SecondaryEnergySource">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/oema/enaeq/EnergySource"/>
+        <rdfs:comment xml:lang="en">Energy carrier that is transformed from primary energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">SecondaryEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#SoftWoodEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#SoftWoodEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergySource"/>
+        <rdfs:comment>The wood from a conifer (such as pine, fir, or spruce) as distinguished from that of broadleaved trees.</rdfs:comment>
+        <rdfs:label>SoftWoodEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#UsefulEnergy -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#UsefulEnergy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Cold"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Heat"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Light"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Water"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#EnergyType"/>
+        <rdfs:comment xml:lang="en">Energy Consumer View: inconvertible form of energy for usage in the building.</rdfs:comment>
+        <rdfs:label xml:lang="en">UsefulEnergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaterEnergyDemand -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaterEnergyDemand">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/oema/enaeq/EnergyDemand"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Water"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Consumed energy that has a water energy source.</rdfs:comment>
+        <rdfs:label>WaterEnergyDemand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaterEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaterEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class represents hydropower energy sources. Hydropower or water power is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">WaterEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaveEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaveEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WaterEnergySource"/>
+        <rdfs:comment xml:lang="en">This class represents wave energy sources. Wave power is the capture of energy of wind waves to do useful work – for example, electricity generation, water desalination, or pumping water.</rdfs:comment>
+        <rdfs:label xml:lang="en">WaveEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergyDemand -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergyDemand">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.org/oema/enaeq/EnergyDemand"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ofEnergyType"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Wood"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Consumed energy that has a wood energy source.</rdfs:comment>
+        <rdfs:label>WaterEnergyDemand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergySource -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#WoodEnergySource">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Renewable"/>
+        <rdfs:comment xml:lang="en">This class represents wood energy sources. Wood fuel (or fuelwood) is a fuel, such as firewood, charcoal, chips, sheets, pellets, and sawdust.</rdfs:comment>
+        <rdfs:label xml:lang="en">WoodEnergySource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Coal -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Coal"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Cold -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Cold">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#UsefulEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergy -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ElectricEnergy"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Gas -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Gas"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Heat -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Heat">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#UsefulEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Light -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Light">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#UsefulEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Oil -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Oil"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Water -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Water">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#UsefulEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Wood -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#Wood"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#ChipWoodEnergySource"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#HardWoodEnergySource"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#PelletWoodEnergySource"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#SoftWoodEnergySource"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

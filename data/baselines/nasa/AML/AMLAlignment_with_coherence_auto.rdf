@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>https://data.nasa.gov/ontologies/atmonto</onto1>
+	<onto2>https://w3id.org/airm-o/ontology</onto2>
+	<uri1>https://data.nasa.gov/ontologies/atmonto</uri1>
+	<uri2>https://w3id.org/airm-o/ontology</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#CrewMember"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#CrewMember"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9874</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#WeatherCondition"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9851</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#AirspaceLayer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9811</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Flight"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Aircraft"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Terminal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Taxiway"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Gate"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Gate"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SID"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#StandardInstrumentDeparture"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftCapacity"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Capacity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7704</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftEngine"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Engine"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7608</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlow"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Flow"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7531</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#AirspaceRouteSegment"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#RouteSegment"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6387</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#TRoute"/>
+			<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Route"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.601</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

@@ -1,0 +1,354 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#"
+    xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+    xmlns:nas="https://data.nasa.gov/ontologies/atmonto/NAS#"
+    xmlns:gen="https://data.nasa.gov/ontologies/atmonto/general#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:doc="https://data.nasa.gov/ontologies/atmonto/documentation#" > 
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#wingSpanHighBound">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>wing span high bound</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWakeCategory"/>
+    <rdfs:comment>The upper bound of the wingspan for this category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#EngineeredSystem">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Engineered system</rdfs:label>
+    <rdfs:comment>Represents engineered systems as either decomposable or non-decomposible subsystems.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#numberOfSeats">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>number of seats</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>The number of seats on this aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#modelID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>model ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#EngineeredSystem"/>
+    <rdfs:comment>The string identifier of the model for this system/subsystem/assembly.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWeightClass">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Aircraft Weight Class</rdfs:label>
+    <rdfs:comment>Specifies a category of aircraft that can be used to partition aircraft according to their weight.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#aircraftWeightHighBound">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>aircraft weight high bound</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWeightClass"/>
+    <rdfs:comment>The upper bound of the aircraft weight category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#aircraftTypeDesignator">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>aircraft type designator</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+    <rdfs:comment>The type designator code for this type of aircraft (e.g., B777).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Aircraft Type</rdfs:label>
+    <rdfs:comment>An aircraft type represents a set of related aircraft models. Each type corresponds to one of the FAA's aircraft type designators (e.g., B777 covers all Boeing 777 models).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#modeSCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>mode SCode</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>The unique Mode S address of the transponder aboard the aircraft. Mode S equipment on aircraft are assigned a unique ICAO 24-bit address or (informally) Mode S hex code upon national registration and this address becomes a part of the aircraft's Certificate of Registration.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#manufactureYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>manufacture year</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#EngineeredSystem"/>
+    <rdfs:comment>The year the system was manufactured.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#maxTakeoffWeightHighBound">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>max takeoff weight high bound</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWakeCategory"/>
+    <rdfs:comment>The upper bound of the maximum takeoff weight for this category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#hasComponent">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#UnitAssembly"/>
+    <rdfs:label>has component</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+    <rdfs:comment>Connects an engineered system to its primitive components.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#EngineeredSystem"/>
+    <rdfs:label>Decomposable system</rdfs:label>
+    <rdfs:comment>A complex engineering system that can be further decomposed into a set of decomposable subsystems and primitive components.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#aircraftSerialNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>serial number</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>The manufacturer serial number of the aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#manufacturedBy"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AircraftEngineManufacturer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftSubsystem">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+    <rdfs:label>Aircraft subsystem</rdfs:label>
+    <rdfs:comment>An engineering subsystem of an aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftModel">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Aircraft model</rdfs:label>
+    <rdfs:comment>An aircraft model represents a generic specification that describes the characteristics of a specific type of aircraft to be manufactured.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#BallBearing">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#UnitAssembly"/>
+    <rdfs:label>Ball bearing</rdfs:label>
+    <rdfs:comment>A unit assembly in an aircraft mechanical subsystem, a ball bearing is positioned between a wheel and a fixed axle, in which the rotating part and the stationary part are separated by a ring of small solid metal balls that reduce friction.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#NavigationAid">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+    <rdfs:label>Navigation aid</rdfs:label>
+    <rdfs:comment>A navaid (navigational aid) is an engineered system on the ground that airplanes can detect based on their emission of radio signals that enable the aircraft to navigate. Modern examples include NDBs and VORs, which both transmit radio signals that aircraft can follow and home in on.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#registrationNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>registration number</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>The aircraft FAA registration number (the tail number, or the N-Number in the US).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment">
+    <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="https://data.nasa.gov/ontologies/atmonto/general"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#cicttNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>CICTT number</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftModel"/>
+    <rdfs:comment>CAST/ICAO Common Taxonomy Team (CICTT) identifier for this model as specified by the International Aircraft Categorisation And Identification Standard (IACIS).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#isAircraftType">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+    <rdfs:label>is aircraft type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftModel"/>
+    <rdfs:comment>Links an aircraft model to its type, where the type represents a set of related models.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#aircraftRegistrant">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>aircraft registrant</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>The name of the entity that registered the aircraft with the FAA.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftEngine">
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftSubsystem"/>
+    <rdfs:label>Aircraft engine</rdfs:label>
+    <rdfs:comment>An aircraft engine is the component of the propulsion system for an aircraft that generates mechanical power.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#wingSpanLowBound">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>wing span low bound</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWakeCategory"/>
+    <rdfs:comment>The lower bound of the wingspan for this category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#certificateIssueDate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>certificate issue date</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>The date that an operating certificate was issued to the aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#aircraftModelCertainty">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>aircraft model certainty</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>A numeric measure between 0 and 1 reflecting how certain the eqp:hasAircraftModel link is to be correct between the aircraft and the model. A value of one indicates 100% certainty. A lesser value is not to be taken as a percentage, but is a heuristic similarity value taken from the scoring of the TF/IDF similarity assessment performed between the FAA aircraft make/model in the FAA registration database and ICAO make/model names used in the ontology.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#hasAircraftWeightClass">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWeightClass"/>
+    <rdfs:label>has aircraft weight class</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+    <rdfs:comment>Links an aircraft model to its weight class.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftNavigationSystem">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftSubsystem"/>
+    <rdfs:label>Aircraft navigation system</rdfs:label>
+    <rdfs:comment>An aircraft subsystem responsible for navigation functions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#UnitAssembly">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#EngineeredSystem"/>
+    <rdfs:label>Unit assembly</rdfs:label>
+    <rdfs:comment>A primitive, non-decomposible component in an engineered system.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#manufacturedBy">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AviationIndustryManufacturer"/>
+    <rdfs:label>manufactured by</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#EngineeredSystem"/>
+    <rdfs:comment>A link to the entity that manufactured the system.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#manufacturedBy"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirframeManufacturer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWakeCategory">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Aircraft Wake Category</rdfs:label>
+    <rdfs:comment>Specifies a category of aircraft according to their wake turbulance characteristics (including takeoff weight and wingspan). These categories are useful for the purpose of FAA separation assurance. See FAA Order JO 7110.659B, Wake Turbulence Recategorization, effective March 01, 2015.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#EngineType">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Engine Type</rdfs:label>
+    <rdfs:comment>Represents different generic types of aircraft engines.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#designedBy">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirframeManufacturer"/>
+    <rdfs:label>designed by</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftModel"/>
+    <rdfs:comment>Links an aircraft model to the airframe manufacturer that designed the model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#ElectricalPowerSystem">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftSubsystem"/>
+    <rdfs:label>Electrical power system</rdfs:label>
+    <rdfs:comment>An aircraft subsystem responsible for generating and distributing electrical power.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#engineTypeDescription">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>engine type description</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#EngineType"/>
+    <rdfs:comment>A text description of the engine type characteristics.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#aircraftWeightLowBound">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>aircraft weight low bound</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWeightClass"/>
+    <rdfs:comment>The lower bound of the aircraft weight category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#maxTakeoffWeightLowBound">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>max takeoff weight low bound</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWakeCategory"/>
+    <rdfs:comment>The lower bound of the maximum takeoff weight for this category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#wakeCategoryID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>wake category ID</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWakeCategory"/>
+    <rdfs:comment>The wake category identification character (A through F).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#hasAircraftEngineType">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#EngineType"/>
+    <rdfs:label>has aircraft engine type</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+    <rdfs:comment>Links an aircraft type to the type of engine it uses.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#hasAircraftWakeCategory">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftWakeCategory"/>
+    <rdfs:label>has aircraft wake category</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+    <rdfs:comment>Links an aircraft model to its wake category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#hasAircraftModel">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftModel"/>
+    <rdfs:label>has aircraft model</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>Links a specific aircraft to its model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftCommunicationSystem">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftSubsystem"/>
+    <rdfs:label>Aircraft communication system</rdfs:label>
+    <rdfs:comment>An aircraft subsystem involving all voice and data communications functions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#numberOfEngines">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>number of engines</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftModel"/>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+    <rdfs:comment>The number of engines specified for this aircraft model or found on this aircraft.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#hasSubsystem">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+    <rdfs:label>has subsystem</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+    <rdfs:comment>Connects an engineered system to its subsystems.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft">
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#DecomposableSystem"/>
+    <rdfs:label>Aircraft</rdfs:label>
+    <rdfs:comment>A physical realization of an aircraft, produced according to the specifications defined for a specific model type.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

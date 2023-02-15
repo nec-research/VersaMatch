@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+	xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#"
+	xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#"
+	xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+	xmlns:nas="https://data.nasa.gov/ontologies/atmonto/NAS#"
+	xmlns:general="https://data.nasa.gov/ontologies/atmonto/general#"
+	xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+	<Alignment>
+		<xml>yes</xml>
+		<level>0</level>
+		<type>11</type>
+		<onto1>
+			<Ontology rdf:about="https://data.nasa.gov/ontologies/atmonto/ATM#">
+				<location>https://data.nasa.gov/ontologies/atmonto/ATM#</location>
+			</Ontology>
+		</onto1>
+		<onto2>
+			<Ontology rdf:about="https://w3id.org/airm-o/ontology">
+				<location>https://w3id.org/airm-o/ontology</location>
+			</Ontology>
+		</onto2>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#Flight"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Flight"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Taxiway"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Taxiway"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#WeatherCondition"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#AirspaceLayer"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#AirspaceLayer"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Terminal"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Terminal"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#Gate"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Gate"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#Aircraft"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Aircraft"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/NAS#SID"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#StandardInstrumentDeparture"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/ATM#CrewMember"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#CrewMember"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftType"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#AircraftType"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#aircraftRegistrant"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Aircraft-aircraftRegistration"/>
+		<measure rdf:datatype="xsd:float">0.76</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#hasAircraftModel"/>
+		<entity2 rdf:resource="https://w3id.org/airm-o/ontology#Aircraft-aircraftModel"/>
+		<measure rdf:datatype="xsd:float">0.86</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+</Alignment>
+</rdf:RDF>

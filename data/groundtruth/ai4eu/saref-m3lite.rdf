@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>11</type>
+  <onto1>
+    <Ontology rdf:about="https://w3id.org/saref">
+      <location>https://w3id.org/saref</location>
+    </Ontology>
+  </onto1>
+  <onto2>
+    <Ontology rdf:about="http://purl.org/iot/vocab/m3-lite#">
+      <location>http://purl.org/iot/vocab/m3-lite#</location>
+    </Ontology>
+  </onto2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Actuator'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#ActuatingDevice'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Device'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Device'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  
+  <!-- <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#UnitOfMeasure'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Unit'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  -->
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#UnitOfMeasure'/>
+      <entity2 rdf:resource='http://purl.org/NET/ssnx/qu/qu#Unit'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Measurement'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#hasMeasurementType'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.7</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Humidity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Humidity'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Humidity'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#HumiditySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#IlluminanceUnit'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lumen'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.7</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#IlluminanceUnit'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Illuminance'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.7</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Motion'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Motion'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Pressure'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Pressure'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#SmokeSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#SmokeDetector'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#TemperatureUnit'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#DegreeCelsius'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.7</measure>
+    </Cell>
+  </map>  
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Temperature'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Temperature'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#WashingMachine'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WashingMachine'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Energy'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Energy'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#EnergyMeter'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#EnergyMeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#EnergyUnit'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#KiloWattHour'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  
+  <!-- <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Gas'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#GaseousPollutantSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  -->
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Power'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Power'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.7</measure>
+    </Cell>
+  </map>  
+  <!-- <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#Water'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#WaterLevel'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.6</measure>
+    </Cell>
+  </map>  -->
+  <map>
+    <Cell>
+      <entity1 rdf:resource='https://w3id.org/saref#TemperatureSensor'/>
+      <entity2 rdf:resource='http://purl.org/iot/vocab/m3-lite#Thermometer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>  
+</Alignment>
+</rdf:RDF>

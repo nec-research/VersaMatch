@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<Alignment>
+<xml>yes</xml>
+<level>0</level>
+<type>??</type>
+<onto1>https://w3id.org/saref</onto1>
+<onto2>https://w3id.org/saref</onto2>
+<uri1>https://w3id.org/saref</uri1>
+<uri2>https://w3id.org/saref</uri2>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OnOffState"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#WorkingState"/>
+		<measure rdf:datatype="xsd:float">0.9</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Sensor"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#IlluminanceUnit"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Illuminance"/>
+		<measure rdf:datatype="xsd:float">0.55</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Power"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Power"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Service"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Service"/>
+		<entity2 rdf:resource="http://www.onem2m.org/ontology/Base_Ontology/base_ontology#Service"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Motion"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Motion"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Property"/>
+		<entity2 rdf:resource="http://www.onem2m.org/ontology/Base_Ontology/base_ontology#ThingProperty"/>
+		<measure rdf:datatype="xsd:float">0.75</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Energy"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Energy"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Measurement"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+		<measure rdf:datatype="xsd:float">0.43</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Measurement"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#MeasurementType"/>
+		<measure rdf:datatype="xsd:float">0.46</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Measurement"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty"/>
+		<measure rdf:datatype="xsd:float">0.43</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Device"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+		<measure rdf:datatype="xsd:float">0.75</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Device"/>
+		<entity2 rdf:resource="http://www.onem2m.org/ontology/Base_Ontology/base_ontology#Device"/>
+		<measure rdf:datatype="xsd:float">0.54</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Temperature"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Temperature"/>
+		<measure rdf:datatype="xsd:float">0.74</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Actuator"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+		<measure rdf:datatype="xsd:float">0.41</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#EnergyMeter"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#EnergyMeter"/>
+		<measure rdf:datatype="xsd:float">0.75</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#StopState"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#WorkingStateDriver"/>
+		<measure rdf:datatype="xsd:float">0.36</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Pressure"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Pressure"/>
+		<measure rdf:datatype="xsd:float">0.8</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Meter"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Metre"/>
+		<measure rdf:datatype="xsd:float">0.73</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Humidity"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Humidity"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#WashingMachine"/>
+		<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#WashingMachine"/>
+		<measure rdf:datatype="xsd:float">0.87</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.w3.org/2006/time#Instant"/>
+		<entity2 rdf:resource="http://www.w3.org/2006/time#Instant"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+</Alignment>
+</rdf:RDF>

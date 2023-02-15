@@ -1,0 +1,1969 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY muo "http://purl.oclc.org/NET/muo/muo#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY power "http://purl.oclc.org/NET/muo/ucum/unit/power/" >
+    <!ENTITY dogont "http://elite.polito.it/ontologies/dogont.owl#" >
+    <!ENTITY poweront "http://elite.polito.it/ontologies/poweront.owl#" >
+    <!ENTITY physical-quality "http://purl.oclc.org/NET/muo/ucum/physical-quality/" >
+]>
+
+
+<rdf:RDF xmlns="http://elite.polito.it/ontologies/poweront.owl#"
+     xml:base="http://elite.polito.it/ontologies/poweront.owl"
+     xmlns:physical-quality="http://purl.oclc.org/NET/muo/ucum/physical-quality/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dogont="http://elite.polito.it/ontologies/dogont.owl#"
+     xmlns:muo="http://purl.oclc.org/NET/muo/muo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:poweront="http://elite.polito.it/ontologies/poweront.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:power="http://purl.oclc.org/NET/muo/ucum/unit/power/"
+     xmlns:cc="http://creativecommons.org/ns#">
+    <owl:Ontology rdf:about="http://elite.polito.it/ontologies/poweront.owl">
+        <cc:license rdf:datatype="&xsd;string">
+Copyright (c) 2010-2014 Dario Bonino
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License                   
+</cc:license>
+        <owl:priorVersion rdf:datatype="&xsd;string">1.0.0</owl:priorVersion>
+        <owl:versionInfo rdf:datatype="&xsd;string">1.1.0</owl:versionInfo>
+        <terms:issued rdf:datatype="&xsd;string">2010-01-01</terms:issued>
+        <terms:modified rdf:datatype="&xsd;string">2014-07-09</terms:modified>
+        <terms:rights rdf:datatype="&xsd;string">Copyright(c) 2010-2014 Dario Bonino</terms:rights>
+        <terms:creator rdf:datatype="&xsd;string">Dario Bonino (dario.bonino@polito.it, dario.bonino@gmail.com)</terms:creator>
+        <foaf:primaryTopic rdf:datatype="&xsd;string">Energy</foaf:primaryTopic>
+        <terms:contributor rdf:datatype="&xsd;string">Luigi De Russis (luigi.derussis@polito.it, luigidr@gmail.com)</terms:contributor>
+        <terms:title rdf:datatype="&xsd;string">PowerOnt: Power Profiling for Intelligent Domotic Environments</terms:title>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;string">http://elite.polito.it/ontologies/poweront</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix rdf:datatype="&xsd;string">poweront</vann:preferredNamespacePrefix>
+        <owl:imports rdf:resource="http://elite.polito.it/ontologies/dogont.owl"/>
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/muo/ucum/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#actualConsumptionValue -->
+
+    <owl:ObjectProperty rdf:about="&poweront;actualConsumptionValue">
+        <rdfs:domain rdf:resource="&poweront;ElectricPowerConsumption"/>
+        <rdfs:range rdf:resource="&poweront;PowerConsumptionValue"/>
+        <rdfs:subPropertyOf rdf:resource="&poweront;consumptionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#consumptionOf -->
+
+    <owl:ObjectProperty rdf:about="&poweront;consumptionOf">
+        <rdfs:range rdf:resource="&dogont;Controllable"/>
+        <rdfs:domain rdf:resource="&poweront;PowerConsumption"/>
+        <owl:inverseOf rdf:resource="&poweront;hasConsumption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#consumptionValue -->
+
+    <owl:ObjectProperty rdf:about="&poweront;consumptionValue">
+        <rdfs:domain rdf:resource="&poweront;PowerConsumption"/>
+        <rdfs:range rdf:resource="&poweront;PowerConsumptionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#hasConsumption -->
+
+    <owl:ObjectProperty rdf:about="&poweront;hasConsumption">
+        <rdfs:domain rdf:resource="&dogont;Controllable"/>
+        <rdfs:range rdf:resource="&poweront;PowerConsumption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#nominalConsumptionValue -->
+
+    <owl:ObjectProperty rdf:about="&poweront;nominalConsumptionValue">
+        <rdfs:domain rdf:resource="&poweront;ElectricPowerConsumption"/>
+        <rdfs:range rdf:resource="&poweront;PowerConsumptionValue"/>
+        <rdfs:subPropertyOf rdf:resource="&poweront;consumptionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#typicalConsumptionValue -->
+
+    <owl:ObjectProperty rdf:about="&poweront;typicalConsumptionValue">
+        <rdfs:domain rdf:resource="&poweront;ElectricPowerConsumption"/>
+        <rdfs:range rdf:resource="&poweront;PowerConsumptionValue"/>
+        <rdfs:subPropertyOf rdf:resource="&poweront;consumptionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#whenIn -->
+
+    <owl:ObjectProperty rdf:about="&poweront;whenIn">
+        <rdfs:range rdf:resource="&dogont;StateValue"/>
+        <rdfs:domain rdf:resource="&poweront;PowerConsumption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#measuredIn -->
+
+    <owl:ObjectProperty rdf:about="&muo;measuredIn"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#measuresQuality -->
+
+    <owl:ObjectProperty rdf:about="&muo;measuresQuality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#BTicinoProperty -->
+
+    <rdf:Description rdf:about="&dogont;BTicinoProperty">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#EchelonProperty -->
+
+    <rdf:Description rdf:about="&dogont;EchelonProperty">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#IPAddress -->
+
+    <rdf:Description rdf:about="&dogont;IPAddress">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#KonnexProperty -->
+
+    <rdf:Description rdf:about="&dogont;KonnexProperty">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ModBusProperty -->
+
+    <rdf:Description rdf:about="&dogont;ModBusProperty">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ZWaveProperty -->
+
+    <rdf:Description rdf:about="&dogont;ZWaveProperty">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#commandParamName -->
+
+    <rdf:Description rdf:about="&dogont;commandParamName">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#commandParamValue -->
+
+    <rdf:Description rdf:about="&dogont;commandParamValue">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#connectionTimeOut -->
+
+    <rdf:Description rdf:about="&dogont;connectionTimeOut">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#connectionTrials -->
+
+    <rdf:Description rdf:about="&dogont;connectionTrials">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#flashingTime -->
+
+    <rdf:Description rdf:about="&dogont;flashingTime">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#levelFromGround -->
+
+    <rdf:Description rdf:about="&dogont;levelFromGround">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#nParams -->
+
+    <rdf:Description rdf:about="&dogont;nParams">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#notificationName -->
+
+    <rdf:Description rdf:about="&dogont;notificationName">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#notificationParamName -->
+
+    <rdf:Description rdf:about="&dogont;notificationParamName">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#phaseID -->
+
+    <rdf:Description rdf:about="&dogont;phaseID">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#pollingInterval -->
+
+    <rdf:Description rdf:about="&dogont;pollingInterval">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#port -->
+
+    <rdf:Description rdf:about="&dogont;port">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#probeID -->
+
+    <rdf:Description rdf:about="&dogont;probeID">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#realCommandName -->
+
+    <rdf:Description rdf:about="&dogont;realCommandName">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#realStateValue -->
+
+    <rdf:Description rdf:about="&dogont;realStateValue">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#returnType -->
+
+    <rdf:Description rdf:about="&dogont;returnType">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#sleepTime -->
+
+    <rdf:Description rdf:about="&dogont;sleepTime">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#stepValue -->
+
+    <rdf:Description rdf:about="&dogont;stepValue">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#svgFootprint -->
+
+    <rdf:Description rdf:about="&dogont;svgFootprint">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#tariffID -->
+
+    <rdf:Description rdf:about="&dogont;tariffID">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#timeToOff -->
+
+    <rdf:Description rdf:about="&dogont;timeToOff">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#weekDay -->
+
+    <rdf:Description rdf:about="&dogont;weekDay">
+        <owl:propertyDisjointWith rdf:resource="&poweront;powerValue"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#powerValue -->
+
+    <owl:DatatypeProperty rdf:about="&poweront;powerValue">
+        <rdfs:domain rdf:resource="&poweront;PowerConsumptionValue"/>
+        <owl:propertyDisjointWith rdf:resource="http://purl.org/goodrelations/v1#serialNumber"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#altSymbol -->
+
+    <rdf:Description rdf:about="&muo;altSymbol">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#factor -->
+
+    <rdf:Description rdf:about="&muo;factor">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#prefSymbol -->
+
+    <rdf:Description rdf:about="&muo;prefSymbol">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#qualityLiteralValue -->
+
+    <rdf:Description rdf:about="&muo;qualityLiteralValue">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/ucum/code1 -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/muo/ucum/code1">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&muo;Prefix"/>
+                    <rdf:Description rdf:about="&muo;UnitOfMeasurement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/ucum/code2 -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/muo/ucum/code2">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&muo;Prefix"/>
+                    <rdf:Description rdf:about="&muo;UnitOfMeasurement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#serialNumber -->
+
+    <rdf:Description rdf:about="http://purl.org/goodrelations/v1#serialNumber"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&owl;topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#AirConditioningSystem -->
+
+    <owl:Class rdf:about="&dogont;AirConditioningSystem"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#AlarmClock -->
+
+    <owl:Class rdf:about="&dogont;AlarmClock"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#AwningActuator -->
+
+    <owl:Class rdf:about="&dogont;AwningActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Boiler -->
+
+    <owl:Class rdf:about="&dogont;Boiler"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Buzzer -->
+
+    <owl:Class rdf:about="&dogont;Buzzer"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#CoffeeMaker -->
+
+    <owl:Class rdf:about="&dogont;CoffeeMaker"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Computer -->
+
+    <owl:Class rdf:about="&dogont;Computer"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Controllable -->
+
+    <owl:Class rdf:about="&dogont;Controllable"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#CoolingStateValue -->
+
+    <owl:Class rdf:about="&dogont;CoolingStateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#DeepFreezer -->
+
+    <owl:Class rdf:about="&dogont;DeepFreezer"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Dishwasher -->
+
+    <owl:Class rdf:about="&dogont;Dishwasher"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#DoorActuator -->
+
+    <owl:Class rdf:about="&dogont;DoorActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Dvd -->
+
+    <owl:Class rdf:about="&dogont;Dvd"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ElectricalCooker -->
+
+    <owl:Class rdf:about="&dogont;ElectricalCooker"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ElectricalOven -->
+
+    <owl:Class rdf:about="&dogont;ElectricalOven"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Fan -->
+
+    <owl:Class rdf:about="&dogont;Fan"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Fridge -->
+
+    <owl:Class rdf:about="&dogont;Fridge"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#GasHeater -->
+
+    <owl:Class rdf:about="&dogont;GasHeater"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#GateActuator -->
+
+    <owl:Class rdf:about="&dogont;GateActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#HeatingAndCoolingUnit -->
+
+    <owl:Class rdf:about="&dogont;HeatingAndCoolingUnit"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#HeatingStateValue -->
+
+    <owl:Class rdf:about="&dogont;HeatingStateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#HiFi -->
+
+    <owl:Class rdf:about="&dogont;HiFi"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Hotplate -->
+
+    <owl:Class rdf:about="&dogont;Hotplate"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Lamp -->
+
+    <owl:Class rdf:about="&dogont;Lamp"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#LevelControlSwitch -->
+
+    <owl:Class rdf:about="&dogont;LevelControlSwitch"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#LoweringStateValue -->
+
+    <owl:Class rdf:about="&dogont;LoweringStateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#MicrowaveOven -->
+
+    <owl:Class rdf:about="&dogont;MicrowaveOven"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#MovingStateValue -->
+
+    <owl:Class rdf:about="&dogont;MovingStateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#OffStateValue -->
+
+    <owl:Class rdf:about="&dogont;OffStateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#OnStateValue -->
+
+    <owl:Class rdf:about="&dogont;OnStateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Printer -->
+
+    <owl:Class rdf:about="&dogont;Printer"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Pump -->
+
+    <owl:Class rdf:about="&dogont;Pump"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#PumpController -->
+
+    <owl:Class rdf:about="&dogont;PumpController"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Radio -->
+
+    <owl:Class rdf:about="&dogont;Radio"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#RaisingStateValue -->
+
+    <owl:Class rdf:about="&dogont;RaisingStateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#RemoteControl -->
+
+    <owl:Class rdf:about="&dogont;RemoteControl"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#SceneSelector -->
+
+    <owl:Class rdf:about="&dogont;SceneSelector"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ShadeActuator -->
+
+    <owl:Class rdf:about="&dogont;ShadeActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ShadeController -->
+
+    <owl:Class rdf:about="&dogont;ShadeController"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ShutterActuator -->
+
+    <owl:Class rdf:about="&dogont;ShutterActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#SingleScenarioControl -->
+
+    <owl:Class rdf:about="&dogont;SingleScenarioControl"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#StateValue -->
+
+    <owl:Class rdf:about="&dogont;StateValue"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Thermostat -->
+
+    <owl:Class rdf:about="&dogont;Thermostat"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ToggleRelay -->
+
+    <owl:Class rdf:about="&dogont;ToggleRelay"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Tv -->
+
+    <owl:Class rdf:about="&dogont;Tv"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Ventilator -->
+
+    <owl:Class rdf:about="&dogont;Ventilator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#WashingMachine -->
+
+    <owl:Class rdf:about="&dogont;WashingMachine"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#WindowActuator -->
+
+    <owl:Class rdf:about="&dogont;WindowActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#WirelessPhone -->
+
+    <owl:Class rdf:about="&dogont;WirelessPhone"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#ElectricPowerConsumption -->
+
+    <owl:Class rdf:about="&poweront;ElectricPowerConsumption">
+        <rdfs:subClassOf rdf:resource="&poweront;PowerConsumption"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&poweront;nominalConsumptionValue"/>
+                <owl:onClass rdf:resource="&poweront;PowerConsumptionValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&poweront;typicalConsumptionValue"/>
+                <owl:onClass rdf:resource="&poweront;PowerConsumptionValue"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&poweront;actualConsumptionValue"/>
+                <owl:onClass rdf:resource="&poweront;PowerConsumptionValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#PowerConsumption -->
+
+    <owl:Class rdf:about="&poweront;PowerConsumption">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&poweront;consumptionValue"/>
+                <owl:someValuesFrom rdf:resource="&poweront;PowerConsumptionValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#PowerConsumptionValue -->
+
+    <owl:Class rdf:about="&poweront;PowerConsumptionValue">
+        <rdfs:subClassOf rdf:resource="&muo;QualityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&muo;measuredIn"/>
+                <owl:onClass rdf:resource="&muo;UnitOfMeasurement"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#QualityValue -->
+
+    <owl:Class rdf:about="&muo;QualityValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#airConditionerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;airConditionerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1313.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#awningActuatorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;awningActuatorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#blenderTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;blenderTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">295.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#bugZapperTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;bugZapperTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">40.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#buzzerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;buzzerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">3.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#carBatteryChargerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;carBatteryChargerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">150.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#carEngineHeaterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;carEngineHeaterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">600.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#cbRadioTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;cbRadioTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">5.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#cdPlayerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;cdPlayerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">35.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#clockTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;clockTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">3.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#clothesDryerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;clothesDryerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">4750.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#coffeeMakerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;coffeeMakerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">941.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#coffeePotTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;coffeePotTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#compactFluorescentLightTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;compactFluorescentLightTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">18.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#compactorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;compactorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">400.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#computerOnTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;computerOnTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">300.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#computerStandByTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;computerStandByTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">20.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#curlingIronTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;curlingIronTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#dehumidifierTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;dehumidifierTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">250.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#dishWasherDryCycleTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;dishWasherDryCycleTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1325.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#dishWasherHeatWaterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;dishWasherHeatWaterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">2000.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#dishWasherWashCycleTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;dishWasherWashCycleTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#disposalTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;disposalTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">435.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#doorActuatorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;doorActuatorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">350.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#drillTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;drillTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">750.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#electricBlanketTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;electricBlanketTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">188.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#evaporativeCoolerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;evaporativeCoolerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">400.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#fanAtticTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;fanAtticTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">575.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#fanCeilingTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;fanCeilingTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">65.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#fanFloorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;fanFloorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">113.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#fanTableTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;fanTableTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">25.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#fanWholeHouseTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;fanWholeHouseTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">350.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#fluorescentLightTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;fluorescentLightTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">40.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#freezerAutomaticDefrostTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;freezerAutomaticDefrostTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">440.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#freezerManualDefrostTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;freezerManualDefrostTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">350.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#fryPanTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;fryPanTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#furnaceBlowerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;furnaceBlowerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">650.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#gasClothesDryerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;gasClothesDryerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">400.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#gasHeaterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;gasHeaterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">750.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#gateActuatorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;gateActuatorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">350.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#genericElectronicControllerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;genericElectronicControllerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">2.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#hairdryerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;hairdryerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1250.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#hdCableBoxTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;hdCableBoxTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">45.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#heatLampTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;heatLampTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">250.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#heatTapeTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;heatTapeTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">180.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#heaterHotTubTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;heaterHotTubTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">2500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#hedgeTrimmerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;hedgeTrimmerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">450.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#hifiTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;hifiTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">250.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#hotPlateTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;hotPlateTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#humidifierTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;humidifierTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">177.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#incandescenseLightTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;incandescenseLightTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">68.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#ironTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;ironTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">867.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#jacuzziTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;jacuzziTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#lampOnTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;lampOnTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">40.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#ledLightTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;ledLightTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#mixerhandTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;mixerhandTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">100.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#monitorCRT17TypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;monitorCRT17TypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">90.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#monitorLCD17TypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;monitorLCD17TypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">40.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#motor1hpTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;motor1hpTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1000.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#mowerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;mowerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#nightLightTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;nightLightTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">5.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#nintendoWiiTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;nintendoWiiTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">18.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#outdoorLightTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;outdoorLightTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">120.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#ovenBroilerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;ovenBroilerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">3000.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#ovenConvectionTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;ovenConvectionTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">2417.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#ovenMicrowaveTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;ovenMicrowaveTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1510.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#ovenSelfCleaningTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;ovenSelfCleaningTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">2464.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#playstation2TypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;playstation2TypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">30.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#playstation3TypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;playstation3TypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">194.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#pondPumpTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;pondPumpTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">560.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#popcornPopperTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;popcornPopperTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">250.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#portableHeaterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;portableHeaterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#portableStereoTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;portableStereoTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">30.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#powerToolsTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;powerToolsTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1800.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#printerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;printerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">100.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#radioClockTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;radioClockTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">3.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#radioTelephoneTransmitTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;radioTelephoneTransmitTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">45.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#radioTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;radioTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">40.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#rangeBurnerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;rangeBurnerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">650.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#rangeOvenTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;rangeOvenTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">2660.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#rangeSelfCleaningTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;rangeSelfCleaningTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">2500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#refrigerator12ftTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;refrigerator12ftTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">110.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#refrigerator18ftTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;refrigerator18ftTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">400.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#refrigeratorFreezerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;refrigeratorFreezerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">450.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#sanderTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;sanderTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1100.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#satelliteDishAndReceiverTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;satelliteDishAndReceiverTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">360.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#satelliteDishTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;satelliteDishTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">30.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#sawTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;sawTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#sewingMachineTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;sewingMachineTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">150.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#shadeActuatorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;shadeActuatorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">100.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#shaverTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;shaverTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">15.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#shutterMotorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;shutterMotorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#slowCookerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;slowCookerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">150.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#stockTankTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;stockTankTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">100.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#televisionTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;televisionTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#tinyAssWindowUnitTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;tinyAssWindowUnitTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#toasterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;toasterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1267.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#typewriterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;typewriterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#vacuumCleanerTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;vacuumCleanerTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1000.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#vcrDvdTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;vcrDvdTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">30.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#waflleIronTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;waflleIronTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">1200.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#washingMachineTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;washingMachineTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">400.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#waterBedHeaterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;waterBedHeaterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">544.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#waterHeaterQuickTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;waterHeaterQuickTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">4267.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#weedHeaterTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;weedHeaterTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">500.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#windowActuatorTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;windowActuatorTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">75.6</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#xbox360TypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;xbox360TypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">185.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#xboxTypicalConsumptionValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;xboxTypicalConsumptionValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">70.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#zeroValue -->
+
+    <owl:NamedIndividual rdf:about="&poweront;zeroValue">
+        <rdf:type rdf:resource="&poweront;PowerConsumptionValue"/>
+        <powerValue rdf:datatype="&xsd;double">0.0</powerValue>
+        <muo:measuredIn rdf:resource="&power;Watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/ucum/physical-quality/power -->
+
+    <owl:NamedIndividual rdf:about="&physical-quality;power"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/ucum/unit/power/Watt -->
+
+    <owl:NamedIndividual rdf:about="&power;Watt"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

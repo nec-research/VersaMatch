@@ -1,0 +1,312 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#"
+    xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:data="https://data.nasa.gov/ontologies/atmonto/data#"
+    xmlns:nas="https://data.nasa.gov/ontologies/atmonto/NAS#"
+    xmlns:gen="https://data.nasa.gov/ontologies/atmonto/general#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:doc="https://data.nasa.gov/ontologies/atmonto/documentation#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#parameterValue"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#Region3D">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#GeographicRegion"/>
+    <rdfs:comment>A three-dimensional geographic region.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#sequenceLength">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>sequence length</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:comment>The number of items in the ordered sequence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#subsequenceStartIndex">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>subsequence start index</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SubSequence"/>
+    <rdfs:comment>A numeric position within a base sequence that represents the start of the subsequence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#NumericParameter">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Numeric Parameter</rdfs:label>
+    <rdfs:comment>A class representing numeric parameters explicitly as objects (versus representing them as datatype properties). These parameters can be inserted into containers and sequenced. This enables reuse of the same parameter value in multiple sequences.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#Region2D">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#GeographicRegion"/>
+    <rdfs:comment>A two-dimensional geographic region.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#WKTgeoRepresentation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Well-Known Text geographic representation</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Location"/>
+    <rdfs:comment>The WKT string representation of a location. Well-known text (WKT) is a text markup language for representing vector geometry objects on a map, spatial reference systems of spatial objects and transformations between spatial reference systems. WKT is a standards-based representation stored as an alternative to the explicit polygon boundary representation employed in the Ontology (see gen:PolygonBoundary).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#IntegerParameter">
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#NumericParameter"/>
+    <rdfs:label>Integer Parameter</rdfs:label>
+    <rdfs:comment>A subclass of NumericParameter representing parameters with interger values.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#closedStartTimeInterval">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>closed start time interval</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#TimeInterval"/>
+    <rdfs:comment>A boolean property that specifies whether or not the starting point of the time interval is closed (inclusive of the point).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#radius">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>radius</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#CircularRegion"/>
+    <rdfs:comment>The radius of a circular region. Note: Unfortunately, the units are currently dependent the type of circular region defined. This needs to be improved.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general">
+    <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#PolygonBoundary">
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>Polygon boundary</rdfs:label>
+    <rdfs:comment>An ordered sequence of point locations where the last point connects back to the first point, closing the polygon.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#subsequenceOf">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:label>subsequence of</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SubSequence"/>
+    <rdfs:comment>Links a subsequence to its base sequence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#Sequence">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Sequence</rdfs:label>
+    <rdfs:comment>An ordered sequence of items.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem">
+    <rdfs:subPropertyOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>hasFirstItem</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:comment>Links a sequence to the first item being sequenced.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#hasNextItem">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>hasNext</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:comment>Links an item in a sequence to the subsequent item in the sequence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#ShearSidedPolygonalVolume"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Sequenced item</rdfs:label>
+    <rdfs:comment>The set of items that can be sequenced.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#latitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>latitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdfs:comment>The latitude of a point location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasFirstItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#Polygonal2DRegion">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Region2D"/>
+    <rdfs:comment>A two-dimensional region defined by a polygonal boundary.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#parameterValue">
+    <rdfs:label>parameter value</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#NumericParameter"/>
+    <rdfs:comment>The numeric value of a parameter.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#longitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>longitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdfs:comment>The longitude of a point location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <owl:allValuesFrom rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#Location">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Location</rdfs:label>
+    <rdfs:comment>A place defined by a point or a contiguous geographic region.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#CircularRegion">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Region2D"/>
+    <rdfs:comment>A two-dimensional region defined by a geographic centerpoint and radius.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:onProperty rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#parameterValue"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#altitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>altitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdfs:comment>The altitude of a point location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#SubSequence">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Subsequence</rdfs:label>
+    <rdfs:comment>Represents a subsequence of existing base sequence. The subsequence does not replicate the items of the sequence, but merely points to the start and end positions within the base sequence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#hasLastItem">
+    <rdfs:subPropertyOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem"/>
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>hasLastItem</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:comment>Links a sequence to the last item being sequenced.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#endTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>end time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#TimeInterval"/>
+    <rdfs:comment>The ending time of a defined time interval.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#startTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>start time</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#TimeInterval"/>
+    <rdfs:comment>The starting time of a defined time interval.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#hasPolygonBoundary">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PolygonBoundary"/>
+    <rdfs:label>has polygon boundary</rdfs:label>
+    <rdfs:domain rdf:nodeID="A6"/>
+    <rdfs:comment>Links a polygonal region to its boundary representation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#TimeInterval">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Time interval</rdfs:label>
+    <rdfs:comment>A time interval with starting and ending time points. Intervals can be open (including the end points) or closed including the end points) or mixed including one but not the other end point).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#FloatParameter">
+    <rdfs:subClassOf rdf:nodeID="A5"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#NumericParameter"/>
+    <rdfs:label>Float parameter</rdfs:label>
+    <rdfs:comment>A subclass of NumericParameter representing parameters with floating-point values.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:unionOf rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#closedEndTimeInterval">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>closed end time interval</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#TimeInterval"/>
+    <rdfs:comment>A boolean property that specifies whether or not the endpoint of the time interval is closes (inclusive of the point).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#hasSequencedItem">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:label>hasSequencedItem</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Sequence"/>
+    <rdfs:comment>Links a sequence to each of the items being sequenced.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#subsequenceEndIndex">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>subsequence end index</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SubSequence"/>
+    <rdfs:comment>A numeric position within a base sequence that represents the end of the subsequence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#polygonHeight">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>polygon height</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#ShearSidedPolygonalVolume"/>
+    <rdfs:comment>Specifies the length dimension of a polygonal volume.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#GeographicRegion">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Location"/>
+    <rdfs:comment>A class representing a demarcated region on or above the surface of the Earth.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#ShearSidedPolygonalVolume">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Region3D"/>
+    <rdfs:label>Shear sided polygonal volume</rdfs:label>
+    <rdfs:comment>A three-dimensional volume defined by a two-dimensional polygon plus a length component that stretches the polygon along an axis perpendicular to the polygon surface.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#sequenceNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>sequenceNumber</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:comment>Indicates the ordered position of this item within the sequence, where 1 signifies the first position in the sequence.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Polygonal2DRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#centerpoint">
+    <rdfs:range rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#PointLocation"/>
+    <rdfs:label>centerpoint</rdfs:label>
+    <rdfs:domain rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#CircularRegion"/>
+    <rdfs:comment>Links to the center point of the 2-D circular region.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.nasa.gov/ontologies/atmonto/general#PointLocation">
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#SequencedItem"/>
+    <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/general#Location"/>
+    <rdfs:comment>A location in three-space defined by a latitude, longitude, and altitude.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

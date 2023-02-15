@@ -1,0 +1,520 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>https://w3id.org/saref</onto1>
+	<onto2>http://elite.polito.it/ontologies/dogont.owl</onto2>
+	<uri1>https://w3id.org/saref</uri1>
+	<uri2>http://elite.polito.it/ontologies/dogont.owl</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#hasState"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#hasCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Switch"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Switch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9897</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OpenCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9874</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#CloseCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#CloseCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9874</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#StartCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StartCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9859</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#StopCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StopCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9855</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Device"/>
+			<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9849</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#ToggleCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#ToggleCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9843</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Command"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Command"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9832</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#WashingMachine"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#WashingMachine"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9817</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#GetCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#GetCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Actuator"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Actuator"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#State"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#State"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OnOffState"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OnOffState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#TemperatureSensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#TemperatureSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OffCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OffCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OnCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OnCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Meter"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Meter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#SmokeSensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#SmokeSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Sensor"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Sensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Sensor"/>
+			<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#StepUpCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StepUpCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#PauseCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#PauseCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#StepDownCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StepDownCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OpenCloseState"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenCloseState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#EnergyMeter"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#EnergyMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/muo-vocab.owl#measuredIn"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9168</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#hasSensorType"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9168</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#isCommandOf"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#commandOf"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.913</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#hasMeterReading"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8935</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#hasFunction"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasFunctionality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8648</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#week"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#weekDay"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.846</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#inXSDDateTime"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/muo-vocab.owl#inTime"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8182</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#intervalContains"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#contains"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7668</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Appliance"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7593</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OpenState"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenStateValue"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7198</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#CloseState"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#CloseStateValue"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7198</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OnOffFunction"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OnOffFunctionality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7169</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#StopState"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StopStateValue"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7128</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#hasDuration"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasNotification"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7121</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Occupancy"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OccupancyState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7115</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Network"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#NetworkNotification"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6956</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#StartStopFunction"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StartStopPauseFunctionality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6785</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Light"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Lighting"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6755</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Pressure"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#PressureState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6736</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#LightSwitch"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OnOffLightSwitch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6585</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#hasValue"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hexValue"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6559</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Temperature"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#TemperatureState"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6526</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#hasBeginning"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasCeiling"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.65</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#SetLevelCommand"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#SetCommand"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6418</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Humidity"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#HumiditySensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6409</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#OpenCloseFunction"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenCloseFunctionality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6169</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Electricity"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#ElectricityMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6147</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#measuresProperty"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/muo-vocab.owl#measuresQuality"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6109</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#hasEnd"/>
+			<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasWall"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6012</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

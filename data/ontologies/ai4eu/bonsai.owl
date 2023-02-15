@@ -1,0 +1,1044 @@
+@prefix : <http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsp: <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix owl-s: <http://www.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix sqwrl: <http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix CoDAMoS: <http://lpis.csd.auth.gr/ontologies/CoDAMoS/CoDAMoS.owl#> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@base <http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl> .
+
+<http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl> rdf:type owl:Ontology ;
+                                                        owl:versionIRI <http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl> ;
+                                                        owl:imports <http://lpis.csd.auth.gr/ontologies/CoDAMoS/CoDAMoS.owl> ,
+                                                                    <http://www.daml.org/services/owl-s/1.2/Service.owl> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#affectsEnvironmentalParameter
+:affectsEnvironmentalParameter rdf:type owl:ObjectProperty ;
+                               rdfs:domain :Appliance ;
+                               rdfs:range :EnvironmentalParameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#belongsToMultiSensor
+:belongsToMultiSensor rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :hasSensor ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :Sensor ;
+                      rdfs:range :MultiSensor .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#belongsToService
+:belongsToService rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasOperation ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Operation ;
+                  rdfs:range :Service .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#causesFact
+:causesFact rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isCausedByAction ;
+            rdfs:domain :Action ;
+            rdfs:range :Fact .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#consumes
+:consumes rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Appliance ;
+          rdfs:range :PowerConsumption .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#exposesDevice
+:exposesDevice rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isExposedByService ;
+               rdfs:domain :Service ;
+               rdfs:range :Device .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasCommunicationProtocol
+:hasCommunicationProtocol rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain :Device ;
+                          rdfs:range :CommunicationProtocol .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasContext
+:hasContext rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :User ;
+            rdfs:range :Context .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasEffect
+:hasEffect rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isEffectOf ;
+           rdfs:domain :Operation ;
+           rdfs:range :Fact .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasEnvironmentalParameter
+:hasEnvironmentalParameter rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Context ;
+                           rdfs:range :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasFloor
+:hasFloor rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isInBuilding ;
+          rdfs:domain :Building ;
+          rdfs:range :Floor .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasID
+:hasID rdf:type owl:ObjectProperty ,
+                owl:FunctionalProperty ,
+                owl:InverseFunctionalProperty ;
+       rdfs:domain :Device ;
+       rdfs:range :ID .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasInput
+:hasInput rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isInputOf ;
+          rdfs:domain :Operation ;
+          rdfs:range :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isLocationOf ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Context
+                                         :Hardware
+                                       )
+                         ] ;
+             rdfs:range :Location .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasOperation
+:hasOperation rdf:type owl:ObjectProperty ,
+                       owl:InverseFunctionalProperty ;
+              rdfs:domain :Service ;
+              rdfs:range :Operation .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isOutputOf ;
+           rdfs:domain :Operation ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :Fact
+                                      :Parameter
+                                    )
+                      ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasParameter
+:hasParameter rdf:type owl:ObjectProperty ;
+              rdfs:range :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasPoint
+:hasPoint rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isInRoom ;
+          rdfs:domain :Room ;
+          rdfs:range :Point .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasPowerState
+:hasPowerState rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isPowerStateOf ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Appliance ;
+               rdfs:range :PowerState .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasPrecondition
+:hasPrecondition rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isPreconditionOf ;
+                 rdfs:domain :Operation ;
+                 rdfs:range :Fact .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasRoom
+:hasRoom rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isOnFloor ;
+         rdfs:domain :Floor ;
+         rdfs:range :Room .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasSensor
+:hasSensor rdf:type owl:ObjectProperty ,
+                    owl:InverseFunctionalProperty ;
+           rdfs:domain :MultiSensor ;
+           rdfs:range :Sensor .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasServiceGrounding
+:hasServiceGrounding rdf:type owl:ObjectProperty ;
+                     owl:equivalentProperty owl-s:supports ;
+                     rdfs:domain :Service ;
+                     rdfs:range owl-s:ServiceGrounding .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasServiceModel
+:hasServiceModel rdf:type owl:ObjectProperty ;
+                 owl:equivalentProperty owl-s:describedBy ;
+                 rdfs:domain :Service ;
+                 rdfs:range owl-s:ServiceModel .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasServiceProfile
+:hasServiceProfile rdf:type owl:ObjectProperty ;
+                   owl:equivalentProperty owl-s:presents ;
+                   rdfs:domain :Service ;
+                   rdfs:range owl-s:ServiceProfile .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hasTime
+:hasTime rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Context ;
+         rdfs:range :Time .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#hostsService
+:hostsService rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isHostedAt ;
+              rdf:type owl:InverseFunctionalProperty ;
+              rdfs:domain :Server ;
+              rdfs:range owl-s:Service .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#inverse_of_hasFloor
+:inverse_of_hasFloor rdf:type owl:ObjectProperty .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isAttachedToAppliance
+:isAttachedToAppliance rdf:type owl:ObjectProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain :SmartPlug ;
+                       rdfs:range :Appliance .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isCausedByAction
+:isCausedByAction rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Fact ;
+                  rdfs:range :Action .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isEffectOf
+:isEffectOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Fact ;
+            rdfs:range :Operation .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isExposedByService
+:isExposedByService rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Device ;
+                    rdfs:range :Service .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isHostedAt
+:isHostedAt rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Service ;
+            rdfs:range :Server .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isInBuilding
+:isInBuilding rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Floor ;
+              rdfs:range :Building .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isInRoom
+:isInRoom rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Point ;
+          rdfs:range :Room .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isInputOf
+:isInputOf rdf:type owl:ObjectProperty ;
+           rdfs:domain :Parameter ;
+           rdfs:range :Operation .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isLocationOf
+:isLocationOf rdf:type owl:ObjectProperty ,
+                       owl:InverseFunctionalProperty ;
+              rdfs:domain :Location ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( :Context
+                                         :Hardware
+                                       )
+                         ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isOnFloor
+:isOnFloor rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Room ;
+           rdfs:range :Floor .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isOutputOf
+:isOutputOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Parameter ;
+            rdfs:range :Operation .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isPerformedByActuator
+:isPerformedByActuator rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :performsAction ;
+                       rdfs:domain :Action ;
+                       rdfs:range :Actuator .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isPowerStateOf
+:isPowerStateOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :PowerState ;
+                rdfs:range :Appliance ;
+                rdfs:comment """<p style=\"margin-top: 0\">
+      Shows the Appliance that the PowerState belongs to
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isPreconditionOf
+:isPreconditionOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Fact ;
+                  rdfs:range :Operation .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#isReturnedBy
+:isReturnedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf :returnsParameter ;
+              rdf:type owl:InverseFunctionalProperty ;
+              rdfs:domain :Parameter ;
+              rdfs:range :Sensor .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#manifestatesDevice
+:manifestatesDevice rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:range :Device .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#offersResource
+:offersResource rdf:type owl:ObjectProperty ;
+                rdfs:domain :Computer ;
+                rdfs:range CoDAMoS:Resource .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#performsAction
+:performsAction rdf:type owl:ObjectProperty ;
+                rdfs:domain :Actuator ;
+                rdfs:range :Action .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#returnsParameter
+:returnsParameter rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Sensor ;
+                  rdfs:range :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#sentFromSensor
+:sentFromSensor rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ,
+                         owl:InverseFunctionalProperty ;
+                rdfs:range :Sensor .
+
+
+###  http://www.daml.org/services/owl-s/1.2/Service.owl#describedBy
+
+###  http://www.daml.org/services/owl-s/1.2/Service.owl#presents
+
+###  http://www.daml.org/services/owl-s/1.2/Service.owl#supports
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#DeviceInterface
+:DeviceInterface rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :Device ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:oneOf [ rdf:type rdf:List ;
+                                          rdf:first "Ethernet"^^xsd:string ;
+                                          rdf:rest [ rdf:type rdf:List ;
+                                                     rdf:first "USB"^^xsd:string ;
+                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                rdf:first "WiFi"^^xsd:string ;
+                                                                rdf:rest rdf:nil
+                                                              ]
+                                                   ]
+                                        ]
+                            ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#FloorNo
+:FloorNo rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Floor ;
+         rdfs:range xsd:int .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#PowerStateValue
+:PowerStateValue rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :PowerState ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:oneOf [ rdf:type rdf:List ;
+                                          rdf:first "Off"^^xsd:string ;
+                                          rdf:rest [ rdf:type rdf:List ;
+                                                     rdf:first "On"^^xsd:string ;
+                                                     rdf:rest rdf:nil
+                                                   ]
+                                        ]
+                            ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#coverRange
+:coverRange rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :WirelessCommunicationProtocol ;
+            rdfs:range xsd:float .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#dataRate
+:dataRate rdf:type owl:DatatypeProperty ;
+          rdfs:domain :CommunicationProtocol .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#dateTime
+:dateTime rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Time ;
+          rdfs:range xsd:dateTime .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#email
+:email rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :User ;
+       rdfs:range xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#energyClass
+:energyClass rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Appliance ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:oneOf [ rdf:type rdf:List ;
+                                      rdf:first "A"^^xsd:string ;
+                                      rdf:rest [ rdf:type rdf:List ;
+                                                 rdf:first "B"^^xsd:string ;
+                                                 rdf:rest [ rdf:type rdf:List ;
+                                                            rdf:first "C"^^xsd:string ;
+                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                       rdf:first "D"^^xsd:string ;
+                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                  rdf:first "E"^^xsd:string ;
+                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                             rdf:first "F"^^xsd:string ;
+                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                        rdf:first "G"^^xsd:string ;
+                                                                                                        rdf:rest rdf:nil
+                                                                                                      ]
+                                                                                           ]
+                                                                                ]
+                                                                     ]
+                                                          ]
+                                               ]
+                                    ]
+                        ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#frequency
+:frequency rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :WirelessCommunicationProtocol .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#latency
+:latency rdf:type owl:DatatypeProperty ;
+         rdfs:domain :CommunicationProtocol .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#macID
+:macID rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :PlugwiseCircle ;
+       rdfs:range xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#manufacturer
+:manufacturer rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Hardware ;
+              rdfs:range xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#maxNodesPerNetwork
+:maxNodesPerNetwork rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :CommunicationProtocol ;
+                    rdfs:range xsd:int .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#measuringUnit
+:measuringUnit rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#model
+:model rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Hardware ;
+       rdfs:range xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#name
+:name rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain :User ;
+      rdfs:range xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#parameter
+:parameter rdf:type owl:DatatypeProperty .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#phone
+:phone rdf:type owl:DatatypeProperty ;
+       rdfs:domain :User ;
+       rdfs:range xsd:int .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#range
+:range rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:float .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#sensorName
+:sensorName rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:range xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#type
+:type rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain :CommunicationProtocol ;
+      rdfs:range [ rdf:type rdfs:Datatype ;
+                   owl:oneOf [ rdf:type rdf:List ;
+                               rdf:first "Wired"^^xsd:string ;
+                               rdf:rest [ rdf:type rdf:List ;
+                                          rdf:first "Wireless"^^xsd:string ;
+                                          rdf:rest rdf:nil
+                                        ]
+                             ]
+                 ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#value
+:value rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Parameter ;
+       rdfs:range xsd:float .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#x_value
+:x_value rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Point ;
+         rdfs:range xsd:float .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#y_value
+:y_value rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Point ;
+         rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lpis.csd.auth.gr/ontologies/CoDAMoS/CoDAMoS.owl#Resource
+CoDAMoS:Resource rdf:type owl:Class .
+
+
+###  http://lpis.csd.auth.gr/ontologies/CoDAMoS/CoDAMoS.owl#User
+CoDAMoS:User rdf:type owl:Class .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Action
+:Action rdf:type owl:Class .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Actuator
+:Actuator rdf:type owl:Class ;
+          rdfs:subClassOf :Device ;
+          rdfs:comment """<p style=\"margin-top: 0\">
+      Models devices that take actions and alter the state of the world
+    </p>
+    <p style=\"margin-top: 0\">
+      (but are not Sensors)
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#ActuatorOperation
+:ActuatorOperation rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :causesFact ;
+                                                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :causesFact ;
+                                                                owl:cardinality "0"^^xsd:nonNegativeInteger
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :Operation ;
+                   owl:disjointWith :SensoryOperation ;
+                   rdfs:comment """<p style=\"margin-top: 0\">
+      Operation that results in a change of the world's state
+    </p>
+    <p style=\"margin-top: 0\">
+      i.e. hasEffect object property has a value 
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#ActuatorSensor
+:ActuatorSensor rdf:type owl:Class ;
+                rdfs:subClassOf :Actuator ,
+                                :Sensor ;
+                rdfs:comment """<p style=\"margin-top: 0\">
+      Models devices that can partially perceive the state of the world 
+    </p>
+    <p style=\"margin-top: 0\">
+      and change it as well (are both Sensors and Actuators)
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#AirCondition
+:AirCondition rdf:type owl:Class ;
+              rdfs:subClassOf :Appliance ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :affectsEnvironmentalParameter ;
+                                owl:allValuesFrom :Temperature
+                              ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Appliance
+:Appliance rdf:type owl:Class ;
+           rdfs:subClassOf :Hardware .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :Location .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#CCSmartClamper
+:CCSmartClamper rdf:type owl:Class ;
+                rdfs:subClassOf :SmartClamper .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#CO2level
+:CO2level rdf:type owl:Class ;
+          rdfs:subClassOf :EnvironmentalParameter ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :measuringUnit ;
+                            owl:hasValue "ppm"^^xsd:string
+                          ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#CommunicationProtocol
+:CommunicationProtocol rdf:type owl:Class ;
+                       rdfs:subClassOf owl:Thing ,
+                                       [ rdf:type owl:Class ;
+                                         owl:unionOf ( :WiredCommunicationProtocol
+                                                       :WirelessCommunicationProtocol
+                                                     )
+                                       ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Computer
+:Computer rdf:type owl:Class ;
+          rdfs:subClassOf :Appliance .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Context
+:Context rdf:type owl:Class ;
+         owl:disjointWith :User ;
+         rdfs:comment """<p style=\"margin-top: 0\">
+      Models tha current situation surrounding an entity, at a certain time.
+    </p>
+    <p style=\"margin-top: 0\">
+      Thus, is a set of Location, Time, and many environmental parameters.
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Date
+:Date rdf:type owl:Class ;
+      rdfs:subClassOf :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf :Hardware ;
+        rdfs:comment """<p style=\"margin-top: 0\">
+      Models Smart Devices, usually classified as either Sensors or Actuators.
+    </p>
+    <p style=\"margin-top: 0\">
+      These devices can be service-enabled.
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Energy
+:Energy rdf:type owl:Class ;
+        rdfs:subClassOf :Parameter ;
+        rdfs:comment """<p style=\"margin-top: 0\">
+      An Energy amount
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#EnvironmentalParameter
+:EnvironmentalParameter rdf:type owl:Class ;
+                        rdfs:subClassOf :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Fact
+:Fact rdf:type owl:Class ;
+      rdfs:comment """A Fact models a known literal or predicate that is valid
+ for the World Model."""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Floor
+:Floor rdf:type owl:Class ;
+       rdfs:subClassOf :Location .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Hardware
+:Hardware rdf:type owl:Class .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Humidity
+:Humidity rdf:type owl:Class ;
+          rdfs:subClassOf :EnvironmentalParameter ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :measuringUnit ;
+                            owl:hasValue "percentage"^^xsd:string
+                          ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#ID
+:ID rdf:type owl:Class ;
+    rdfs:subClassOf :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Insteon
+:Insteon rdf:type owl:Class ;
+         rdfs:subClassOf :PLC .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Lighting
+:Lighting rdf:type owl:Class ;
+          rdfs:subClassOf :Appliance ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :affectsEnvironmentalParameter ;
+                            owl:allValuesFrom :Luminance
+                          ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Location
+:Location rdf:type owl:Class ;
+          rdfs:comment """<p style=\"margin-top: 0\">
+      Location models the abstract notion of whereabouts.
+    </p>
+    <p style=\"margin-top: 0\">
+      It can be specified further through subclasses.
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Luminance
+:Luminance rdf:type owl:Class ;
+           rdfs:subClassOf :EnvironmentalParameter ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :measuringUnit ;
+                             owl:hasValue "lm/m^2"^^xsd:string
+                           ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#MultiSensor
+:MultiSensor rdf:type owl:Class ;
+             rdfs:subClassOf :Device ;
+             rdfs:comment """<p style=\"margin-top: 0\">
+      Models arrays of (single) Sensors (e.g. Sensor boards)
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Noise
+:Noise rdf:type owl:Class ;
+       rdfs:subClassOf :EnvironmentalParameter ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :measuringUnit ;
+                         owl:hasValue "dB"^^xsd:string
+                       ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#OWLSmartClamper
+:OWLSmartClamper rdf:type owl:Class ;
+                 rdfs:subClassOf :SmartClamper .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Operation
+:Operation rdf:type owl:Class ;
+           owl:disjointWith :User ;
+           rdfs:comment """<p style=\"margin-top: 0\">
+      A Service Operation is an actual function that can be invoked as an RPC.
+    </p>
+    <p style=\"margin-top: 0\">
+      It has inherently Input and Output types.
+    </p>
+    <p style=\"margin-top: 0\">
+      In the model it also has Preconditions and Effects.
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#PLC
+:PLC rdf:type owl:Class ;
+     rdfs:subClassOf :WiredCommunicationProtocol ;
+     rdfs:comment """<p style=\"margin-top: 0\">
+      Power Line Communications, wired communication protocol for smart devices
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Parameter
+:Parameter rdf:type owl:Class .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#PlugwiseCircle
+:PlugwiseCircle rdf:type owl:Class ;
+                rdfs:subClassOf :SmartPlug .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Point
+:Point rdf:type owl:Class ;
+       rdfs:subClassOf :Location .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#PowerConsumption
+:PowerConsumption rdf:type owl:Class ;
+                  rdfs:subClassOf :Parameter ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :measuringUnit ;
+                                    owl:hasValue "watt"^^xsd:string
+                                  ] ;
+                  rdfs:comment """<p style=\"margin-top: 0\">
+      A Power amount
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#PowerState
+:PowerState rdf:type owl:Class ;
+            rdfs:subClassOf :Fact ;
+            rdfs:comment """A PowerState models the current supply for an Electric Appliance.
+A PowerState has a value. e.g. off value means that the Appliance that has 
+    this PowerState is off.
+PowerState is also a subclass of Fact.
+e.g. a PowerState of value off, means that the connected Appliance is 
+    currently off."""@en .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Pressure
+:Pressure rdf:type owl:Class ;
+          rdfs:subClassOf :EnvironmentalParameter ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :measuringUnit ;
+                            owl:hasValue "Atm"^^xsd:string
+                          ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#PrismaQuax
+:PrismaQuax rdf:type owl:Class ;
+            rdfs:subClassOf :MultiSensor ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :returnsParameter ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Humidity
+                                                                :Luminance
+                                                                :Temperature
+                                                              )
+                                                ]
+                            ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Radiator
+:Radiator rdf:type owl:Class ;
+          rdfs:subClassOf :Appliance ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :affectsEnvironmentalParameter ;
+                            owl:allValuesFrom :Temperature
+                          ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Room
+:Room rdf:type owl:Class ;
+      rdfs:subClassOf :Location .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:subClassOf :Device ;
+        rdfs:comment """<p style=\"margin-top: 0\">
+      Models devices that can partially perceive the state of the world
+    </p>
+    <p style=\"margin-top: 0\">
+      (but cannot change it i.e. are not Actuators)
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#SensoryOperation
+:SensoryOperation rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasOutput ;
+                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
+                  rdfs:subClassOf :Operation ;
+                  rdfs:comment """<p style=\"margin-top: 0\">
+      Operation that returns a parameter.
+    </p>"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Server
+:Server rdf:type owl:Class ;
+        rdfs:subClassOf :Computer .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf owl-s:Service ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasServiceModel ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#SmartClamper
+:SmartClamper rdf:type owl:Class ;
+              rdfs:subClassOf :Sensor .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#SmartPlug
+:SmartPlug rdf:type owl:Class ;
+           rdfs:subClassOf :ActuatorSensor ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :performsAction ;
+                             owl:allValuesFrom :SwitchAction
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :returnsParameter ;
+                             owl:allValuesFrom :PowerConsumption
+                           ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#SwitchAction
+:SwitchAction rdf:type owl:Class ;
+              rdfs:subClassOf :Action ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :causesFact ;
+                                owl:allValuesFrom :PowerState
+                              ] ;
+              rdfs:comment """<p style=\"margin-top: 0\">
+      A Switch Action turns an electric Appliance On or Off (i.e. switches"""^^xsd:string .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Temperature
+:Temperature rdf:type owl:Class ;
+             rdfs:subClassOf :EnvironmentalParameter ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :measuringUnit ;
+                               owl:hasValue "celcius"^^xsd:string
+                             ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Time
+:Time rdf:type owl:Class ;
+      rdfs:subClassOf :Parameter .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#User
+:User rdf:type owl:Class ;
+      rdfs:subClassOf CoDAMoS:User .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#WiredCommunicationProtocol
+:WiredCommunicationProtocol rdf:type owl:Class ;
+                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :type ;
+                                                  owl:hasValue "Wired"^^xsd:string
+                                                ] ;
+                            rdfs:subClassOf :CommunicationProtocol .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#WirelessCommunicationProtocol
+:WirelessCommunicationProtocol rdf:type owl:Class ;
+                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :type ;
+                                                     owl:hasValue "Wireless"^^xsd:string
+                                                   ] ;
+                               rdfs:subClassOf :CommunicationProtocol .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#X10
+:X10 rdf:type owl:Class ;
+     rdfs:subClassOf :PLC .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Z-Wave
+:Z-Wave rdf:type owl:Class ;
+        rdfs:subClassOf :WirelessCommunicationProtocol ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :frequency ;
+                          owl:hasValue "868.42"^^xsd:float
+                        ] .
+
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#Zigbee
+:Zigbee rdf:type owl:Class ;
+        rdfs:subClassOf :WirelessCommunicationProtocol ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :frequency ;
+                          owl:hasValue "868"^^xsd:int
+                        ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://lpis.csd.auth.gr/ontologies/bonsai/BOnSAI.owl#SmartPlugService
+:SmartPlugService rdf:type owl:NamedIndividual ,
+                           :Service .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

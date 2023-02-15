@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>11</type>
+  <onto1>
+    <Ontology rdf:about="http://purl.org/iot/ontology/fiesta-iot#">
+      <location>http://purl.org/iot/ontology/fiesta-iot#</location>
+    </Ontology>
+  </onto1>
+  <onto2>
+    <Ontology rdf:about="http://elite.polito.it/ontologies/dogont.owl">
+      <location>http://elite.polito.it/ontologies/dogont.owl</location>
+    </Ontology>
+  </onto2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Door'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Door'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CO2Sensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Co2Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NOSensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.89</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#NOSensor'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.89</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Clock'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Clock'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Drawer'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Drawer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#ProximitySensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#PresenceSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.87</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Ventilation'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Ventilator'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.73</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Computer'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Computer'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#SmokeDetector'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#SmokeSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.86</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#MotionState'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#MovementState'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.5</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.onem2m.org/ontology/Base_Ontology/base_ontology#Thing'/>
+      <entity2 rdf:resource='http://www.w3.org/2002/07/owl#Thing'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#LightSensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#LightSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Environment'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Environment'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Fridge'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Fridge'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Cupboard'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Cupboard'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#EnergyMeter'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#EnergyMeter'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Fan'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Fan'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Lamp'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Lamp'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#WashingMachine'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#WashingMachine'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#CurrentSensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#FlowSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.69</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#GasDetector'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#GasSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.84</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Sirens'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Siren'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.75</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Shower'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Shower'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.onem2m.org/ontology/Base_Ontology/base_ontology#Device'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Device'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Boiler'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Boiler'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Device'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Device'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.w3.org/2002/07/owl#Thing'/>
+      <entity2 rdf:resource='http://www.w3.org/2002/07/owl#Thing'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Communication'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Communication'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#PressureSensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#PressureSensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#Window'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Window'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.org/iot/vocab/m3-lite#HumiditySensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#HumiditySensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Sensor'/>
+      <entity2 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://purl.oclc.org/NET/ssnx/ssn#Sensor'/>
+      <entity2 rdf:resource='http://elite.polito.it/ontologies/dogont.owl#Sensor'/>
+      <relation>http://www.w3.org/2004/02/skos/core#exactMatch</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>

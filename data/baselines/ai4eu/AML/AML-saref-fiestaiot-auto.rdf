@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>https://w3id.org/saref</onto1>
+	<onto2>http://purl.org/iot/ontology/fiesta-iot#</onto2>
+	<uri1>https://w3id.org/saref</uri1>
+	<uri2>http://purl.org/iot/ontology/fiesta-iot#</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Power"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Power"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9898</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Energy"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Energy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9889</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#EnergyMeter"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#EnergyMeter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9858</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Motion"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Motion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9839</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#Year"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Year"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Humidity"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Humidity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Device"/>
+			<entity2 rdf:resource="http://www.onem2m.org/ontology/Base_Ontology/base_ontology#Device"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#WashingMachine"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#WashingMachine"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Temperature"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Pressure"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#Pressure"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Sensor"/>
+			<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Service"/>
+			<entity2 rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#SmokeSensor"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#SmokeDetector"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8821</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#LightingDevice"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#FallDetector"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7841</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/2006/time#Duration"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#MinuteTime"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7366</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#PressureUnit"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#PressureSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7351</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#SensingFunction"/>
+			<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7351</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#ActuatingFunction"/>
+			<entity2 rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7351</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#EnergyUnit"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#EnergyDOI"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6979</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#Light"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#LightSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6966</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#SetLevelCommand"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#FuelLevel"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#MultiLevelState"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#AlcoholLevelSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://w3id.org/saref#LevelControlFunction"/>
+			<entity2 rdf:resource="http://purl.org/iot/vocab/m3-lite#WindDirectionSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

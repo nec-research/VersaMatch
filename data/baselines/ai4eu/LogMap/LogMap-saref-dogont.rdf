@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<Alignment>
+<xml>yes</xml>
+<level>0</level>
+<type>??</type>
+<onto1>https://w3id.org/saref</onto1>
+<onto2>https://w3id.org/saref</onto2>
+<uri1>https://w3id.org/saref</uri1>
+<uri2>https://w3id.org/saref</uri2>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OnOffState"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OnOffState"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Sensor"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Sensor"/>
+		<measure rdf:datatype="xsd:float">0.73</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Sensor"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+		<measure rdf:datatype="xsd:float">0.51</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#PauseCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#PauseCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OffCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OffCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OpenState"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenStateValue"/>
+		<measure rdf:datatype="xsd:float">0.55</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/muo-vocab.owl#UnitOfMeasurement"/>
+		<measure rdf:datatype="xsd:float">0.57</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#UnitOfMeasure"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#UnitOfMeasurement"/>
+		<measure rdf:datatype="xsd:float">0.6</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Command"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Command"/>
+		<measure rdf:datatype="xsd:float">0.76</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OnCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OnCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#StartCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StartCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#StepUpCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StepUpCommand"/>
+		<measure rdf:datatype="xsd:float">0.95</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#State"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#State"/>
+		<measure rdf:datatype="xsd:float">0.74</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Device"/>
+		<entity2 rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+		<measure rdf:datatype="xsd:float">0.7</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Appliance"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+		<measure rdf:datatype="xsd:float">0.72</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#StopState"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StopStateValue"/>
+		<measure rdf:datatype="xsd:float">0.55</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#StopCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StopCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#ToggleCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#ToggleCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#SmokeSensor"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#SmokeSensor"/>
+		<measure rdf:datatype="xsd:float">0.92</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#WashingMachine"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#WashingMachine"/>
+		<measure rdf:datatype="xsd:float">0.87</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OpenCloseFunction"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenCloseFunctionality"/>
+		<measure rdf:datatype="xsd:float">0.66</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#GetCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#GetCommand"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Switch"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Switch"/>
+		<measure rdf:datatype="xsd:float">0.76</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#TemperatureSensor"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#SingleTemperatureSensor"/>
+		<measure rdf:datatype="xsd:float">0.57</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#TemperatureSensor"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#TemperatureSensor"/>
+		<measure rdf:datatype="xsd:float">0.84</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#CloseCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#CloseCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#LightSwitch"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OnOffLightSwitch"/>
+		<measure rdf:datatype="xsd:float">0.53</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#StepDownCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StepDownCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OpenCloseState"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenCloseState"/>
+		<measure rdf:datatype="xsd:float">0.94</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#CloseState"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#CloseStateValue"/>
+		<measure rdf:datatype="xsd:float">0.56</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Actuator"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Actuator"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#EnergyMeter"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#EnergyMeter"/>
+		<measure rdf:datatype="xsd:float">0.73</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#Meter"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Meter"/>
+		<measure rdf:datatype="xsd:float">0.72</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#OpenCommand"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/dogont.owl#OpenCommand"/>
+		<measure rdf:datatype="xsd:float">0.85</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="https://w3id.org/saref#isMeasuredIn"/>
+		<entity2 rdf:resource="http://elite.polito.it/ontologies/muo-vocab.owl#measuredIn"/>
+		<measure rdf:datatype="xsd:float">0.91</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+</Alignment>
+</rdf:RDF>

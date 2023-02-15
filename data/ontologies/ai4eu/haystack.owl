@@ -1,0 +1,1342 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY ns "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY hto "http://project-haystack.org/hto#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY hto2 "http://vcharpenay.github.io/hto/hto.xml#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:hto="http://project-haystack.org/hto#"
+     xmlns:hto2="http://vcharpenay.github.io/hto/hto.xml#">
+    <Ontology rdf:about="http://vcharpenay.github.io/hto/hto.xml">
+        <terms:modified rdf:datatype="&xsd;date">2016-10-20</terms:modified>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://vcharpenay.github.io/hto/</rdfs:seeAlso>
+        <dc:creator>Victor Charpenay &lt;victor.charpenay[at]siemens.com&gt;</dc:creator>
+        <versionInfo>0.2.0</versionInfo>
+        <ns:license>Academic Free License (&quot;AFL&quot;) 3.0</ns:license>
+        <dc:title>Haystack Tagging Ontology</dc:title>
+        <rdfs:comment>The Haystack Tagging Ontology is an OWL ontology for Project Haystack, a domain vocabulary for Building Automation Systems.</rdfs:comment>
+        <imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#associatedTo -->
+
+    <AnnotationProperty rdf:about="&hto2;associatedTo">
+        <rdfs:comment>gives the OWL class defined in the present ontology that should be associated to the individual defined as subject.</rdfs:comment>
+        <rdfs:domain rdf:resource="&hto2;HTag"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#belongsTo -->
+
+    <ObjectProperty rdf:about="&hto2;belongsTo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+        <rdfs:range rdf:resource="&hto2;Equipment"/>
+        <rdfs:domain rdf:resource="&hto2;Point"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hasRef -->
+
+    <ObjectProperty rdf:about="&hto2;hasRef">
+        <inverseOf rdf:resource="&hto2;isRefedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hasSection -->
+
+    <ObjectProperty rdf:about="&hto2;hasSection">
+        <rdfs:domain rdf:resource="&hto2;Equipment"/>
+        <rdfs:range rdf:resource="&hto2;Section"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hasTag -->
+
+    <ObjectProperty rdf:about="&hto2;hasTag"/>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#isRefedBy -->
+
+    <ObjectProperty rdf:about="&hto2;isRefedBy"/>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#locatedOn -->
+
+    <ObjectProperty rdf:about="&hto2;locatedOn">
+        <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf"/>
+        <rdfs:domain rdf:resource="&hto2;Point"/>
+        <rdfs:range rdf:resource="&hto2;Section"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#measuredOn -->
+
+    <ObjectProperty rdf:about="&hto2;measuredOn">
+        <rdfs:domain rdf:resource="&hto2;Measurement"/>
+        <rdfs:range rdf:resource="&hto2;PhysicalBody"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#quantifies -->
+
+    <ObjectProperty rdf:about="&hto2;quantifies">
+        <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+        <rdfs:range rdf:resource="&hto2;Measurement"/>
+        <rdfs:domain rdf:resource="&hto2;Point"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#dis -->
+
+    <DatatypeProperty rdf:about="&hto2;dis">
+        <rdfs:domain rdf:resource="&hto2;HEntity"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#AHU -->
+
+    <Class rdf:about="&hto2;AHU">
+        <rdfs:label>AHU</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Air -->
+
+    <Class rdf:about="&hto2;Air">
+        <rdfs:label>Air</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Boiler -->
+
+    <Class rdf:about="&hto2;Boiler">
+        <rdfs:label>Boiler</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#CO2 -->
+
+    <Class rdf:about="&hto2;CO2">
+        <rdfs:label>CO2</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#ChilledSystem -->
+
+    <Class rdf:about="&hto2;ChilledSystem">
+        <rdfs:label>Chilled System</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Chiller -->
+
+    <Class rdf:about="&hto2;Chiller">
+        <rdfs:label>Chiller</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Command -->
+
+    <Class rdf:about="&hto2;Command">
+        <rdfs:label>Command</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Point"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#CondenserSystem -->
+
+    <Class rdf:about="&hto2;CondenserSystem">
+        <rdfs:label>Condenser System</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#CoolingCoil -->
+
+    <Class rdf:about="&hto2;CoolingCoil">
+        <rdfs:label>Cooling Coil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Discharge -->
+
+    <Class rdf:about="&hto2;Discharge">
+        <rdfs:label>Discharge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Efficiency -->
+
+    <Class rdf:about="&hto2;Efficiency">
+        <rdfs:label>Efficiency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Entering -->
+
+    <Class rdf:about="&hto2;Entering">
+        <rdfs:label>Entering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Equipment -->
+
+    <Class rdf:about="&hto2;Equipment">
+        <rdfs:label>Equipment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+        <rdfs:subClassOf rdf:resource="&hto2;HEntity"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Exhaust -->
+
+    <Class rdf:about="&hto2;Exhaust">
+        <rdfs:label>Exhaust</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Fan -->
+
+    <Class rdf:about="&hto2;Fan">
+        <rdfs:label>Fan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Flow -->
+
+    <Class rdf:about="&hto2;Flow">
+        <rdfs:label>Flow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Frequency -->
+
+    <Class rdf:about="&hto2;Frequency">
+        <rdfs:label>Frequency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Gas -->
+
+    <Class rdf:about="&hto2;Gas">
+        <rdfs:label>Gas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HEntity -->
+
+    <Class rdf:about="&hto2;HEntity">
+        <rdfs:label>HEntity</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HTag -->
+
+    <Class rdf:about="&hto2;HTag">
+        <rdfs:label>HTag</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HVAC -->
+
+    <Class rdf:about="&hto2;HVAC">
+        <rdfs:label>HVAC</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HeatingCoil -->
+
+    <Class rdf:about="&hto2;HeatingCoil">
+        <rdfs:label>Heating Coil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Historized -->
+
+    <Class rdf:about="&hto2;Historized">
+        <rdfs:label>Historized</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PointProperty"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Humidity -->
+
+    <Class rdf:about="&hto2;Humidity">
+        <rdfs:label>Humidity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#IsolationValve -->
+
+    <Class rdf:about="&hto2;IsolationValve">
+        <rdfs:label>Isolation Valve</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Valve"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Leaving -->
+
+    <Class rdf:about="&hto2;Leaving">
+        <rdfs:label>Leaving</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#LightLevel -->
+
+    <Class rdf:about="&hto2;LightLevel">
+        <rdfs:label>Light Level</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#LightsGroup -->
+
+    <Class rdf:about="&hto2;LightsGroup">
+        <rdfs:label>Lights Group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Measurement -->
+
+    <Class rdf:about="&hto2;Measurement">
+        <rdfs:label>Measurement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Meter -->
+
+    <Class rdf:about="&hto2;Meter">
+        <rdfs:label>Meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Mixed -->
+
+    <Class rdf:about="&hto2;Mixed">
+        <rdfs:label>Mixed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#OnOff -->
+
+    <Class rdf:about="&hto2;OnOff">
+        <rdfs:label>On/Off</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Percentage -->
+
+    <Class rdf:about="&hto2;Percentage">
+        <rdfs:label>Percentage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#PerimeterHeat -->
+
+    <Class rdf:about="&hto2;PerimeterHeat">
+        <rdfs:label>Perimeter Heat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#PhysicalBody -->
+
+    <Class rdf:about="&hto2;PhysicalBody">
+        <rdfs:label>Physical Body</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Point -->
+
+    <Class rdf:about="&hto2;Point">
+        <rdfs:label>Point</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;HEntity"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#PointProperty -->
+
+    <Class rdf:about="&hto2;PointProperty">
+        <rdfs:label>Point Property</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Power -->
+
+    <Class rdf:about="&hto2;Power">
+        <rdfs:label>Power</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Pressure -->
+
+    <Class rdf:about="&hto2;Pressure">
+        <rdfs:label>Pressure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Pump -->
+
+    <Class rdf:about="&hto2;Pump">
+        <rdfs:label>Pump</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;VFD"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#RTU -->
+
+    <Class rdf:about="&hto2;RTU">
+        <rdfs:label>RTU</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;AHU"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#RealTime -->
+
+    <Class rdf:about="&hto2;RealTime">
+        <rdfs:label>Real time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PointProperty"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#RefrigerantSubstance -->
+
+    <Class rdf:about="&hto2;RefrigerantSubstance">
+        <rdfs:label>Refrigirant Substance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Return -->
+
+    <Class rdf:about="&hto2;Return">
+        <rdfs:label>Return</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Section -->
+
+    <Class rdf:about="&hto2;Section">
+        <rdfs:label>Section</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Sensor -->
+
+    <Class rdf:about="&hto2;Sensor">
+        <rdfs:label>Sensor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:subClassOf rdf:resource="&hto2;Point"/>
+        <hto2:associatedTo rdf:resource="&hto2;sensor"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#SetPoint -->
+
+    <Class rdf:about="&hto2;SetPoint">
+        <rdfs:label>Set Point</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Point"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Site -->
+
+    <Class rdf:about="&hto2;Site">
+        <rdfs:label>Site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;HEntity"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Speed -->
+
+    <Class rdf:about="&hto2;Speed">
+        <rdfs:label>Speed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Steam -->
+
+    <Class rdf:about="&hto2;Steam">
+        <rdfs:label>Steam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Temperature -->
+
+    <Class rdf:about="&hto2;Temperature">
+        <rdfs:label>Temperature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#VAV -->
+
+    <Class rdf:about="&hto2;VAV">
+        <rdfs:label>VAV</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#VFD -->
+
+    <Class rdf:about="&hto2;VFD">
+        <rdfs:label>VFD</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#VFDFan -->
+
+    <Class rdf:about="&hto2;VFDFan">
+        <rdfs:label>VFD Fan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;VFD"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Valve -->
+
+    <Class rdf:about="&hto2;Valve">
+        <rdfs:label>Valve</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Water -->
+
+    <Class rdf:about="&hto2;Water">
+        <rdfs:label>Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Writable -->
+
+    <Class rdf:about="&hto2;Writable">
+        <rdfs:label>Writable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;PointProperty"/>
+    </Class>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Zone -->
+
+    <Class rdf:about="&hto2;Zone">
+        <rdfs:label>Zone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hto2;Section"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#ahu -->
+
+    <NamedIndividual rdf:about="&hto2;ahu">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Air Handler Unit which heats and/or cools air.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;AHU"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#air -->
+
+    <NamedIndividual rdf:about="&hto2;air">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Point associated with the measurement or control of air. In regards to `wetBulb`, points with the &apos;air&apos; tag are associated with dry bulb.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Air"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#boiler -->
+
+    <NamedIndividual rdf:about="&hto2;boiler">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Boiler `equip` used to generate hot water or steam for heating.</rdfs:comment>
+        <rdfs:comment>note: does not fully implement specification (no boilerPlant). However, is still a TODO in project Haystack.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Boiler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#bypass -->
+
+    <NamedIndividual rdf:about="&hto2;bypass">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  If used with `valve` indicates a by-pass in a piping system. If used in combination with the `damper` tag on an `ahu` to indicate a damper in the ductwork to by-pass the VAV boxs and create a direct circuit between the discharge and return of the unit.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#chilled -->
+
+    <NamedIndividual rdf:about="&hto2;chilled">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Marker tag used with `water` for the chilled water system between `chiller` and `ahu`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;ChilledSystem"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#chiller -->
+
+    <NamedIndividual rdf:about="&hto2;chiller">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Chillers remove heat from a liquid via a vapor compression or an absorption refrigeration cycle.</rdfs:comment>
+        <rdfs:comment>note: does not fully implement specification (no chillerPlant, no CoolingTower).</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Chiller"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#cmd -->
+
+    <NamedIndividual rdf:about="&hto2;cmd">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Classifies a `point` as an output, AO/BO, command, or actuator.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Command"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#co2 -->
+
+    <NamedIndividual rdf:about="&hto2;co2">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Carbon dioxide level `point` measured in &quot;ppm&quot;.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;CO2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#condenser -->
+
+    <NamedIndividual rdf:about="&hto2;condenser">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  When combined with the `water` tag, this indicates points in a condenser water system between a `chiller` and `coolingTower`. When used with the `refrig` tag, this indicates points on the condenser mechanism used to convert a refrigerant from its gaseous to liquid state. If paired with the `cmd` tag this tag indicates the command status of a condensor in a `chiller` modeled as true/false (on/off) or 0% to 100%.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;CondenserSystem"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#cool -->
+
+    <NamedIndividual rdf:about="&hto2;cool">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Cooling coil as bool or numeric `point` used with `ahu` equip.  If multiple stages are used, then also specify the `stage` tag. If the cooling coil is controlled by a valve, then this point is mesaured from 0% to 100%, otherwise it should be a boolean point.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;CoolingCoil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#cooling -->
+
+    <NamedIndividual rdf:about="&hto2;cooling">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with the cooling mode of an HVAC system.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#damper -->
+
+    <NamedIndividual rdf:about="&hto2;damper">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Damper position measured from 0% (fully closed) to 100% (fully open).</rdfs:comment>
+        <rdfs:comment>note: indicates the measurement of how open the damper of a AHU is (0-100%)</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Percentage"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#delta -->
+
+    <NamedIndividual rdf:about="&hto2;delta">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Indicates a differential of `air`, `water`, or `steam` between the `entering` and `leaving` sensors.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#discharge -->
+
+    <NamedIndividual rdf:about="&hto2;discharge">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with the discharge air an `ahu` or `vav`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Discharge"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#effective -->
+
+    <NamedIndividual rdf:about="&hto2;effective">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Used to indicate the effective setpoint which takes into account various other mode based setpoints the equip might define.  See [zone setpoints]`Zones#zonePoints` for complete example of how this tag is used.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#efficiency -->
+
+    <NamedIndividual rdf:about="&hto2;efficiency">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Efficiency point of a `chiller` measured in &quot;COP&quot; or &quot;kW/ton&quot;.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Efficiency"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#elec -->
+
+    <NamedIndividual rdf:about="&hto2;elec">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Used on `point` or `equip` entities relating to electricity. When paried with `meter` indicates a electric meter.</rdfs:comment>
+        <rdfs:comment>note: according to the documentation, is assocated to either point or equip</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#enable -->
+
+    <NamedIndividual rdf:about="&hto2;enable">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Secondary on/off `point` of an `equip` especially used with a `vfd`. Enable is used with Bool points where true indicates on and false indicates off.  Equip with an enable should always also define a `run` point which indicates the primary on/off state of the equipment.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#energy -->
+
+    <NamedIndividual rdf:about="&hto2;energy">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Applied to `point` entities which measure energy consumption:   - Electric meters: &quot;kWh&quot;   - Thermal meters: &quot;BTU&quot;   - Gas meters: &quot;mÂ³_gas&quot;   - Chillers: &quot;tonrefh&quot;</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#entering -->
+
+    <NamedIndividual rdf:about="&hto2;entering">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Indicates `water` or `steam` entering a piece of equipment like a `boiler` or `chiller`.  Used with `vav` for air flow into the unit from the AHU.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Entering"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#evaporator -->
+
+    <NamedIndividual rdf:about="&hto2;evaporator">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Indicates points on the evaporator mechanism used to convert a refrigerant from its liquid to gageous state.  It is often paired with the `refrig` marker tag.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#exhaust -->
+
+    <NamedIndividual rdf:about="&hto2;exhaust">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with the exhaust air an `ahu`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Exhaust"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#faceBypass -->
+
+    <NamedIndividual rdf:about="&hto2;faceBypass">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  A `point` of an `ahu` indicating air flow is by-passing the heating/cooling elements. If a boolean point, then true indicates the unit is in by-pass mode and false indicates by-pass is disabled.  If the point is an analog point then 100% indicates full by-pass mode and 0% that by-pass is completely disabled.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#fan -->
+
+    <NamedIndividual rdf:about="&hto2;fan">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Fan `point` or `equip` associated with an `ahu`, `vav`, or `coolingTower`.</rdfs:comment>
+        <rdfs:comment>note: according to the documentation, is assocated to either point or equip. Should use reasoning to choose the right one for a given HEntity</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#filter -->
+
+    <NamedIndividual rdf:about="&hto2;filter">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Differential pressure across the filter of an `ahu`.  If a boolean point then true indicates successful airflow and false indicates a clogged filter.  If a numeric then the pressure differential should be measured in &quot;inHâ‚‚O&quot; or &quot;kPa&quot;</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Pressure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#flow -->
+
+    <NamedIndividual rdf:about="&hto2;flow">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Marker tag on a `point` which measures rate of volume currently flowing through a flow meter, duct, or pipe .   - Air flow: &quot;cfm&quot; or &quot;L/s&quot;   - Gas/water flow: &quot;gal/min&quot; or &quot;mÂ³/s&quot;</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Flow"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#freezeStat -->
+
+    <NamedIndividual rdf:about="&hto2;freezeStat">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  A boolean `point` of an `ahu` indicating a freezing condition which might require a control sequence to protect the equipment. If true then a freeze condition is deteted, or false if not.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#freq -->
+
+    <NamedIndividual rdf:about="&hto2;freq">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Electrical A/C frequency `point` measured in &quot;Hz&quot; for `elec` `meter` or a `vfd`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Frequency"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#gas -->
+
+    <NamedIndividual rdf:about="&hto2;gas">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Used on `point` or `equip` entities relating to natural gas. When paried with `meter` indicates a gas meter.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Gas"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#heat -->
+
+    <NamedIndividual rdf:about="&hto2;heat">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Heating coil as bool or float point on an `ahu` or `vav`. If multiple stages are used, then also specify the `stage` tag. If the heating coil is controlled by a valve, then this point is mesaured from 0% to 100%, otherwise it should be a boolean point.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;HeatingCoil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#heatWheel -->
+
+    <NamedIndividual rdf:about="&hto2;heatWheel">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Bool `point` which models the on or off state of an `ahu` heat wheel.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#heating -->
+
+    <NamedIndividual rdf:about="&hto2;heating">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with the heating mode of an HVAC system.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#humidifier -->
+
+    <NamedIndividual rdf:about="&hto2;humidifier">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Boolean or numeric `point` of an `ahu` used to indicate if if the humidifier is on or off.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#humidity -->
+
+    <NamedIndividual rdf:about="&hto2;humidity">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Humidity measured from 0% to 100%.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Humidity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hvac -->
+
+    <NamedIndividual rdf:about="&hto2;hvac">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with HVAC (Heating, Ventilating, Air Conditioning)</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;HVAC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#isolation -->
+
+    <NamedIndividual rdf:about="&hto2;isolation">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Indicates a `valve` used to isolate a piece of equipment from a piping system.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;IsolationValve"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#leaving -->
+
+    <NamedIndividual rdf:about="&hto2;leaving">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Indicates `water` or `steam` exiting a piece of equipment like a `boiler` or `chiller`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Leaving"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#lightLevel -->
+
+    <NamedIndividual rdf:about="&hto2;lightLevel">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Light level sensor point under `lightsGroup` measured in &quot;lux&quot; or &quot;lumen&quot;.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;LightLevel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#lights -->
+
+    <NamedIndividual rdf:about="&hto2;lights">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Lighting on/off status as a boolean or if dimmable a numeric between 0% and 100%.</rdfs:comment>
+        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type and redundant with the tag lightLevel.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;LightLevel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#lightsGroup -->
+
+    <NamedIndividual rdf:about="&hto2;lightsGroup">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Equip level of the lighting system which is a group of one or more `lights` points.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;LightsGroup"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#load -->
+
+    <NamedIndividual rdf:about="&hto2;load">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Models a `point` on a `chiller` used to command or measure the chiller&apos;s load as a percentage from &quot;0%&quot; to &quot;100%&quot;.  When paired with `cmd` this models the chiller&apos;s load limit.  When paired with `sensor` this models the chiller&apos;s current load factor.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Percentage"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#meter -->
+
+    <NamedIndividual rdf:about="&hto2;meter">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Equip which meters usage of `elec` energy, thermal energy, `gas`, `water` or `steam`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Meter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#mixed -->
+
+    <NamedIndividual rdf:about="&hto2;mixed">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with the mixed air of an `ahu`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Mixed"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#occupancyIndicator -->
+
+    <NamedIndividual rdf:about="&hto2;occupancyIndicator">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Occupancy sensor under `lightsGroup`.  Point must be Bool where true indicates occupied and false indicates unoccupied</rdfs:comment>
+        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type. Similarly, lights and lightLevel tags both refer to the class LightLevel.</rdfs:comment>
+        <rdfs:seeAlso>http://project-haystack.org/tag/lights</rdfs:seeAlso>
+        <hto2:associatedTo rdf:resource="&hto2;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#perimeterHeat -->
+
+    <NamedIndividual rdf:about="&hto2;perimeterHeat">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Auxiliary heating points associated with a `vav`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;PerimeterHeat"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#point -->
+
+    <NamedIndividual rdf:about="&hto2;point">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Data point such as a sensor or actuator.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Point"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#power -->
+
+    <NamedIndividual rdf:about="&hto2;power">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Applied to `point` entities which measure energy consumed per unit time. For &apos;elec meter&apos; this is the electrical demand.   - Electric meters: &quot;kW&quot;   - Thermal meters: &quot;BTU/h&quot;   - Chillers: &quot;tonref&quot; or &quot;kW&quot; refrigeration</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Power"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#pressure -->
+
+    <NamedIndividual rdf:about="&hto2;pressure">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Static pressure associated with the measurement or control of fluids such as air, oxygen, water, steam, gas, oil, etc.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Pressure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#refrig -->
+
+    <NamedIndividual rdf:about="&hto2;refrig">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Indicates points associated with the measurment or control of the refrigerant substance in a cooling system like a `chiller`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;RefrigerantSubstance"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#return -->
+
+    <NamedIndividual rdf:about="&hto2;return">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with the return air an `ahu`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Return"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#rooftop -->
+
+    <NamedIndividual rdf:about="&hto2;rooftop">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Used with `ahu` to mark an AHU as a packaged rooftop unit (RTU).</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;RTU"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#run -->
+
+    <NamedIndividual rdf:about="&hto2;run">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Primary on/off `point` of an `equip` especially used with a `vfd`. Run is used with Bool points where true indicates on and false indicates off. When paired with `cmd` this is the commanded state of the equipment. When paired with `sensor` this is the actual status of the equip.  If the equipment also defines an `enable` point then both must be commanded on in order to run the equipment.</rdfs:comment>
+        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#sensor -->
+
+    <NamedIndividual rdf:about="&hto2;sensor">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Classifies a `point` as an input, AI/BI, or sensor.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Sensor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#sp -->
+
+    <NamedIndividual rdf:about="&hto2;sp">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Classifies a `point` as a setpoint, soft point, or process control variable.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;SetPoint"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#speed -->
+
+    <NamedIndividual rdf:about="&hto2;speed">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Speed `point` of a `vfd` measured in &quot;%&quot; where 0% is off and 100% is the fastest speed.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Speed"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#steam -->
+
+    <NamedIndividual rdf:about="&hto2;steam">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Point associated with the measurement or control of steam. This tag is often paired with `entering` versus `leaving` versus `delta`. It may also be paired with `meter` to indicate a steam meter.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Steam"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#temp -->
+
+    <NamedIndividual rdf:about="&hto2;temp">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Temperature measured in Â°C or Â°F.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Temperature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#valve -->
+
+    <NamedIndividual rdf:about="&hto2;valve">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Marker tag on `point` which indicates a valve used to regulate or control the flow or pressure of a fluid.  It is used with `cmd` to indicate the valve command: true/false (open/close) or 0% to 100%.  It may also be used with `sensor` to indicate a feedback sensor such as a voltage giving exact position between 0% and 100%.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Valve"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#vav -->
+
+    <NamedIndividual rdf:about="&hto2;vav">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Variable Volume Volume supply duct `equip`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;VAV"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#vfd -->
+
+    <NamedIndividual rdf:about="&hto2;vfd">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Marker for a motor `equip` with variable frequency drive.  Commonly used in combination with `fan` and `pump`.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;VFD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#water -->
+
+    <NamedIndividual rdf:about="&hto2;water">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Point associated with the measurement or control of water.  This tag is often paired:   - `entering` versus `leaving` versus `delta`   - `chilled` versus `condenser` It may also be paired with `meter` to indicate a water meter.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Water"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://vcharpenay.github.io/hto/hto.xml#zone -->
+
+    <NamedIndividual rdf:about="&hto2;zone">
+        <rdf:type rdf:resource="&hto2;HTag"/>
+        <rdfs:comment rdf:datatype="&xsd;string">  Associated with a conditioned [zone]`Zones` of a building.</rdfs:comment>
+        <hto2:associatedTo rdf:resource="&hto2;Zone"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&hto2;Equipment"/>
+            <rdf:Description rdf:about="&hto2;Point"/>
+            <rdf:Description rdf:about="&hto2;Site"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
